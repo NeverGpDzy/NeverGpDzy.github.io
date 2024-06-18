@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>NeverGpDzy</ShortName>
+  <Description>Search NeverGpDzy</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">http://docs.nevergpdzy.cn/http://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png</Image>
+  <Url type="text/html" method="get" template="http://docs.nevergpdzy.cn/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="http://docs.nevergpdzy.cn/opensearch.xml" />
+  <moz:SearchForm>http://docs.nevergpdzy.cn/</moz:SearchForm>
+</OpenSearchDescription>
