@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdev_knowledge_base=self.webpackChunkdev_knowledge_base||[]).push([[8121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"thoughts","permalink":"/blog/tags/thoughts","count":4},{"label":"life-log","permalink":"/blog/tags/life-log","count":1}]}')}}]);
