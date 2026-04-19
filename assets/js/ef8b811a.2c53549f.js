@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdev_knowledge_base=self.webpackChunkdev_knowledge_base||[]).push([[8947],{56600:e=>{e.exports=JSON.parse('{"authors":[{"name":"DingZhiyu","title":"Southwest Petroleum University","url":"https://nevergpdzy.cn","imageURL":"https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png","key":"DingZhiyu","page":null,"count":5}]}')}}]);
