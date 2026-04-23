@@ -11,7 +11,7 @@
 
 <link rel="search" type="application/opensearchdescription+xml" title="NeverGpDzy" href="/opensearch.xml">
 <link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.fefe67a5.css">
-<script src="/assets/js/runtime~main.e0f29512.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b5f99212.js" defer="defer"></script>
 <script src="/assets/js/main.729b15d7.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -235,10 +235,11 @@
 <li>统一读取 <code>key / serviceHost / securityJsCode</code></li>
 <li>统一设置 <code>window._AMapSecurityConfig</code></li>
 <li>统一懒加载 <code>@amap/amap-jsapi-loader</code></li>
-<li>统一加 <code>AMap.ToolBar</code> 和 <code>AMap.Scale</code></li>
+<li>统一根据设备能力决定是否加载 <code>AMap.ToolBar</code> 和 <code>AMap.Scale</code></li>
+<li>统一收紧地图渲染参数，例如默认走 <code>2D</code>、关闭旋转 / 俯仰 / 3D 楼块，只保留必要底图要素</li>
 <li>统一做 <code>gps -&gt; 高德坐标</code> 转换</li>
 <li>统一 <code>fitTravelMapToOverlays</code></li>
-<li>统一在组件卸载时 <code>map.destroy()</code></li>
+<li>统一在组件折叠或卸载时 <code>map.destroy()</code></li>
 </ul>
 <p>只要这些逻辑散落到各个地图组件里，后面就一定会出现行为漂移。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="高德接入层为什么现在同时支持-servicehost-和-securityjscode">高德接入层：为什么现在同时支持 <code>serviceHost</code> 和 <code>securityJsCode</code><a href="#高德接入层为什么现在同时支持-servicehost-和-securityjscode" class="hash-link" aria-label="高德接入层为什么现在同时支持-servicehost-和-securityjscode的直接链接" title="高德接入层为什么现在同时支持-servicehost-和-securityjscode的直接链接">​</a></h2>
@@ -270,7 +271,7 @@
 <li><code>travelPhotoMetadata.generated.json</code> 里的坐标仍然是原始 GPS</li>
 <li><code>travelMap.generated.json</code> 里的点位也继续沿用这组原始 GPS</li>
 </ul>
-<p>真正变成高德可 直接渲染坐标，是在前端调用：</p>
+<p>真正变成高德可直接渲染坐标，是在前端调用：</p>
 <div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token maybe-class-name">AMap</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">convertFrom</span><span class="token punctuation" style="color:#393A34">(</span><span class="token spread operator" style="color:#393A34">...</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;gps&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
 <p>这个设计是故意的，不是疏忽。原因是：</p>
 <ol>
@@ -286,7 +287,7 @@
 <p>文章页地图和分类页地图都通过 <code>TravelMapDisclosure</code> 折叠。</p>
 <p>原因有三条：</p>
 <ol>
-<li>地图不应该压  过正文。</li>
+<li>地图不应该压过正文。</li>
 <li>高德 JSAPI 首屏加载成本不低。</li>
 <li>折叠后才初始化地图，可以减少无意义的 WebGL 实例。</li>
 </ol>
@@ -294,15 +295,48 @@
 <ul>
 <li>默认不展开</li>
 <li>用户点击后才真正创建地图</li>
+<li>分类页总览图和文章页地图都保持默认折叠，不在首屏自动初始化</li>
+<li>收起折叠面板时直接销毁 inline map，避免隐藏状态继续占着 WebGL 资源</li>
 <li>地图创建后请求 resize，避免折叠动画导致画布尺寸不对</li>
 <li>页面销毁时销毁 map 实例</li>
 </ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="移动端交互性能优化为什么现在要刻意减配">移动端交互性能优化：为什么现在要刻意“减配”<a href="#移动端交互性能优化为什么现在要刻意减配" class="hash-link" aria-label="移动端交互性能优化：为什么现在要刻意“减配”的直接链接" title="移动端交互性能优化：为什么现在要刻意“减配”的直接链接">​</a></h2>
+<p>这部分是后续维护时很容易被“顺手加回去”的地方，所以单独记一下。</p>
+<p>项目上线后，移动端最直接的问题不是“点位太多”，而是滑动、拖拽、双指缩放时的每一帧成本偏高。</p>
+<p>当时主要有三个风险点：</p>
+<ol>
+<li>分类页总览图曾经出现过默认展开并立即初始化的回退行为。</li>
+<li>地图实例虽然没有使用俯仰、旋转或 3D 楼块效果，但初始化时仍然按 <code>3D</code> 模式创建。</li>
+<li>移动端仍然加载了 <code>ToolBar</code>、<code>Scale</code> 这类更偏桌面操作的控件。</li>
+</ol>
+<p>现在的处理原则是：</p>
+<ul>
+<li>Travel 地图优先保证移动端交互顺滑，而不是追求“参数看起来开得很满”。</li>
+<li>只要当前页面没有明确 使用 3D 视角，就不要为了“理论上更强”而保留 3D 开销。</li>
+<li>隐藏状态的地图实例不保活，折叠后直接销毁，重新展开再创建。</li>
+</ul>
+<p>具体落地成了下面几条规则：</p>
+<ul>
+<li><code>shared.js</code> 创建地图时默认使用 <code>2D</code> 模式。</li>
+<li>统一关闭 <code>pitchEnable</code>、<code>rotateEnable</code>、<code>showBuildingBlock</code>、<code>showIndoorMap</code>。</li>
+<li>地图底图只保留 <code>bg / road / point</code>，不额外打开这套页面不需要的更重图层元素。</li>
+<li>对粗指针设备（手机、平板一类）默认不加载 <code>AMap.ToolBar</code> 和 <code>AMap.Scale</code>。</li>
+<li>分类页总览图恢复为默认折叠，避免进入 Travel 分类页时立刻创建地图实例。</li>
+<li>文章页和分类页的 inline map 在折叠时都会立刻 <code>destroy()</code>。</li>
+</ul>
+<p>这套收缩不是为了“阉割功能”，而是因为 Travel 地图的职责本来就是辅助阅读：</p>
+<ul>
+<li>能看清点位分布就够了</li>
+<li>不需要在这里展示 3D 城市效果</li>
+<li>不需要为了少量点位维持一个隐藏的活跃 WebGL 实例</li>
+</ul>
+<p>如果以后这里真的演变成高密度点位或长时间交互场景，再考虑把覆盖物继续换成 <code>LabelMarker</code> 这类更偏性能的实现，而不是先把 3D 和桌面控件重新开回去。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="这套实现为什么没有继续保留路线">这套实现为什么没有继续保留“路线”<a href="#这套实现为什么没有继续保留路线" class="hash-link" aria-label="这套实现为什么没有继续保留“路线”的直接链接" title="这套实现为什么没有继续保留“路线”的直接链接">​</a></h2>
 <p>这是一个明确的产品取舍，不是功能没做完。</p>
 <p>之前路线的主要问题是：</p>
 <ul>
 <li>视觉上像轨迹图，不像相册</li>
-<li>多数旅行图组的 GPS 点并不适合线性讲述</li>
+<li>多数旅行图组的 GPS 点并不适合线  性讲述</li>
 <li>有些照片没有 GPS，路线天然不完整</li>
 <li>地图越像“导航产品”，正文越容易被抢焦点</li>
 </ul>
@@ -345,7 +379,7 @@
 <li><code>fit view</code></li>
 <li>销毁逻辑</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-新增内容优先走源稿---最终-mdx链路">3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路<a href="#3-新增内容优先走源稿---最终-mdx链路" class="hash-link" aria-label="3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路的直接链接" title="3. 新增内容优先走“源  稿 -&gt; 最终 MDX”链路的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-新增内容优先走源稿---最终-mdx链路">3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路<a href="#3-新增内容优先走源稿---最终-mdx链路" class="hash-link" aria-label="3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路的直接链接" title="3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路的直接链接">​</a></h3>
 <p>不要回退到每次都手工拼 <code>createTravelPhotos([...])</code>。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-生产环境优先走代理">4. 生产环境优先走代理<a href="#4-生产环境优先走代理" class="hash-link" aria-label="4. 生产环境优先走代理的直接链接" title="4. 生产环境优先走代理的直接链接">​</a></h3>
 <p>不要默认把 <code>AMAP_SECURITY_JS_CODE</code> 跟着静态构建一起公开发布。</p>
@@ -377,6 +411,6 @@
 <p>当前 Travel 功能的核心不是“接了一个高德地图”，而是：</p>
 <blockquote>
 <p>用文章结构做真源，用脚本生成元数据和地图数据，用前端只负责展示，从而把“旅行图片 + 文案 + 地图”变成一条可以重复执行、可以长期维护的内容生产链路。</p>
-</blockquote></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/LabNotes/rocky-system-configuration"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">rocky新系统配置</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/travel-photo-metadata-workflow"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">旅游照片元数据工作流</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#这套功能最终解决了什么问题" class="table-of-contents__link toc-highlight">这套功能最终解决了什么问题</a></li><li><a href="#设计原则" class="table-of-contents__link toc-highlight">设计原则</a><ul><li><a href="#1-文章文件负责表达内容结构" class="table-of-contents__link toc-highlight">1. 文章文件负责表达内容结构</a></li><li><a href="#2-元数据和地图数据都走生成产物" class="table-of-contents__link toc-highlight">2. 元数据和地图数据都走生成产物</a></li><li><a href="#3-原始-gps-保留在数据层" class="table-of-contents__link toc-highlight">3. 原始 GPS 保留在数据层</a></li><li><a href="#4-地图默认不抢正文注意力" class="table-of-contents__link toc-highlight">4. 地图默认不抢正文注意力</a></li><li><a href="#5-生成流程优先可维护不优先一次性最快" class="table-of-contents__link toc-highlight">5. 生成流程优先可维护，不优先“一次性最快”</a></li></ul></li><li><a href="#总体分层" class="table-of-contents__link toc-highlight">总体分层</a></li><li><a href="#端到端数据流" class="table-of-contents__link toc-highlight">端到端数据流</a></li><li><a href="#内容层为什么最终文章仍然是-mdx" class="table-of-contents__link toc-highlight">内容层：为什么最终文章仍然是 MDX</a></li><li><a href="#文章生成层为什么单独做-create-travel-article" class="table-of-contents__link toc-highlight">文章生成层：为什么单独做 <code>create-travel-article</code></a></li><li><a href="#照片元数据生成层为什么不在前端读-exif" class="table-of-contents__link toc-highlight">照片元数据生成层：为什么不在前端读 EXIF</a></li><li><a href="#地图数据生成层为什么还要多一层-travelmapgeneratedjson" class="table-of-contents__link toc-highlight">地图数据生成层：为什么还要多一层 <code>travelMap.generated.json</code></a><ul><li><a href="#1-地图只展示点不展示路线" class="table-of-contents__link toc-highlight">1. 地图只展示点，不展示路线</a></li><li><a href="#2-分类页用代表点而不是所有点硬铺开" class="table-of-contents__link toc-highlight">2. 分类页用代表点，而不是所有点硬铺开</a></li><li><a href="#3-章节顺序继续从文章里继承" class="table-of-contents__link toc-highlight">3. 章节顺序继续从文章里继承</a></li></ul></li><li><a href="#展示层为什么拆成-travelgallery-和-travelmap" class="table-of-contents__link toc-highlight">展示层：为什么拆成 <code>TravelGallery</code> 和 <code>TravelMap</code></a><ul><li><a href="#travelgallery" class="table-of-contents__link toc-highlight"><code>TravelGallery</code></a></li><li><a href="#travelmap" class="table-of-contents__link toc-highlight"><code>TravelMap</code></a></li><li><a href="#为什么-sharedjs-要做成公共层" class="table-of-contents__link toc-highlight">为什么 <code>shared.js</code> 要做成公共层</a></li></ul></li><li><a href="#高德接入层为什么现在同时支持-servicehost-和-securityjscode" class="table-of-contents__link toc-highlight">高德接入层：为什么现在同时支持 <code>serviceHost</code> 和 <code>securityJsCode</code></a></li><li><a href="#坐标处理为什么选择渲染前转换而不是生成时覆盖" class="table-of-contents__link toc-highlight">坐标处理：为什么选择“渲染前转换”，而不是“生成时覆盖”</a></li><li><a href="#地图交互为什么默认折叠为什么只点开时加载" class="table-of-contents__link toc-highlight">地图交互：为什么默认折叠、为什么只点开时加载</a></li><li><a href="#这套实现为什么没有继续保留路线" class="table-of-contents__link toc-highlight">这套实现为什么没有继续保留“路线”</a></li><li><a href="#为什么这套实现适合你现在的工作方式" class="table-of-contents__link toc-highlight">为什么这套实现适合你现在的工作方式</a></li><li><a href="#以后继续扩展时优先遵守的规则" class="table-of-contents__link toc-highlight">以后继续扩展时，优先遵守的规则</a><ul><li><a href="#1-不要手改生成-json" class="table-of-contents__link toc-highlight">1. 不要手改生成 JSON</a></li><li><a href="#2-新增地图组件时先复用-sharedjs" class="table-of-contents__link toc-highlight">2. 新增地图组件时先复用 <code>shared.js</code></a></li><li><a href="#3-新增内容优先走源稿---最终-mdx链路" class="table-of-contents__link toc-highlight">3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路</a></li><li><a href="#4-生产环境优先走代理" class="table-of-contents__link toc-highlight">4. 生产环境优先走代理</a></li><li><a href="#5-不要把路线逻辑重新塞回来" class="table-of-contents__link toc-highlight">5. 不要把路线逻辑重新塞回来</a></li></ul></li><li><a href="#当前最常用的命令" class="table-of-contents__link toc-highlight">当前最常用的命令</a></li><li><a href="#以后看这套实现先从哪几个文件开始" class="table-of-contents__link toc-highlight">以后看这套实现，先从哪几个文件开始</a></li><li><a href="#一句话总结" class="table-of-contents__link toc-highlight">一句话总结</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v6.1.0</span></div></div></div></footer></div>
+</blockquote></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/LabNotes/rocky-system-configuration"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">rocky新系统配置</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/travel-photo-metadata-workflow"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">旅游照片元数据工作流</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#这套功能最终解决了什么问题" class="table-of-contents__link toc-highlight">这套功能最终解决了什么问题</a></li><li><a href="#设计原则" class="table-of-contents__link toc-highlight">设计原则</a><ul><li><a href="#1-文章文件负责表达 内容结构" class="table-of-contents__link toc-highlight">1. 文章文件负责表达内容结构</a></li><li><a href="#2-元数据和地图数据都走生成产物" class="table-of-contents__link toc-highlight">2. 元数据和地图数据都走生成产物</a></li><li><a href="#3-原始-gps-保留在数据层" class="table-of-contents__link toc-highlight">3. 原始 GPS 保留在数据层</a></li><li><a href="#4-地图默认不抢正文注意力" class="table-of-contents__link toc-highlight">4. 地图默认不抢正文注意力</a></li><li><a href="#5-生成流程优先可维护不优先一次性最快" class="table-of-contents__link toc-highlight">5. 生成流程优先可维护，不优先“一次性最快”</a></li></ul></li><li><a href="#总体分层" class="table-of-contents__link toc-highlight">总体分层</a></li><li><a href="#端到端数据流" class="table-of-contents__link toc-highlight">端到端数据流</a></li><li><a href="#内容层为什么最终文章仍然是-mdx" class="table-of-contents__link toc-highlight">内容层：为什么最终文章仍然是 MDX</a></li><li><a href="#文章生成层为什么单独做-create-travel-article" class="table-of-contents__link toc-highlight">文章生成层：为什么单独做 <code>create-travel-article</code></a></li><li><a href="#照片元数据生成层为什么不在前端读-exif" class="table-of-contents__link toc-highlight">照片元数据生成层：为什么不在前端读 EXIF</a></li><li><a href="#地图数据生成层为什么还要多一层-travelmapgeneratedjson" class="table-of-contents__link toc-highlight">地图数据生成层：为什么还要多一层 <code>travelMap.generated.json</code></a><ul><li><a href="#1-地图只展示点不展示路线" class="table-of-contents__link toc-highlight">1. 地图只展示点，不展示路线</a></li><li><a href="#2-分类页用代表点而不是所有点硬铺开" class="table-of-contents__link toc-highlight">2. 分类页用代表点，而不是所有点硬铺开</a></li><li><a href="#3-章节  顺序继续从文章里继承" class="table-of-contents__link toc-highlight">3. 章节顺序继续从文章里继承</a></li></ul></li><li><a href="#展示层为什么拆成-travelgallery-和-travelmap" class="table-of-contents__link toc-highlight">展示层：为什么拆成 <code>TravelGallery</code> 和 <code>TravelMap</code></a><ul><li><a href="#travelgallery" class="table-of-contents__link toc-highlight"><code>TravelGallery</code></a></li><li><a href="#travelmap" class="table-of-contents__link toc-highlight"><code>TravelMap</code></a></li><li><a href="#为什么-sharedjs-要做成公共层" class="table-of-contents__link toc-highlight">为什么 <code>shared.js</code> 要做成公共层</a></li></ul></li><li><a href="#高德接入层为什么现在同时支持-servicehost-和-securityjscode" class="table-of-contents__link toc-highlight">高德接入层：为什么现在同时支持 <code>serviceHost</code> 和 <code>securityJsCode</code></a></li><li><a href="#坐标处理为什么选择渲染前转换而不是生成时覆盖" class="table-of-contents__link toc-highlight">坐标处理：为什么选择“渲染前转换”，而不是“生成时覆盖”</a></li><li><a href="#地图交互为什么默认折叠为什么只点开时加载" class="table-of-contents__link toc-highlight">地图交互：为什么默认折叠、为什么只点开时加载</a></li><li><a href="#移动端交互性能优化为什么现在要刻意减配" class="table-of-contents__link toc-highlight">移动端交互性能优化：为什么现在要刻意“减配”</a></li><li><a href="#这套实现为什么没有继续保留路线" class="table-of-contents__link toc-highlight">这套实现为什么没有继续保留“路线”</a></li><li><a href="#为什么这套实现适合你现在的工作方式" class="table-of-contents__link toc-highlight">为什么这套实现适合你现在的工作方式</a></li><li><a href="#以后继续扩展时优先遵守的规则" class="table-of-contents__link toc-highlight">以后继续扩展时，  优先遵守的规则</a><ul><li><a href="#1-不要手改生成-json" class="table-of-contents__link toc-highlight">1. 不要手改生成 JSON</a></li><li><a href="#2-新增地图组件时先复用-sharedjs" class="table-of-contents__link toc-highlight">2. 新增地图组件时先复用 <code>shared.js</code></a></li><li><a href="#3-新增内容优先走源稿---最终-mdx链路" class="table-of-contents__link toc-highlight">3. 新增内容优先走“源稿 -&gt; 最终 MDX”链路</a></li><li><a href="#4-生产环境优先走代理" class="table-of-contents__link toc-highlight">4. 生产环境优先走代理</a></li><li><a href="#5-不要把路线逻辑重新塞回来" class="table-of-contents__link toc-highlight">5. 不要把路线逻辑重新塞回来</a></li></ul></li><li><a href="#当前最常用的命令" class="table-of-contents__link toc-highlight">当前最常用的命令</a></li><li><a href="#以后看这套实现先从哪几个文件开始" class="table-of-contents__link toc-highlight">以后看这套实现，先从哪几个文件开始</a></li><li><a href="#一句话总结" class="table-of-contents__link toc-highlight">一句话总结</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v6.1.0</span></div></div></div></footer></div>
 </body>
 </html>
