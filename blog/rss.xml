@@ -9,17 +9,77 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
         <item>
-            <title><![CDATA[被 gpt-image-2 惊到了]]></title>
+            <title><![CDATA[gpt-image-2 不只是会画图了]]></title>
             <link>https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock</link>
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock</guid>
             <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[2026-04-21，OpenAI 发布了 Introducing ChatGPT Images 2.0。帮助中心同一天也写明了，它已经覆盖全部 ChatGPT plans / tiers；开发者文档里，gpt-image-2 也已经挂出了 gpt-image-2-2026-04-21 这个最新快照。]]></description>
-            <content:encoded><![CDATA[<p><code>2026-04-21</code>，OpenAI 发布了 <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer">Introducing ChatGPT Images 2.0</a>。帮助中心同一天也写明了，它已经覆盖全部 ChatGPT plans / tiers；开发者文档里，<code>gpt-image-2</code> 也已经挂出了 <code>gpt-image-2-2026-04-21</code> 这个最新快照。</p>
-<p>刚发布那会儿，我先是被别人用它生成的图片惊艳到了。不是那种“这次画风不错”的惊艳，而是很明显会让人觉得，图像模型又往前走了一步。今天我才真正自己上手试了一下，结果越试越觉得离谱。尤其是这张让它给我做的个人简历海报，出来的一瞬间，我直接愣了一下。</p>
-<p>过去我一直觉得，AI 生图很擅长做氛围、概念和情绪，但一旦要求画面里同时有很多信息、有排版、有文字、还有明确的人设，通常就会开始露怯。简历海报刚好就是最容易翻车的一类图，因为它不能只好看，还得像一张真的能传达内容的海报。</p>
-<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Ding Zhiyu HPC 简历海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/dingzhiyu-hpc-poster-form-ai.png" alt="gpt-image-2 生成的 Ding Zhiyu HPC 简历海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">它最让我震惊的，不是单纯把人画得像，而是把技术方向、履历信息和视觉气质一起组织进了一张真的能看的海报里。</figcaption></figure></section>
-<p>这次最让我震惊的，是它不只是把人画得像，也不只是堆了一层科技风元素，而是真的把名字、技术方向、项目经历、奖项和整体气质一起组织进去了。哪怕里面的小字和个别细节仍然值得人工复核，它也已经把最难的那部分先搭好了。</p>
-<p>所以我今天试完之后最强烈的感受是：<code>gpt-image-2</code> 已经不太像以前那种“帮你出一张灵感图”的工具了，它开始有点像“先替你搭一个接近成品的框架”。后面我大概还会继续试别的图，但至少今天，这张海报已经足够让我单独记一笔。</p>]]></content:encoded>
+            <description><![CDATA[事情是这样的。]]></description>
+            <content:encoded><![CDATA[<p>事情是这样的。</p>
+<p><code>2026-04-21</code>，OpenAI 发了 <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer">Introducing ChatGPT Images 2.0</a>。</p>
+<p>我一开始其实没太当回事。</p>
+<p>不是说不期待，而是这两年 AI 生图的惊艳时刻太多了，大家已经被训练得有点麻木。你给它一句话，它给你一张漂亮图。光影很好，氛围很好，细节也挺满。然后呢。</p>
+<p>然后很多时候就没有然后了。</p>
+<p>尤其是一到真正要干活的场景，问题就来了。你想让它做一张能用的海报，它开始胡写字。你想让它组织一堆信息，它开始把版面塞成一个五颜六色的 PPT 封面。你想让它兼顾人物、履历、技术方向和视觉风格，它经常会非常努力，然后非常露馅。</p>
+<p>所以刚发布那两天，我先在网上看了一圈别人用 ChatGPT Images 2.0 做出来的图，确实有点被打到，但还属于那种隔着屏幕看热闹的被打到。</p>
+<p>直到今天我自己上手试了一下。</p>
+<p>我把自己的信息丢进去，让它做一张个人简历海报。</p>
+<p>成图弹出来那一下，我真的愣了几秒。</p>
+<p>说实话，我以前对 AI 生图的预期是很固定的。</p>
+<p>它可以做氛围，可以做概念，可以做那种一眼看过去很爽的情绪图。比如赛博城市，未来实验室，雨夜霓虹，孤独背影，穿着风衣的人站在巨大的屏幕前。</p>
+<p>这种图当然好看。</p>
+<p>但它离真正的设计交付，中间隔着一条很宽的河。</p>
+<p>真正麻烦的不是画得像不像，而是它能不能把信息安放好。名字要在哪里，技术方向怎么呈现，项目经历怎么分层，奖项和技能怎么不打架，整张图看上去是不是一个统一的视觉系统，而不是一堆素材被强行按在画布上。</p>
+<p>简历海报刚好是这类场景的压力测试。</p>
+<p>它不能只好看。</p>
+<p>它还得讲清楚。</p>
+<p>它不能只是很有科技感。</p>
+<p>它还得像一张真的能拿出去给人看的设计初稿。</p>
+<p>这就很要命了。因为 AI 生图以前最容易翻车的，恰恰就是这些地方。文字会错，排版会乱，信息层级会塌，人物会像从另一个模型里临时借来的，背景会变成那种蓝光电路线大杂烩。</p>
+<p>我跟你说，那个味儿太熟了。</p>
+<p>就是所有东西看起来都很 AI，但没有一处真的像人在做设计。</p>
+<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Ding Zhiyu HPC 简历海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/dingzhiyu-hpc-poster-form-ai.png" alt="gpt-image-2 生成的 Ding Zhiyu HPC 简历海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">最让我意外的不是人像有多像，而是它真的把技术方向、履历信息和版式放到了一张像样的海报里。</figcaption></figure></section>
+<p>但这张图给我的感觉不太一样。</p>
+<p>最让我意外的不是人像有多像。</p>
+<p>真的不是。</p>
+<p>人像这件事当然重要，但我看到这张图的时候，第一反应反而是，它居然在认真处理信息。</p>
+<p>它没有只盯着脸，也没有只往画面上贴蓝光、电路、HUD、六边形网格这些科技感老三样。它把名字、HPC、项目经历、奖项、技术方向这些东西放到了一个相对统一的版式里，而且整个画面有主次，有留白，有视觉重心。</p>
+<p>不是完美。</p>
+<p>小字肯定还要人工校对，有些细节也不能直接拿来当最终版。比如某些描述是否准确，某些排版是否符合真实简历的严肃程度，这些还是要人来收口。</p>
+<p>但问题是，它已经不是那种只能拿来发朋友圈说一句好酷的图了。</p>
+<p>它像一个可以被讨论的初稿。</p>
+<p>这个变化其实挺大的。</p>
+<p>因为很多创作任务最折磨人的地方，不是最后那 20% 的精修，而是最开始那一片空白。你脑子里知道自己要一个东西，但说不清它具体长什么样。你打开设计软件，画布白得发亮，鼠标在那儿晃半天，最后去找参考图，一找就是一个小时。</p>
+<p>说到这里你应该能懂我为什么兴奋了。</p>
+<p><code>gpt-image-2</code> 这次让我感兴趣的点，不是它替你做完了设计，而是它把第一张能看的东西推到了你面前。</p>
+<p>你可以说这个字要改。</p>
+<p>你可以说这里太满了。</p>
+<p>你可以说项目经历应该更突出，奖项不要压过名字，HPC 的技术感可以再克制一点。</p>
+<p>但你终于不是对着空气说话了。</p>
+<p>你是在对着一张已经存在的图说话。</p>
+<p>坦率地说，这才是 AI 工具真正开始有用的地方。不是替你一键生成一个完美成品，而是把你的想法从一团雾里拽出来，变成一个可以被看见、被指出问题、被继续修改的对象。</p>
+<p>我有时候觉得，很多人讨论 AI 创作时太爱走极端。</p>
+<p>一边说设计师要完蛋了。</p>
+<p>一边说 AI 永远不可能理解真正的审美。</p>
+<p>这两个判断我都不太想站。</p>
+<p>因为真正发生的事情，可能没有那么戏剧化。它更像是工作流里某个很烦人的环节突然被削薄了。不是从此没有设计师了，而是从此那个从零开始憋第一稿的痛苦，可能会少很多。</p>
+<p>你还是需要判断力。</p>
+<p>你还是需要审美。</p>
+<p>你还是需要知道什么信息该突出，什么细节必须删掉，什么地方看着高级但其实是廉价的套路。</p>
+<p>只是以前这些能力要先穿过一大片空白画布才能发挥作用，现在它可能先给你一个靶子。</p>
+<p>这就很不一样。</p>
+<p>回到这次的 <code>gpt-image-2</code>。</p>
+<p>官方帮助中心里说，ChatGPT Images 2.0 已经覆盖所有订阅层级，开发者文档里 <code>gpt-image-2</code> 也是最新的 GPT Image 模型，快照能锁到 <code>gpt-image-2-2026-04-21</code>。这些信息本身当然重要，但如果只是复述参数和发布节奏，其实没什么意思。</p>
+<p>真正有意思的是，它在把图像生成从漂亮图片往复杂视觉任务推进。</p>
+<p>海报、信息图、讲义、简历、活动物料、产品图、课程封面，这些东西以前不是不能用 AI 做，而是经常做到一半就让人想叹气。因为它太会生成，但不太会组织。</p>
+<p>而这次，我第一次比较强烈地感觉到，它开始会组织了。</p>
+<p>当然，我现在说这些也还早。</p>
+<p>一张图不能代表全部，尤其是这种刚发布不久的模型，兴奋很容易，冷静下来做十几轮测试才有资格下结论。我后面应该还会继续试别的图，尤其是多语言文字、复杂信息图、项目展示页这些更难的场景。</p>
+<p>但今天这张简历海报，确实值得单独记一笔。</p>
+<p>它让我意识到一件事。</p>
+<p>AI 生图最有价值的方向，可能不只是让普通人做出一张漂亮图。</p>
+<p>更重要的是，它让普通人更快拥有一个可以开始修改的东西。</p>
+<p>从空白到初稿。</p>
+<p>就这一步，已经很大了。</p>]]></content:encoded>
             <category>thoughts</category>
         </item>
         <item>
@@ -30,7 +90,7 @@
             <description><![CDATA[4 月 18 日周六晚上，和朋友们在「川西火焰山西昌火盆烧烤(新都格林城市花园店)」小聚了一下。说是小聚，其实也没有什么特别隆重的安排，就是找个地方坐下来，围着一盆炭火，点几样想吃的东西，喝一点小酒，把最近的生活慢慢聊开。]]></description>
             <content:encoded><![CDATA[<p>4 月 18 日周六晚上，和朋友们在「川西火焰山西昌火盆烧烤(新都格林城市花园店)」小聚了一下。说是小聚，其实也没有什么特别隆重的安排，就是找个地方坐下来，围着一盆炭火，点几样想吃的东西，喝一点小酒，把最近的生活慢慢聊开。</p>
 <p>这种饭局最舒服的地方，是它不急。肉串架到火盆边上以后，不能马上吃，只能等炭火一点点把油脂逼出来。跑山小香猪、麻辣嫩牛肉、香烤五花肉、香烤猪皮，一串串摆开的时候，桌面上已经有了很踏实的烟火气。</p>
-<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：火盆上的肉串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9549_FriendsMeet.jpg" alt="火盆上的肉串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">围着炭火慢慢烤，肉串的香气一点点被逼出来。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：��腌好的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9550_FriendsMeet.jpg" alt="腌好的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">跑山小香猪在盘子里排好队。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火边的烤串近景"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9555_FriendsMeet.jpg" alt="炭火边的烤串近景" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">有些时候，等待肉熟的过程本身就很适合聊天。</figcaption></figure></section>
+<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：火盆上的肉串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9549_FriendsMeet.jpg" alt="火盆上的肉串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">围着炭火慢慢烤，肉串的香气一点点被逼出来。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：腌好的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9550_FriendsMeet.jpg" alt="腌好的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">跑山小香猪在盘子里排好队。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火边的烤串近景"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9555_FriendsMeet.jpg" alt="炭火边的烤串近景" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">有些时候，等待肉熟的过程本身就很适合聊天。</figcaption></figure></section>
 <p>我一直觉得，火盆烧烤比很多已经烤好端上来的烧烤更适合朋友局。它会自然地把节奏放慢：有人看火，有人翻面，有人提醒快糊了，有人负责先尝一口。肉还没熟的时候，话就已经接上了；等肉真的能吃了，桌上的气氛也就热起来了。</p>
 <p>这顿饭里让我印象最深的，反而是调料盘。以前吃烧烤，最熟悉的当然是辣椒面，香、辣、直接，蘸一下就很有存在感。但这次盘子里还有黄豆粉，我第一次试着把烤好的肉串蘸黄豆粉吃，结果非常惊艳。</p>
 <p>黄豆粉不像辣椒面那样一上来就抢味道，它更像是给炭火味垫了一层柔和的香。烤肉本身有油脂，炭火又带一点焦香，蘸上黄豆粉以后，入口会更圆一点，香气也更厚一点。那种感觉不是单纯的“更重口”，而是忽然发现烧烤还能有另一种吃法：没有那么冲，却很耐吃。</p>
@@ -38,7 +98,7 @@
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：朋友倒汾酒"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9554_FriendsMeet.jpg" alt="朋友倒汾酒" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">小杯倒上汾酒，一杯二两必须一样高！</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火上的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9566_FriendsMeet.jpg" alt="炭火上的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">炭火烧得正旺，串在火边一点点变得有焦香。</figcaption></figure></section>
 <p>素菜也很适合放在这顿里慢慢吃。茄子吸味，藕片脆，洋葱烤过以后甜味会出来，生菜可以把刚烤好的肉包起来。炭火慢炙，鲜润的鱿鱼渐渐褪去紧实，变得软糯柔韧。裹挟着洋葱的清甜辛香，烟火入味，分寸恰好。</p>
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：烤鱼和藕片"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9578_FriendsMeet.jpg" alt="烤鱼和藕片" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">烤盘上铺着茄子、葱、芹菜粒、小米辣和藕片，热油和炭火味混在一起。</figcaption></figure></section>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直��接链接">​</a></h2>
 <p>这次桌上喝了汾酒，也喝了朝日啤酒。它们放在同一顿烧烤里，其实还挺有意思：一个是白酒里的清香型代表，一个是主打干爽收口的啤酒。</p>
 <p>汾酒是清香型白酒的典型代表，产地和山西汾阳杏花村联系很深。清香型给人的感觉通常不是厚重堆叠，而是比较干净、利落。放在烧烤桌上，小杯慢慢喝，反而不会把肉串和调料的味道压过去。尤其是这种带炭火味的饭局，白酒如果太甜太厚，很容易抢戏；汾酒这种清爽一点的路子，和烤肉的油脂感是能搭上的。</p>
 <p>朝日啤酒走的是另一条线。Super Dry 诞生于 1987 年，主打的是 <code>Karakuchi</code> 风格，也就是干爽、清冽、收口快。它适合配烧烤的原因也很直接：肉串有油脂，辣椒面和黄豆粉会让口腔里的味道变丰富，这时候喝一口冰一点、收口干净的啤酒，能把前一口的油香和辣味轻轻带走，让人很自然地想吃下一串。</p>
@@ -60,6 +120,114 @@
 <p>这几年我越来越警惕一类话术：表面上是在教你进场，实际上是在借你的焦虑变现。判断一个行业是不是开始走下坡路，有个不一定绝对、但很有参考价值的信号：这个行业里是不是越来越多人开始教别人怎么挣钱。</p>
 <p>一个行业真正还在上升的时候，大多数人会把精力放在里面继续狠狠干，因为直接做事本身就更挣钱。只有当一些人发现一线的钱没那么好赚了，才会把自己积累的经验拆出来，包装成课程、社群、咨询、方法论，做第二次变现。说难听一点，你很可能就是他准备退场前，顺手再赚的一波。</p>
 <p>所以人要勇敢，也要强大。勇敢，是敢自己判断，不轻易被别人的成功学牵着走。强大，是能分清什么是真机会，什么只是别人给自己找退路时顺手摆出来的诱饵。</p>]]></content:encoded>
+            <category>thoughts</category>
+        </item>
+        <item>
+            <title><![CDATA[Agent 真正难的不是模型多聪明]]></title>
+            <link>https://docs.nevergpdzy.cn/blog/2026/04/07/agent-harness</link>
+            <guid>https://docs.nevergpdzy.cn/blog/2026/04/07/agent-harness</guid>
+            <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[事情是这样的。]]></description>
+            <content:encoded><![CDATA[<p>事情是这样的。</p>
+<p>4 月 7 日，我花了一点时间读 LangChain 的这篇文章，<a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/" target="_blank" rel="noopener noreferrer">The Anatomy of an Agent Harness</a>。</p>
+<p>一开始我是冲着 harness 这个词去的。</p>
+<p>因为这个词最近在 Agent 圈子里出现得越来越频繁，但它又有点尴尬。你要是直接翻译成「马具」或者「束具」，听着很奇怪。翻译成「框架」又太轻了，好像只是写几层代码封装一下。翻译成「外骨骼」可能更接近一点，但也不完全准确。</p>
+<p>反正就是这么一个词。</p>
+<p>它说的是，模型外面那一整套让 Agent 真正能做事的系统。</p>
+<p>我读完之后最大的感受是，过去我们可能太喜欢盯着模型本身了。</p>
+<p>哪个模型更聪明。</p>
+<p>哪个模型推理更强。</p>
+<p>哪个模型写代码更猛。</p>
+<p>这些当然重要。你不能拿一个很弱的模型，硬说靠工程就能补回来。这个不现实。</p>
+<p>但如果你真的用过 Claude Code、Codex、Cursor，或者自己用 LangGraph、OpenAI Agents SDK、CrewAI 这些东西搭过 Agent，你会很快发现一个很烦人的问题。</p>
+<p>模型聪明，不等于系统可靠。</p>
+<p>它能想到下一步，不等于它知道什么时候该停。</p>
+<p>它能调用工具，不等于它知道哪些工具不能乱用。</p>
+<p>它能写文件，不等于它知道怎么回滚一个坏改动。</p>
+<p>它能读上下文，不等于它不会在十几轮之后把自己绕晕。</p>
+<p>这就很像一个特别聪明的人坐进一辆没有方向盘、没有刹车、没有仪表盘的车里。</p>
+<p>脑子很好。</p>
+<p>车不行。</p>
+<p>LangChain 这篇文章最打动我的地方，是它把这个问题讲得非常具体。它不是在抽象地说 Agent 需要工程化，而是把 harness 拆开给你看，planning、filesystem、subagents、stateful middleware、context engineering、tool permission、evaluation loop。</p>
+<p>每个词看起来都不性感。</p>
+<p>但每个都很要命。</p>
+<p>比如 planning。</p>
+<p>很多人会觉得，计划不就是让模型写个 todo 吗。听起来很普通对吧。</p>
+<p>但你想想看，一个 Agent 做复杂任务的时候，最常见的问题是什么。不是它完全不会做，而是它做着做着就跑偏了。刚开始说要修一个 bug，修到一半突然开始重构整个项目。刚开始说要写一篇文章，写到一半开始补一堆和主题关系不大的背景。</p>
+<p>这个时候，计划不是装饰。</p>
+<p>计划是绳子。</p>
+<p>不是为了限制模型，而是为了让它隔一段时间能回头看一眼，自己到底在干嘛。</p>
+<p>filesystem 也一样。</p>
+<p>以前我们总觉得上下文窗口越长越好。窗口越长，模型记得越多，Agent 就越强。</p>
+<p>这话只对一半。</p>
+<p>长上下文确实有用，但你不能把所有东西都塞进上下文里。代码仓库、日志、草稿、资料、历史尝试、中间结果，全塞进去之后，模型看起来什么都知道，实际上注意力会变得很散。</p>
+<p>文件系统就是另一个脑子。</p>
+<p>该记的先写下来，该看的时候再读回来。你不用把整个世界都塞进 prompt，你只需要让模型知道，东西放在哪，什么时候取。</p>
+<p>这也是我这两天越来越强烈的一个感受。</p>
+<p>Agent 不是一个更会聊天的模型。</p>
+<p>Agent 是一个会被放进环境里的模型。</p>
+<p>环境一复杂，问题就变了。</p>
+<p>早期 ReAct 那套东西其实已经把这个问题露出来了。模型先想一步，再行动，再观察，再继续想。那时候还是很朴素的 <code>Thought</code>、<code>Action</code>、<code>Observation</code>，有点像在提示词里手搓一个小型操作循环。</p>
+<p>后来 AutoGPT 火了一阵，大家第一次看到模型可以自己拆任务、搜索、写文件、继续迭代，感觉很震撼。</p>
+<p>然后很快也看到了另一面。</p>
+<p>它会迷路。</p>
+<p>它会陷入循环。</p>
+<p>它会非常努力地忙一大圈，最后交出来一个让人不知道该怎么评价的东西。</p>
+<p>那一刻其实就已经说明，模型自己会想还不够。你还得给它状态，给它权限，给它工具边界，给它错误恢复，给它人类插手的位置。</p>
+<p>回到 harness 这块。</p>
+<p>我觉得 LangChain 这篇文章真正想说的，不是「我们又发明了一个新概念」。</p>
+<p>它更像是在提醒大家，Agent 能力有一大块藏在模型外面。</p>
+<p>文章里有个例子挺有意思，他们说在模型不变的情况下，通过改 harness，把编程 Agent 在 Terminal Bench 2.0 上的排名从 Top 30 提到了 Top 5。</p>
+<p>这个结果不能被神化，benchmark 这个东西永远只是一块切片。</p>
+<p>但它足够说明问题。</p>
+<p>同一个模型，放进不同的系统里，表现会差很多。</p>
+<p>这其实跟人很像。</p>
+<p>一个聪明人，如果每天没有日程，没有文档，没有协作工具，没有复盘机制，没有人提醒他优先级，他也会乱。反过来，一个能力没那么夸张的人，如果有很好的流程、笔记、工具和反馈系统，也能稳定产出很不错的东西。</p>
+<p>Agent 也是这样。</p>
+<p>模型是脑子。</p>
+<p>harness 是工作习惯。</p>
+<p>说到这里，我突然理解为什么 Claude Code 这种产品会让人上头了。</p>
+<p>它不是只给你一个更会写代码的模型。它给了模型一个很具体的工作场景。它能读 repo，能改文件，能跑测试，能看报错，能跟你确认危险操作，能在一个任务里持续推进。</p>
+<p>这些体验背后，都是 harness。</p>
+<p>OpenAI Agents SDK 也是这个方向。它把 agent、handoff、guardrail、session、tracing 这些概念往 SDK 里收。Anthropic 推 MCP，其实是在试图把模型连接外部工具这件事标准化。LangGraph 则更像给开发者一个可控的 Agent 运行时，让状态、分支、人类介入、持久执行这些东西不要全靠你自己手搓。</p>
+<p>你看，大家嘴上都在讲 Agent。</p>
+<p>但真正竞争的地方，越来越像是在讲谁的外壳更好。</p>
+<p>这件事对普通开发者也挺重要。</p>
+<p>如果你只是玩玩，随便找个产品就行。Claude Code 好用就用 Claude Code，Cursor 顺手就用 Cursor，OpenAI Agents SDK 方便就用 OpenAI Agents SDK。</p>
+<p>但如果你真的要把 Agent 放进自己的业务里，就不能只问模型强不强。</p>
+<p>你还得问，它的记忆放在哪。</p>
+<p>工具权限谁管。</p>
+<p>失败了怎么恢复。</p>
+<p>日志能不能回放。</p>
+<p>人能不能在关键节点插手。</p>
+<p>以后换模型的时候，这套工作流能不能带走。</p>
+<p>这个问题越往后越重要。</p>
+<p>因为 Agent 用久了之后，最值钱的东西可能不是某一次回答，而是它积累下来的工作方式。它知道你怎么写代码，知道你怎么整理资料，知道你团队的流程，知道哪些命令危险，知道哪些文件不能碰。</p>
+<p>这些东西如果全沉在某个闭源产品里，你短期会很舒服。</p>
+<p>长期就会有点慌。</p>
+<p>不是说闭源产品不好。</p>
+<p>我自己也用，而且很多时候确实好用。</p>
+<p>只是我们得知道，自己交出去的到底是什么。</p>
+<p>以前我们说模型供应商卖的是智能。现在看，未来它们可能卖的是一整套工作环境。你在里面工作得越久，它越懂你，你也越离不开它。</p>
+<p>大时代啊，朋友们。</p>
+<p>所以我现在看 Agent，心态跟以前不太一样了。</p>
+<p>以前看到一个新 Agent demo，我会先问，它用了什么模型。</p>
+<p>现在我会先问，它的 harness 是什么。</p>
+<p>它有没有计划系统。</p>
+<p>有没有外部记忆。</p>
+<p>有没有工具权限。</p>
+<p>有没有可观察性。</p>
+<p>有没有回滚和评估。</p>
+<p>它到底是一个会聊天的聪明脑袋，还是一个真的能稳定做事的小型系统。</p>
+<p>差别就在这里。</p>
+<p>4 月 7 日读完这篇文章之后，我脑子里一直有一个画面。</p>
+<p>一个模型站在舞台中央，大家都在看它有多聪明。</p>
+<p>但灯光、音响、提词器、后台调度、舞台机械、紧急刹车，全都藏在暗处。</p>
+<p>观众看到的是演员。</p>
+<p>真正决定演出能不能顺利完成的，是整套剧场。</p>
+<p>Agent 也是这样。</p>
+<p>我们当然还会继续追更强的模型。</p>
+<p>但可能从现在开始，也得认真看看模型脚下那套剧场了。</p>]]></content:encoded>
             <category>thoughts</category>
         </item>
         <item>
@@ -96,7 +264,7 @@
 <p>徐强教授的回答并不悲观。他并不认为科研能力会被少数“天赋型选手”彻底固化。大模型会放大效率差距，这一点很可能是真的；但科研思维本身是可以训练的。如何察觉一个问题的价值，如何辨别信息是否可靠，如何组织自己的研究过程，这些都不是不可学习的神秘天赋，而是可以靠长期训练建立起来的能力。</p>
 <p>他还提到，读论文时最重要的，不只是看作者得出了什么结论，而是去想：他是怎么走到这条路上的？一个成熟研究者真正需要培养的，不只是知识储备，更是研究品味和判断力。你不只是要会“读懂论文”，更要会看出问题是如何被发现、定义、推进和解决的。</p>
 <p>这一点非常重要。因为 AI 可以帮你更快地总结论文、提取信息、生成思路，但如果你没有判断力，就很容易被看似流畅、实际上空洞的内容牵着走。工具越强，判断力越稀缺。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-时代教育最��该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-时代教育最该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接">​</a></h2>
 <p>报告里还有一部分关于教育的讨论，也让我印象很深。</p>
 <p>在 AI 的帮助下，知识获取和技能学习会越来越“平权”。很多过去必须靠长期积累才能掌握的内容，今天正在变得更容易触达、更容易调用。但这并不意味着教育会变轻松，恰恰相反，它可能会变得更难。</p>
 <p>因为当知识本身越来越容易获得时，真正稀缺的就不再是记住多少内容，而是判断什么值得学、什么值得做、什么值得相信。未来真正重要的，可能不只是教学生掌握知识，而是培养他们的判断力、选择能力、批判性思维，以及围绕真实兴趣形成问题意识的能力。</p>
@@ -113,7 +281,7 @@
 <p>科研的核心价值不应仅限于发表论文（citation），更应体现在能否被 AI Agent 调用和产生实际的社会影响力。</p>
 <p>未来的科研交付物应包含可被 Agent 调用的工具、API、Benchmark 或 Ground Truth 等基础设施，以确保工作的长期生命力和生态位。</p>
 <p>提出了“Rose 法则”作为新的科研评判标准：解决一个真实需求（R），具备原创性（O），具有重要性（S）和优雅性（E）。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统�的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%EF%BF%BD%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接">​</a></h3>
 <p>针对 Agent 系统存在的不确定性、不可控性及潜在风险，提出构建一个“监管内核”（OS），作为 Agent 的“缰绳”。</p>
 <p>该内核通过将大语言模型（LLM）的语义输出映射为确定性的指令集，结合规则进行边界检查和拦截，形成“神经符号系统”。</p>
 <p>目标是让 LLM 负责创造可能性和制定计划，而监管内核则负责守住边界，确保系统安全、可靠地执行。</p>
