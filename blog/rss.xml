@@ -4,10 +4,65 @@
         <title>NeverGpDzy Blog</title>
         <link>https://docs.nevergpdzy.cn/blog</link>
         <description>NeverGpDzy Blog</description>
-        <lastBuildDate>Thu, 23 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 25 Apr 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[gpt-image-2 又打动我了]]></title>
+            <link>https://docs.nevergpdzy.cn/blog/2026/04/25/gpt-image-2-f1-driver-posters</link>
+            <guid>https://docs.nevergpdzy.cn/blog/2026/04/25/gpt-image-2-f1-driver-posters</guid>
+            <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[这次不是简历海报，而是一组 F1 车手海报。记录 gpt-image-2 把私人热爱变成可收藏画面的那一下。]]></description>
+            <content:encoded><![CDATA[<p>4 月 25 日，我又拿 <code>gpt-image-2</code> 玩了一轮。</p>
+<p>这次没有继续做简历海报，也没有正儿八经去测什么复杂信息图。我只是做了一件很私人的小事，把自己喜欢的几位 F1 车手，生成成一组海报。</p>
+<p>然后我又被打到了。</p>
+<p>前几天我刚写过一次 <code>gpt-image-2</code>，那篇里已经聊过它为什么不只是会画图了，所以今天就不再重复模型发布、参数、能力边界这些东西。那些当然重要，但对我来说，真正有意思的变化其实发生在更小的地方。</p>
+<p>就是你突然发现，它不只是能帮你做一个工作里的视觉初稿。</p>
+<p>它也能把你的私人审美，变成一张真的想留下来的图。</p>
+<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Max Verstappen Red Bull 主题海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/max-verstappen-red-bull-poster.png" alt="gpt-image-2 生成的 Max Verstappen Red Bull 主题海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">Max Verstappen，Red Bull 主题海报。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Oscar Piastri McLaren 主题海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/oscar-piastri-mclaren-portrait-poster.png" alt="gpt-image-2 生成的 Oscar Piastri McLaren 主题海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">Oscar Piastri，McLaren 主题海报。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Charles Leclerc Ferrari 主题海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/charles-leclerc-ferrari-poster.png" alt="gpt-image-2 生成的 Charles Leclerc Ferrari 主题海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">Charles Leclerc，Ferrari 主题海报。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：gpt-image-2 生成的 Kimi Antonelli Mercedes-AMG Petronas 主题海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/kimi-antonelli-mercedes-amg-petronas-poster.png" alt="gpt-image-2 生成的 Kimi Antonelli Mercedes-AMG Petronas 主题海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">Kimi Antonelli，Mercedes-AMG Petronas 主题海报。</figcaption></figure></section>
+<p>F1 这个题材很适合做海报。</p>
+<p>车手本身就是人物，车队又自带颜色、符号和视觉语言。红牛、迈凯伦、法拉利、梅赛德斯，这些名字不用展开讲太多，喜欢赛车的人看到它们，脑子里会自动浮现一整套东西：赛车涂装、头盔、P 房、发车灯、无线电、领奖台，还有那些周末晚上盯着直播时的紧张感。</p>
+<p>这跟普通的“生成一张好看的赛车图”不太一样。</p>
+<p>普通赛车图只要够快、够炫、够有速度感，大概就能糊弄过去。但车手海报不行。它必须同时处理两件事，一边是公共符号，一边是私人情绪。</p>
+<p>公共符号是大家都认识的那部分。车队色彩、赞助块、赛车运动里的速度感、人物肖像的中心位置，这些东西如果丢了，图就不像 F1。</p>
+<p>私人情绪是只有自己在乎的那部分。你为什么喜欢这个车手，为什么愿意把他的图单独做成一张海报，为什么看到某种颜色和姿态会觉得对味，这些东西很难直接写进提示词里。你可以描述，但描述永远不是完整的。</p>
+<p>所以成图弹出来那一瞬间，如果它刚好对上了，人会很明显地愣一下。</p>
+<p>那种愣，不是因为它“画得真像”这么简单。</p>
+<p>更像是，你脑子里一直有一个模糊的收藏柜，里面放着车手、车队、比赛记忆和自己的审美偏好。以前这些东西只能散着放，存在壁纸里，存在截图里，存在某个比赛周末之后的情绪里。现在 <code>gpt-image-2</code> 突然把它们收进了一张海报。</p>
+<p>这一下就很爽。</p>
+<p>说真的，我越来越觉得，AI 生图最容易被低估的价值，不是让一个人省掉多少设计费，也不是让一张图从 70 分变成 90 分。</p>
+<p>它更像是在帮普通人完成一种过去很难完成的表达。</p>
+<p>你喜欢 F1，你喜欢某几个车手，你想要一组属于自己的视觉收藏。这个需求不大，不宏大，也不一定值得专门找设计师做一整套。但它对你自己是有意义的。</p>
+<p>以前这种小需求经常会被压下去。</p>
+<p>因为成本太高了。你要找参考，要拼图，要调色，要抠图，要排版。真做起来，热情还没消失，耐心先被磨掉一半。</p>
+<p>但现在不一样了。</p>
+<p>你可以很快把那团感觉丢给 <code>gpt-image-2</code>，让它先给你一个看得见的东西。它不一定完美，肯定也还有很多地方要人工判断，比如人物是否准确、队伍元素是否合适、文字有没有问题、画面是不是过度戏剧化。</p>
+<p>但它已经把最难的那一步推过去了。</p>
+<p>从“我想要一张这样的海报”，到“这张海报哪里还可以改”，中间的距离突然变短了。</p>
+<p>这就是我这次最强烈的感受。</p>
+<p>上一篇写简历海报的时候，我更兴奋的是它开始能组织信息了。那是一个偏工作流的判断。它让空白画布变成一个能讨论的初稿，让你可以指出哪里要改、哪里要删、哪里要继续强化。</p>
+<p>这次 F1 车手海报让我兴奋的点更私人一点。</p>
+<p>它让我意识到，生成模型不只是能帮我们更快完成任务，它还会让一些很小、很个人、以前不值得启动复杂流程的愿望，突然变得可执行。</p>
+<p>给喜欢的车手做一组海报。</p>
+<p>给某个游戏角色做一套收藏卡。</p>
+<p>给一段旅行记忆做成电影海报。</p>
+<p>给自己喜欢的一首歌、一台车、一段关系、一座城市，生成一张只属于自己的视觉纪念。</p>
+<p>这些东西从商业角度看可能都不大，但从个人生活角度看，很有重量。</p>
+<p>因为人本来就会给自己喜欢的东西留位置。有人买模型，有人贴海报，有人收车票，有人保存比赛截图。我们留住这些东西，不是因为它们有多稀缺，而是因为它们能把某一部分自己固定下来。</p>
+<p><code>gpt-image-2</code> 这次让我再次惊艳的地方，就在这里。</p>
+<p>它不是简单地把 F1 画得更帅。</p>
+<p>它是让一个喜欢 F1 的人，突然拥有了一组可以挂进自己世界里的图。</p>
+<p>这件事听起来很小。</p>
+<p>但我觉得还挺重要的。</p>
+<p>因为 AI 最有意思的时刻，往往不是它显得多么全能，而是它刚好接住了你一个很具体的念头。你没有准备写需求文档，没有准备开项目，也没有准备做一件多严肃的事。</p>
+<p>你只是突然想试一下。</p>
+<p>然后它真的给了你一个惊喜。</p>
+<p>就像 4 月 25 日这组 F1 车手海报。</p>
+<p>我本来只是想玩一下。</p>
+<p>结果又被它认真对待了一次。</p>]]></content:encoded>
+            <category>thoughts</category>
+        </item>
         <item>
             <title><![CDATA[gpt-image-2 不只是会画图了]]></title>
             <link>https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock</link>
@@ -98,7 +153,7 @@
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：朋友倒汾酒"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9554_FriendsMeet.jpg" alt="朋友倒汾酒" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">小杯倒上汾酒，一杯二两必须一样高！</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火上的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9566_FriendsMeet.jpg" alt="炭火上的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">炭火烧得正旺，串在火边一点点变得有焦香。</figcaption></figure></section>
 <p>素菜也很适合放在这顿里慢慢吃。茄子吸味，藕片脆，洋葱烤过以后甜味会出来，生菜可以把刚烤好的肉包起来。炭火慢炙，鲜润的鱿鱼渐渐褪去紧实，变得软糯柔韧。裹挟着洋葱的清甜辛香，烟火入味，分寸恰好。</p>
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：烤鱼和藕片"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9578_FriendsMeet.jpg" alt="烤鱼和藕片" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">烤盘上铺着茄子、葱、芹菜粒、小米辣和藕片，热油和炭火味混在一起。</figcaption></figure></section>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直��接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直接链接">​</a></h2>
 <p>这次桌上喝了汾酒，也喝了朝日啤酒。它们放在同一顿烧烤里，其实还挺有意思：一个是白酒里的清香型代表，一个是主打干爽收口的啤酒。</p>
 <p>汾酒是清香型白酒的典型代表，产地和山西汾阳杏花村联系很深。清香型给人的感觉通常不是厚重堆叠，而是比较干净、利落。放在烧烤桌上，小杯慢慢喝，反而不会把肉串和调料的味道压过去。尤其是这种带炭火味的饭局，白酒如果太甜太厚，很容易抢戏；汾酒这种清爽一点的路子，和烤肉的油脂感是能搭上的。</p>
 <p>朝日啤酒走的是另一条线。Super Dry 诞生于 1987 年，主打的是 <code>Karakuchi</code> 风格，也就是干爽、清冽、收口快。它适合配烧烤的原因也很直接：肉串有油脂，辣椒面和黄豆粉会让口腔里的味道变丰富，这时候喝一口冰一点、收口干净的啤酒，能把前一口的油香和辣味轻轻带走，让人很自然地想吃下一串。</p>
@@ -281,7 +336,7 @@
 <p>科研的核心价值不应仅限于发表论文（citation），更应体现在能否被 AI Agent 调用和产生实际的社会影响力。</p>
 <p>未来的科研交付物应包含可被 Agent 调用的工具、API、Benchmark 或 Ground Truth 等基础设施，以确保工作的长期生命力和生态位。</p>
 <p>提出了“Rose 法则”作为新的科研评判标准：解决一个真实需求（R），具备原创性（O），具有重要性（S）和优雅性（E）。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%EF%BF%BD%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接">​</a></h3>
 <p>针对 Agent 系统存在的不确定性、不可控性及潜在风险，提出构建一个“监管内核”（OS），作为 Agent 的“缰绳”。</p>
 <p>该内核通过将大语言模型（LLM）的语义输出映射为确定性的指令集，结合规则进行边界检查和拦截，形成“神经符号系统”。</p>
 <p>目标是让 LLM 负责创造可能性和制定计划，而监管内核则负责守住边界，确保系统安全、可靠地执行。</p>
@@ -289,7 +344,7 @@
 <p>科研价值与“水论文”：强调硬核科研的价值在于对问题的深刻洞察和解决，而非简单的重复劳动。自动化“水论文”系统缺乏认知增益，而高质量的科研过程本身对锻炼个人能力有益。</p>
 <p>AI 工具的使用：认为 AI 工具（如大模型）能有效抹平不同能力的研究人员在技能层面的差距，但核心的“科研思维”如如何提出有价值的问题、如何与 AI 有效沟通、如何判断信息真伪，仍是需要训练和培养的。</p>
 <p>教育模式的演变：面对 AI 对知识获取方式的冲击，教育应转向培养学生的核心判断力、批判性思维和跨领域整合能力，而非单纯的知识灌输。课堂的角色应转变为引导学生解决问题和进行深度交流。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="待办">待办<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BE%85%E5%8A%9E" class="hash-link" aria-label="待办的直接链接" title="待办的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="待办">待办<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BE%85%E5%8A%9E" class="hash-link" aria-label="待办的直接链��接" title="待办的直接链接">​</a></h3>
 <ol>
 <li>开源项目发布</li>
 </ol>
