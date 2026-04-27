@@ -128,7 +128,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Motorsport" term="Motorsport"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[gpt-image-2 又打动我了]]></title>
@@ -187,7 +187,8 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Tech" term="Tech"/>
+        <category label="Motorsport" term="Motorsport"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[gpt-image-2 不只是会画图了]]></title>
@@ -265,7 +266,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Tech" term="Tech"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[炭火、朋友和一点小酒]]></title>
@@ -295,7 +296,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="life-log" term="life-log"/>
+        <category label="Life" term="Life"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[做勇敢的人，做强大的人]]></title>
@@ -313,7 +314,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Essay" term="Essay"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Agent 真正难的不是模型多聪明]]></title>
@@ -425,7 +426,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Tech" term="Tech"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Paper 已死，硬核科研当立]]></title>
@@ -502,7 +503,7 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Research" term="Research"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[模拟器、下厨和一点微醺]]></title>
@@ -523,7 +524,8 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="life-log" term="life-log"/>
+        <category label="Life" term="Life"/>
+        <category label="Motorsport" term="Motorsport"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[阿Q与精神胜利法]]></title>
@@ -542,6 +544,6 @@
             <name>DingZhiyu</name>
             <uri>https://nevergpdzy.cn</uri>
         </author>
-        <category label="thoughts" term="thoughts"/>
+        <category label="Essay" term="Essay"/>
     </entry>
 </feed>
