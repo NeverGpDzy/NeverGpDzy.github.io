@@ -10,9 +10,9 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="NeverGpDzy" href="/opensearch.xml">
-<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.4023b5cd.css">
-<script src="/assets/js/runtime~main.61c4a399.js" defer="defer"></script>
-<script src="/assets/js/main.8e9848a5.js" defer="defer"></script>
+<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.110de7fc.css">
+<script src="/assets/js/runtime~main.5aff2139.js" defer="defer"></script>
+<script src="/assets/js/main.2b3da90e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -26,46 +26,47 @@
 <ol>
 <li>页面加载后，仅检查 sessionStorage 缓存。若有有效缓存则直接展示天气，不做任何网络请求。</li>
 <li>若无缓存，显示占位文字（<code>weather?</code>），不调用任何高德 API。</li>
-<li>用户首次点击组件时，通过高德 IP 定位识别访问者城市并查询天气。</li>
-<li>如果 IP 定位失败，回退到默认城市成都。</li>
-<li>如果当前展示的是默认城市，用户再次点击组件时请求浏览器地理位置权限；授权成功后切换到浏览器精确位置对应的天气。</li>
+<li>用户首次点击组件时，请求浏览器地理位置权限；授权成功后使用精确位置对应的区县或城市查询天气。</li>
+<li>如果浏览器定位失败、用户拒绝授权或逆地理编码失败，再通过高德 IP 定位识别访问者城市并查询天气。</li>
+<li>如果 IP 定位也失败，回退到默认城市成都。</li>
 </ol>
-<p>如果点击时已有缓存数据（命中缓存或已通过 IP 定位获取），用户点击组件只展开天气详情，不再重复请求。</p>
+<p>如果点击时已有缓存数据，浏览器定位天气只展开详情，不再重复请求；IP 定位或默认城市天气会在下一次点击时补一次浏览器定位。</p>
 <p>这样做的原因是：</p>
 <ul>
 <li>高德 API 配额有限，避免每次页面访问都消耗配额。</li>
 <li>缓存命中时直接展示，既能快速渲染又不消耗 API。</li>
-<li>IP 定位不需要用户授权，适合首次点击时静默获取。</li>
-<li>浏览器地理位置权限比较敏感，只在用户多次点击后才请求。</li>
+<li>天气请求只在用户主动点击后触发，避免页面加载即消耗 API。</li>
+<li>浏览器地理位置最接近用户真实位置，适合作为点击后的优先路径。</li>
+<li>IP 定位不需要用户授权，适合作为浏览器定位失败后的兜底。</li>
 <li>默认城市能保证组件在公网、代理、海外网络、机房出口等场景下仍然可见。</li>
 </ul>
 <p>默认城市配置为：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">城市：成都市</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">adcode：510100</span><br></span></code></pre></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="初始化流程">初始化流程<a href="#初始化流程" class="hash-link" aria-label="初始化流程的直接链接" title="初始化流程的直接链接">​</a></h2>
 <p>组件挂载时不再自动请求天气 API，仅执行缓存检查：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">检查 sessionStorage 缓存 (key: navbar-weather-v2, TTL: 30 分钟)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 缓存有效：直接渲染天气按钮</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 缓存无效或不存在：渲染占位按钮（显示 &quot;weather?&quot;）</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">检查 sessionStorage 缓存 (key: navbar-weather-v3, TTL: 30 分钟)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 缓存有效：直接渲染天气按钮</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 缓存无效或不存在：渲染占位按钮（显示 &quot;weather?&quot;）</span><br></span></code></pre></div></div>
 <p>渲染占位按钮时，不加载高德 JSAPI，不发起任何网络请求。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="首次点击流程">首次点击流程<a href="#首次点击流程" class="hash-link" aria-label="首次点击流程的直接链接" title="首次点击流程的直接链接">​</a></h2>
 <p>用户首次点击天气组件（无缓存数据时）：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">加载高德 JSAPI</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 加载 AMap.CitySearch 和 AMap.Weather 插件</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 调用 CitySearch.getLocalCity()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 如果获得 city 或 province，使用 adcode/city 查询天气</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 如果失败，使用成都市 510100 查询天气</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 成功后渲染顶栏按钮、展开详情面板，并写入 sessionStorage 缓存</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">请求 navigator.geolocation.getCurrentPosition()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 授权成功后加载高德 JSAPI</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 调用 AMap.convertFrom(..., &#x27;gps&#x27;) 转换为高德可用坐标</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 调用 Geocoder.getAddress() 反查区县、城市和 adcode</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 优先使用 district/adcode 查询天气并显示区县名</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 如果浏览器定位失败，再调用 CitySearch.getLocalCity()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 如果 IP 定位失败，使用成都市 510100 查询天气</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 成功后渲染顶栏按钮、展开详情面板，并写入 sessionStorage 缓存</span><br></span></code></pre></div></div>
+<p>浏览器定位成功时，天气数据会标记为：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">source: browser</span><br></span></code></pre></div></div>
 <p>IP 定位成功时，天气数据会标记为：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">source: ip</span><br></span></code></pre></div></div>
 <p>默认城市兜底成功时，天气数据会标记为：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">source: default</span><br></span></code></pre></div></div>
 <p>这个 <code>source</code> 字段是后续点击策略的关键。组件通过它判断用户点击时是否需要请求浏览器地理位置。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="后续点击流程已有天气数据时">后续点击流程（已有天气  数据时）<a href="#后续点击流程已有天气数据时" class="hash-link" aria-label="后续点击流程（已有天气数据时）的直接链接" title="后续点击流程（已有天气数据时）的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="后续点击流程已有天气数据时">后续点击流程（已有天气数据时）<a href="#后续点击流程已有天气数据时" class="hash-link" aria-label="后续点击流程（已有天气数据时）的直接链接" title="后续点击流程（已有天气数据时）的直接链接">​</a></h2>
 <p>用户在有天气数据时点击组件，组件首先切换详情面板的展开状态。</p>
 <p>随后根据当前天气来源决定是否请求浏览器定位：</p>
 <ul>
-<li><code>source: ip</code>：说明已经通过 IP 识别到用户城市，只展开详情，不请求权限。</li>
+<li><code>source: ip</code>：说明已经通过 IP 识别到用户城市，点击时会补一次浏览器定位。</li>
 <li><code>source: browser</code>：说明已经通过浏览器定位更新过，只展开详情，不重复请求权限。</li>
 <li><code>source: default</code>：说明当前只是成都兜底天气，点击时请求浏览器定位。</li>
 </ul>
 <p>浏览器定位流程：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">navigator.geolocation.getCurrentPosition()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 获取 WGS84/GPS 经纬度</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 调用 AMap.convertFrom(..., &#x27;gps&#x27;) 转换为高德可用坐标</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 加载 AMap.Geocoder</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 调用 geocoder.getAddress() 反查城市和 adcode</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 使用 adcode 查询实时天气和天气预报</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -&gt; 更新组件并刷新 sessionStorage 缓存</span><br></span></code></pre></div></div>
-<p>浏览器定位成功后，天气数据会标记为：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">source: browser</span><br></span></code></pre></div></div>
-<p>如果用户拒绝权限、浏览器不支持定位、定位超时、逆地理编码失败，组件不会报错给用户，也不会隐藏。它会继续展示成都兜底天气。</p>
+<p>如果用户拒绝权限、浏览器不支持定位、定位超时、逆地理编码失败，组件不会报错给用户，也不会隐藏。它会继续展示 IP 定位或成都兜底天气。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="为什么不能只依赖-ip-定位">为什么不能只依赖 IP 定位<a href="#为什么不能只依赖-ip-定位" class="hash-link" aria-label="为什么不能只依赖 IP 定位的直接链接" title="为什么不能只依赖 IP 定位的直接链接">​</a></h2>
 <p>IP 定位只能识别公网出口 IP，不等于用户真实 GPS 位置。</p>
 <p>下面这些网络环境经常导致 IP 定位失败或不准：</p>
@@ -82,8 +83,8 @@
 <p>这类响应代表请求本身成功，但没有可用城市数据。旧逻辑会因为拿不到城市而隐藏组件；新逻辑会回退到成都天气。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="缓存策略">缓存策略<a href="#缓存策略" class="hash-link" aria-label="缓存策略的直接链接" title="缓存策略的直接链接">​</a></h2>
 <p>组件使用 <code>sessionStorage</code> 缓存天气数据：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">key: navbar-weather-v2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ttl: 30 分钟</span><br></span></code></pre></div></div>
-<p>缓存目标是减少同一次 浏览会话内重复请求高德接口。</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">key: navbar-weather-v3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ttl: 30 分钟</span><br></span></code></pre></div></div>
+<p>缓存目标是减少同一次浏览会话内重复请求高德接口。</p>
 <p>缓存内容包括：</p>
 <ul>
 <li>城市名</li>
@@ -118,9 +119,9 @@
 <li>CSS 媒体查询命中 <code>max-width: 996px</code>。</li>
 </ul>
 <p>除此之外，单纯 IP 定位失败不再导致组件隐藏。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="隐私与交互原则">隐私与交互原则<a href="#隐私与交互原则" class="hash-link" aria-label="隐私与交互原则的直接链接" title="隐私与交  互原则的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="隐私与交互原则">隐私与交互原则<a href="#隐私与交互原则" class="hash-link" aria-label="隐私与交互原则的直接链接" title="隐私与交互原则的直接链接">​</a></h2>
 <p>页面初次加载不发起任何天气 API 请求，也不请求用户位置权限。天气数据仅在用户主动点击组件后获取。</p>
-<p>浏览器精确定位只在用户多次点击天气组件后（且当前为兜底城市时）才请求。</p>
+<p>浏览器精确定位只在用户主动点击天气组件后才请求。若当前显示的是 IP 定位或默认城市天气，后续点击会补一次浏览器定位。</p>
 <p>实现上不主动保存精确经纬度，也不把经纬度写入缓存。缓存里只保存查询天气所需的城市、adcode 和天气数据。</p>
 <p>这保持了两个边界：</p>
 <ul>
@@ -135,19 +136,19 @@
 <li>确认 <code>window._AMapSecurityConfig</code> 存在。</li>
 <li>确认 <code>window.AMap</code> 已加载。</li>
 <li>检查高德 JSAPI、插件和 REST 请求是否返回 200。</li>
-<li>检查 <code>sessionStorage.navbar-weather-v2</code> 是否存在有效数据。</li>
+<li>检查 <code>sessionStorage.navbar-weather-v3</code> 是否存在有效数据。</li>
 <li>如果 IP 定位返回空城市，确认组件是否回退到 <code>source: default</code> 的成都天气。</li>
-<li>如果点击后没有切换城市，检查浏览器是否拒绝了 geolocation 权限。</li>
+<li>如果点击后没有切换城市，检查浏览器是否拒绝了 geolocation 权限，或是否仍命中 <code>source: browser</code> 的旧缓存。</li>
 </ol>
 <p>本地验证可以使用生产构建：</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run build</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run serve -- --host 127.0.0.1 --port 3002</span><br></span></code></pre></div></div>
-<p>在桌面宽度下访问页面，IP 定位失败时应至少看到成都天气。模拟或授权浏览器地理位置后，点击天气组件应切换到对应位置的天气。</p>
+<p>在桌面宽度下访问页面，授权浏览器地理位置后，点击天气组件应切换到对应位置的区县或城市天气；定位失败时应至少看到 IP 定位或成都天气。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="相关实现文件">相关实现文件<a href="#相关实现文件" class="hash-link" aria-label="相关实现文件的直接链接" title="相关实现文件的直接链接">​</a></h2>
 <ul>
 <li><code>src/components/NavbarWeather/index.js</code></li>
 <li><code>src/components/NavbarWeather/styles.module.css</code></li>
 <li><code>src/utils/amap.js</code></li>
 <li><code>docusaurus.config.js</code></li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/LabNotes/life-blog-writing-workflow"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">生活类 Blog 写作工作流</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/rocky-system-configuration"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">rocky新系统配置</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标策略" class="table-of-contents__link toc-highlight">目标策略</a></li><li><a href="#初始化流程" class="table-of-contents__link toc-highlight">初始化流程</a></li><li><a href="#首次点击流程" class="table-of-contents__link toc-highlight">首次点击流程</a></li><li><a href="#后续点击流程已有天气数据时" class="table-of-contents__link toc-highlight">后续点击流程（已有天气数据时）</a></li><li><a href="#为什么不能只依赖-ip-定位" class="table-of-contents__link toc-highlight">为什么不能只依赖 IP 定位</a></li><li><a href="#缓存策略" class="table-of-contents__link toc-highlight">缓存策略</a></li><li><a href="#高德-jsapi-依赖" class="table-of-contents__link toc-highlight">高德 JSAPI 依赖</a></li><li><a href="#组件隐藏条件" class="table-of-contents__link toc-highlight">组件隐藏条件</a></li><li><a href="#隐私与交互原则" class="table-of-contents__link toc-highlight">隐私与交互原则</a></li><li><a href="#排障检查清单" class="table-of-contents__link toc-highlight">排障检查清单</a></li><li><a href="#相关实现文件" class="table-of-contents__link toc-highlight">相关实现文件</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.9.0</span></div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/LabNotes/life-blog-writing-workflow"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">生活类 Blog 写作工作流</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/rocky-system-configuration"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">rocky新系统配置</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标策略" class="table-of-contents__link toc-highlight">目标策略</a></li><li><a href="#初始化流程" class="table-of-contents__link toc-highlight">初始化流程</a></li><li><a href="#首次点击流程" class="table-of-contents__link toc-highlight">首次点击流程</a></li><li><a href="#后续点击流程已有天气数据时" class="table-of-contents__link toc-highlight">后续点击流程（已有天气数据时）</a></li><li><a href="#为什么不能只依赖-ip-定位" class="table-of-contents__link toc-highlight">为什么不能只依赖 IP 定位</a></li><li><a href="#缓存策略" class="table-of-contents__link toc-highlight">缓存策略</a></li><li><a href="#高德-jsapi-依赖" class="table-of-contents__link toc-highlight">高德 JSAPI 依赖</a></li><li><a href="#组件隐藏条件" class="table-of-contents__link toc-highlight">组件隐藏条件</a></li><li><a href="#隐私与交互原则" class="table-of-contents__link toc-highlight">隐私与交互原则</a></li><li><a href="#排障检查清单" class="table-of-contents__link toc-highlight">排障检查清单</a></li><li><a href="#相关实现文件" class="table-of-contents__link toc-highlight">相关实现文件</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.10.0</span></div></div></div></footer></div>
 </body>
 </html>
