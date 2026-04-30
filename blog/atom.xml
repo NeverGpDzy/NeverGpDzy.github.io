@@ -8,7 +8,7 @@
     <subtitle>NeverGpDzy Blog</subtitle>
     <icon>https://docs.nevergpdzy.cn/https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png</icon>
     <entry>
-        <title type="html"><![CDATA[宝马把一个愚人节玩笑开上了纽北24H]]></title>
+        <title type="html"><![CDATA[宝马把愚人节玩笑开上了纽北24H]]></title>
         <id>https://docs.nevergpdzy.cn/blog/2026/04/27/bmw-m3-touring-24h-note</id>
         <link href="https://docs.nevergpdzy.cn/blog/2026/04/27/bmw-m3-touring-24h-note"/>
         <updated>2026-04-27T00:00:00.000Z</updated>
@@ -130,14 +130,14 @@
         <category label="Motorsport" term="Motorsport"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[gpt-image-2 又打动我了]]></title>
+        <title type="html"><![CDATA[几张车手海报: AI 生图最温柔的价值]]></title>
         <id>https://docs.nevergpdzy.cn/blog/2026/04/25/gpt-image-2-f1-driver-posters</id>
         <link href="https://docs.nevergpdzy.cn/blog/2026/04/25/gpt-image-2-f1-driver-posters"/>
         <updated>2026-04-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[这次不是简历海报，而是一组 F1 车手海报。记录 gpt-image-2 把私人热爱变成可收藏画面的那一下。]]></summary>
         <content type="html"><![CDATA[<p>4 月 25 日，我又拿 <code>gpt-image-2</code> 玩了一轮。</p>
 <p>这次没有继续做简历海报，也没有正儿八经去测什么复杂信息图。我只是做了一件很私人的小事，把自己喜欢的几位 F1 车手，生成成一组海报。</p>
-<p>然后我又被打到了。</p>
+<p>结果再一次被戳中内心。</p>
 <p>前几天我刚写过一次 <code>gpt-image-2</code>，那篇里已经聊过它为什么不只是会画图了，所以今天就不再重复模型发布、参数、能力边界这些东西。那些当然重要，但对我来说，真正有意思的变化其实发生在更小的地方。</p>
 <p>就是你突然发现，它不只是能帮你做一个工作里的视觉初稿。</p>
 <p>它也能把你的私人审美，变成一张真的想留下来的图。</p>
@@ -191,7 +191,7 @@
         <category label="Motorsport" term="Motorsport"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[gpt-image-2 不只是会画图了]]></title>
+        <title type="html"><![CDATA[GPT-Image-2：一张海报打破固有认知]]></title>
         <id>https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock</id>
         <link href="https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock"/>
         <updated>2026-04-23T00:00:00.000Z</updated>
@@ -202,7 +202,7 @@
 <p>不是说不期待，而是这两年 AI 生图的惊艳时刻太多了，大家已经被训练得有点麻木。你给它一句话，它给你一张漂亮图。光影很好，氛围很好，细节也挺满。然后呢。</p>
 <p>然后很多时候就没有然后了。</p>
 <p>尤其是一到真正要干活的场景，问题就来了。你想让它做一张能用的海报，它开始胡写字。你想让它组织一堆信息，它开始把版面塞成一个五颜六色的 PPT 封面。你想让它兼顾人物、履历、技术方向和视觉风格，它经常会非常努力，然后非常露馅。</p>
-<p>所以刚发布那两天，我先在网上看了一圈别人用 ChatGPT Images 2.0 做出来的图，确实有点被打到，但还属于那种隔着屏幕看热闹的被打到。</p>
+<p>所以刚发布那两天，我先在网上翻了翻别人用 ChatGPT Images 2.0 做的图，确实觉得很厉害，但还停留在隔着屏幕围观的层面。</p>
 <p>直到今天我自己上手试了一下。</p>
 <p>我把自己的信息丢进去，让它做一张个人简历海报。</p>
 <p>成图弹出来那一下，我真的愣了几秒。</p>
