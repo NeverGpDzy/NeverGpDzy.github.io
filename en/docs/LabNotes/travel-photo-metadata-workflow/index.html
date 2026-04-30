@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
-<title data-rh="true">旅游照片元数据工作流 | NeverGpDzy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" name="twitter:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" property="og:url" content="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="旅游照片元数据工作流 | NeverGpDzy"><meta data-rh="true" name="description" content="这个仓库中旅游相册照片的元数据保留、检查、生成、验证与 AI 接手流程规范。"><meta data-rh="true" property="og:description" content="这个仓库中旅游相册照片的元数据保留、检查、生成、验证与 AI 接手流程规范。"><link data-rh="true" rel="icon" href="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><link data-rh="true" rel="canonical" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-photo-metadata-workflow" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-photo-metadata-workflow" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://HB5I1Y5I3F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Practice And Troubleshooting","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes"},{"@type":"ListItem","position":2,"name":"旅游照片元数据工作流","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"}]}</script><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="NeverGpDzy RSS Feed">
+<title data-rh="true">Travel Photo Metadata Workflow | NeverGpDzy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" name="twitter:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" property="og:url" content="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Travel Photo Metadata Workflow | NeverGpDzy"><meta data-rh="true" name="description" content="Specifications for preserving, checking, generating, validating, and AI-handling photo metadata in this repo&#x27;s travel album pages."><meta data-rh="true" property="og:description" content="Specifications for preserving, checking, generating, validating, and AI-handling photo metadata in this repo&#x27;s travel album pages."><link data-rh="true" rel="icon" href="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><link data-rh="true" rel="canonical" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-photo-metadata-workflow" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-photo-metadata-workflow" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://HB5I1Y5I3F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Practice And Troubleshooting","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes"},{"@type":"ListItem","position":2,"name":"Travel Photo Metadata Workflow","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-photo-metadata-workflow"}]}</script><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="NeverGpDzy RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/en/blog/atom.xml" title="NeverGpDzy Atom Feed">
 
 
@@ -11,555 +11,554 @@
 
 <link rel="search" type="application/opensearchdescription+xml" title="NeverGpDzy" href="/en/opensearch.xml">
 <link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.01d8757c.css">
-<script src="/en/assets/js/runtime~main.e37a31a9.js" defer="defer"></script>
-<script src="/en/assets/js/main.1174524d.js" defer="defer"></script>
+<script src="/en/assets/js/runtime~main.d919ec64.js" defer="defer"></script>
+<script src="/en/assets/js/main.4c798b50.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">NeverGpDzy</b></a><a class="navbar__item navbar__link" href="/en/docs/intro">All Articles</a><a class="navbar__item navbar__link" href="/en/docs/Travel">Travel</a><a class="navbar__item navbar__link" href="/en/blog">Blog</a><div class="root_VgBn"><button class="trigger_mviG" type="button"><span class="mark_yPFJ" aria-hidden="true"></span><span class="city_Cy95">weather?</span></button></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://cv.nevergpdzy.cn/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">CV<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a class="navbar__item navbar__link" href="/en/about">About</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/docs/LabNotes/travel-photo-metadata-workflow" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-CN">简体中文</a></li><li><a href="/en/docs/LabNotes/travel-photo-metadata-workflow" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en-US">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Command+K)"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_bSxm"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_cWv0"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/en/docs/LabNotes">Practice And Troubleshooting</a><button aria-label="Collapse sidebar category &#x27;Practice And Troubleshooting&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/mermaid-diagram-syntax-guide">Mermaid 图表示例与语法速查</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/topic-directory-workflow">创建专题目录工作流</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-intro-page-workflow">文档首页维护工作流</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-acr-docker-hub-pull-acceleration">阿里云 ECS 上 Docker Hub 拉取失败的处理记录</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-oss-static-site-hosting-guide">阿里云 OSS 托管静态网站</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/amap-coordinate-drift">高德地图坐标侧漂记录</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/apple-heif-display-on-web">苹果HEIF照片网站展示指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/config-mac-from-zero">mac从零开始配置</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dark-visitor-map-troubleshooting">暗黑模式访客地图排障记录</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dual-cdn-cloudflare-free-cname-postmortem">双 CDN 分流失败复盘</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/embed-pdf-using-iframe">使用 PdfEmbed 嵌入 PDF 文件</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/cuda-cache-streaming">CUDA Cache Streaming 优化指南 MDX版</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/life-blog-writing-workflow">生活类 Blog 写作工作流</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/navbar-weather-widget-strategy">顶栏天气组件策略</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/rocky-system-configuration">rocky新系统配置</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/time-machine-wechat-file-recovery">从时间机器备份里找回微信文件</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/travel-album-map-implementation">Travel 相册与地图实现说明</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/en/docs/LabNotes/travel-photo-metadata-workflow">旅游照片元数据工作流</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_hjYf"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_z5aJ"><div class="docItemContainer_c0TR"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/en/docs/LabNotes"><span>Practice And Troubleshooting</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">旅游照片元数据工作流</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>旅游照片元数据工作流</h1></header>
-<p>这篇文档是这个仓库里旅游相册页面的专用规范。目标只有两个：</p>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">NeverGpDzy</b></a><a class="navbar__item navbar__link" href="/en/docs/intro">All Articles</a><a class="navbar__item navbar__link" href="/en/docs/Travel">Travel</a><a class="navbar__item navbar__link" href="/en/blog">Blog</a><div class="root_VgBn"><button class="trigger_mviG" type="button"><span class="mark_yPFJ" aria-hidden="true"></span><span class="city_Cy95">weather?</span></button></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://cv.nevergpdzy.cn/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">CV<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a class="navbar__item navbar__link" href="/en/about">About</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/docs/LabNotes/travel-photo-metadata-workflow" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-CN">简体中文</a></li><li><a href="/en/docs/LabNotes/travel-photo-metadata-workflow" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en-US">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Command+K)"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_bSxm"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_cWv0"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/en/docs/LabNotes">Practice And Troubleshooting</a><button aria-label="Collapse sidebar category &#x27;Practice And Troubleshooting&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/mermaid-diagram-syntax-guide">Mermaid Diagram Examples and Syntax Quick Reference</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/topic-directory-workflow">Creating a Topic Directory Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-intro-page-workflow">Docs Intro Page Maintenance Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-acr-docker-hub-pull-acceleration">Troubleshooting Docker Hub Pull Failures on Aliyun ECS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-oss-static-site-hosting-guide">Hosting a Static Site on Aliyun OSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/amap-coordinate-drift">Amap Coordinate Drift</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/apple-heif-display-on-web">Displaying Apple HEIF Photos on the Web</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/config-mac-from-zero">Setting Up a Mac From Zero</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dark-visitor-map-troubleshooting">Dark Mode Visitor Map Troubleshooting</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dual-cdn-cloudflare-free-cname-postmortem">Dual CDN Split-Traffic Failure Postmortem</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/embed-pdf-using-iframe">Embedding PDF Files With PdfEmbed</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/cuda-cache-streaming">CUDA Cache Streaming Optimization Guide (MDX Edition)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/life-blog-writing-workflow">Life Blog Writing Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/navbar-weather-widget-strategy">Navbar Weather Widget Strategy</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/rocky-system-configuration">Rocky Linux New System Configuration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/time-machine-wechat-file-recovery">Recovering WeChat Files from a Time Machine Backup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/travel-album-map-implementation">Travel Album and Map Implementation Notes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/en/docs/LabNotes/travel-photo-metadata-workflow">Travel Photo Metadata Workflow</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_hjYf"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_z5aJ"><div class="docItemContainer_c0TR"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/en/docs/LabNotes"><span>Practice And Troubleshooting</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Travel Photo Metadata Workflow</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Travel Photo Metadata Workflow</h1></header>
+<p>This document is the dedicated specification for travel album pages in this repo. It has two goals:</p>
 <ul>
-<li>让旅游照片在灯箱里稳定展示低调的一行元数据</li>
-<li>让以后“给 AI 一份全是图片链接的 Markdown，然后让它补完整篇旅行相册”这件事可以重复执行</li>
+<li>Make travel photos stably display a subtle one-line metadata strip in the lightbox</li>
+<li>Make it repeatable: give AI a Markdown file full of image links and have it produce a complete travel album page</li>
 </ul>
-<p>如果你后续继续往 <code>docs/Travel</code> 增加新的旅行页面，建议以这篇文档为准。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="先理解当前实现">先理解当前实现<a href="#先理解当前实现" class="hash-link" aria-label="Direct link to 先理解当前实现" title="Direct link to 先理解当前实现">​</a></h2>
-<p>当前仓库里旅游照片元数据的链路是：</p>
+<p>If you continue adding new travel pages to <code>docs/Travel</code>, default to this document.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-the-current-implementation">Understanding the Current Implementation<a href="#understanding-the-current-implementation" class="hash-link" aria-label="Direct link to Understanding the Current Implementation" title="Direct link to Understanding the Current Implementation">​</a></h2>
+<p>The current travel photo metadata pipeline in this repo works like this:</p>
 <ol>
-<li>你先准备带有效 EXIF 的照片</li>
-<li>照片被转成适合网页的 JPEG 并上传到 <code>https://picture.nevergpdzy.cn/</code> 下的稳定路径</li>
-<li>在 <code>docs/Travel/*.mdx</code> 里用 <code>createTravelPhotos([...])</code> 按域名相对路径引用这些照片</li>
-<li>默认运行 <code>npm run verify:travel</code>（内部会先执行 <code>npm run generate:travel</code>，再执行 <code>npm run build</code>）</li>
-<li>脚本 <code>scripts/generate-travel-photo-metadata.mjs</code> 会按这些相对路径下载 JPEG，读取 EXIF / GPS，并在有 GPS 时调用高德逆地理编码，最后生成 <code>src/data/travelPhotoMetadata.generated.json</code></li>
-<li>脚本 <code>scripts/generate-travel-map-data.mjs</code> 会按 <code>docs/Travel/*.mdx</code> 里的 <code>TravelGallery</code> 顺序聚合文章地点和逐张照片 GPS 点，生成 <code>src/data/travelMap.generated.json</code></li>
-<li><code>src/components/TravelGallery/index.js</code> 读取照片元数据；<code>src/components/TravelMap/*</code> 读取地图数据，把 Travel 分类页的地点总览地图和文章页的拍摄点地图渲染出来</li>
+<li>You prepare photos with valid EXIF data.</li>
+<li>Photos are converted to web-friendly JPEG and uploaded to stable paths under <code>https://picture.nevergpdzy.cn/</code>.</li>
+<li>In <code>docs/Travel/*.mdx</code>, photos are referenced by domain-relative paths using <code>createTravelPhotos([...])</code>.</li>
+<li>Running <code>npm run verify:travel</code> (which internally runs <code>npm run generate:travel</code> then <code>npm run build</code>).</li>
+<li>The script <code>scripts/generate-travel-photo-metadata.mjs</code> downloads the JPEGs by these relative paths, reads EXIF / GPS, and calls AMap reverse geocoding when GPS is present. It generates <code>src/data/travelPhotoMetadata.generated.json</code>.</li>
+<li>The script <code>scripts/generate-travel-map-data.mjs</code> aggregates article places and per-photo GPS points by the <code>TravelGallery</code> order in <code>docs/Travel/*.mdx</code>. It generates <code>src/data/travelMap.generated.json</code>.</li>
+<li><code>src/components/TravelGallery/index.js</code> reads the photo metadata. <code>src/components/TravelMap/*</code> reads the map data, rendering the place overview map on the Travel category page and the capture point map on article pages.</li>
 </ol>
-<p>如果 Travel 地图出现“点位整体侧漂到道路另一侧”这类问题，先看：</p>
+<p>If the Travel map shows issues like &quot;all markers shifted to the other side of the road,&quot; start here:</p>
 <ul>
-<li><a href="/en/docs/LabNotes/amap-coordinate-drift">高德地图坐标侧漂记录</a></li>
+<li><a href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
 </ul>
-<p>当前灯箱实际会优先使用下面这些字段：</p>
-<table><thead><tr><th>字段</th><th>来源</th><th>是否显示</th></tr></thead><tbody><tr><td><code>displayLocation</code></td><td>优先来自 GPS + 高德逆地理编码简化结果；没有 GPS 或请求失败时回退 <code>locationLabel</code></td><td>显示</td></tr><tr><td><code>capturedAt</code></td><td>EXIF <code>DateTimeOriginal</code>，没有就回退到 <code>DateTime</code></td><td>显示</td></tr><tr><td><code>device</code></td><td>EXIF <code>Make + Model</code></td><td>显示</td></tr><tr><td><code>lens</code></td><td>EXIF <code>LensModel</code>，iPhone 会被归一化成短标签</td><td>显示</td></tr><tr><td><code>locationLabel</code></td><td>来自旅行文章标题，作为无 GPS / 请求失败时的回退位置</td><td>不直接优先显示</td></tr><tr><td><code>gps</code> / <code>reverseGeocode</code></td><td>EXIF GPS 与高德逆地理编码的规范化缓存</td><td>不直接显示</td></tr></tbody></table>
-<p>另外还会生成 <code>hasMetadata</code>，用于标记这一张图是否至少提取到了部分可用元数据。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="需要记住的几个关键事实">需要记住的几个关键事实<a href="#需要记住的几个关键事实" class="hash-link" aria-label="Direct link to 需要记住的几个关键事实" title="Direct link to 需要记住的几个关键事实">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-页面显示的地点优先来自逆地理编码缺-gps-时才回退标题">1. 页面显示的地点优先来自逆地理编码，缺 GPS 时才回退标题<a href="#1-页面显示的地点优先来自逆地理编码缺-gps-时才回退标题" class="hash-link" aria-label="Direct link to 1. 页面显示的地点优先来自逆地理编码，缺 GPS 时才回退标题" title="Direct link to 1. 页面显示的地点优先来自逆地理编码，缺 GPS 时才回退标题">​</a></h3>
-<p>当前页面展示的地点文字优先来自照片 GPS 经过高德逆地理编码后的简化结果，不再一律使用文章标题。
-只有在下面这些情况下，才会回退到文章 front matter 里的 <code>title</code>：</p>
+<p>The lightbox currently prioritizes these fields:</p>
+<table><thead><tr><th>Field</th><th>Source</th><th>Displayed</th></tr></thead><tbody><tr><td><code>displayLocation</code></td><td>Prefer GPS + AMap reverse geocoding simplified result; falls back to <code>locationLabel</code> when no GPS or request fails</td><td>Yes</td></tr><tr><td><code>capturedAt</code></td><td>EXIF <code>DateTimeOriginal</code>; falls back to <code>DateTime</code></td><td>Yes</td></tr><tr><td><code>device</code></td><td>EXIF <code>Make + Model</code></td><td>Yes</td></tr><tr><td><code>lens</code></td><td>EXIF <code>LensModel</code>; iPhone names are normalized to short labels</td><td>Yes</td></tr><tr><td><code>locationLabel</code></td><td>Inherited from the travel article title; serves as fallback location when GPS is missing or the request fails</td><td>Not directly prioritized</td></tr><tr><td><code>gps</code> / <code>reverseGeocode</code></td><td>Normalized cache of EXIF GPS and AMap reverse geocoding results</td><td>Not directly displayed</td></tr></tbody></table>
+<p>Additionally, <code>hasMetadata</code> is generated to flag whether at least some usable metadata was extracted for a given image.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-facts-to-remember">Key Facts to Remember<a href="#key-facts-to-remember" class="hash-link" aria-label="Direct link to Key Facts to Remember" title="Direct link to Key Facts to Remember">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-displayed-location-prefers-reverse-geocoding-title-is-the-fallback">1. Displayed Location Prefers Reverse Geocoding; Title Is the Fallback<a href="#1-displayed-location-prefers-reverse-geocoding-title-is-the-fallback" class="hash-link" aria-label="Direct link to 1. Displayed Location Prefers Reverse Geocoding; Title Is the Fallback" title="Direct link to 1. Displayed Location Prefers Reverse Geocoding; Title Is the Fallback">​</a></h3>
+<p>The location text displayed on the page comes from the photo GPS via AMap reverse geocoding simplified result, not from the article title by default. Only under these conditions does it fall back to the <code>title</code> in the article front matter:</p>
 <ul>
-<li>照片本身没有可用 GPS</li>
-<li>逆地理编码请求失败</li>
-<li>逆地理编码虽然成功，但没有得到可读的景点名或行政区组合</li>
+<li>The photo has no usable GPS</li>
+<li>The reverse geocoding request failed</li>
+<li>The reverse geocoding succeeded but returned no readable landmark name or administrative district combination</li>
 </ul>
-<p>例如：</p>
-<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token front-matter-block punctuation" style="color:#393A34">---</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block front-matter yaml language-yaml key atrule" style="color:#00a4db">title</span><span class="token front-matter-block front-matter yaml language-yaml punctuation" style="color:#393A34">:</span><span class="token front-matter-block front-matter yaml language-yaml"> 武汉 Wuhan</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block punctuation" style="color:#393A34">---</span><br></span></code></pre></div></div>
-<p>最终灯箱里会显示 <code>武汉</code>。</p>
-<p>再例如：</p>
-<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token front-matter-block punctuation" style="color:#393A34">---</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block front-matter yaml language-yaml key atrule" style="color:#00a4db">title</span><span class="token front-matter-block front-matter yaml language-yaml punctuation" style="color:#393A34">:</span><span class="token front-matter-block front-matter yaml language-yaml"> 黄龙与九寨沟 Jiuzhai Valley</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block punctuation" style="color:#393A34">---</span><br></span></code></pre></div></div>
-<p>最终灯箱里会显示 <code>黄龙与九寨沟</code>。</p>
-<p>所以如果你想让地点显示正确，最重要的是把旅行文章标题写对，而不是指望照片 GPS 决定前端文案。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-当前元数据脚本只处理-jpeg标准输入是域名相对路径">2. 当前元数据脚本只处理 JPEG，标准输入是域名相对路径<a href="#2-当前元数据脚本只处理-jpeg标准输入是域名相对路径" class="hash-link" aria-label="Direct link to 2. 当前元数据脚本只处理 JPEG，标准输入是域名相对路径" title="Direct link to 2. 当前元数据脚本只处理 JPEG，标准输入是域名相对路径">​</a></h3>
-<p>当前脚本识别的是 <code>.jpg</code> / <code>.jpeg</code> 图片引用。标准写法是域名相对路径，例如：</p>
+<p>For example:</p>
+<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token front-matter-block punctuation" style="color:#393A34">---</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block front-matter yaml language-yaml key atrule" style="color:#00a4db">title</span><span class="token front-matter-block front-matter yaml language-yaml punctuation" style="color:#393A34">:</span><span class="token front-matter-block front-matter yaml language-yaml"> Wuhan</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block punctuation" style="color:#393A34">---</span><br></span></code></pre></div></div>
+<p>The lightbox will display <code>Wuhan</code>.</p>
+<p>Another example:</p>
+<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token front-matter-block punctuation" style="color:#393A34">---</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block front-matter yaml language-yaml key atrule" style="color:#00a4db">title</span><span class="token front-matter-block front-matter yaml language-yaml punctuation" style="color:#393A34">:</span><span class="token front-matter-block front-matter yaml language-yaml"> Huanglong and Jiuzhai Valley</span><span class="token front-matter-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token front-matter-block"></span><span class="token front-matter-block punctuation" style="color:#393A34">---</span><br></span></code></pre></div></div>
+<p>The lightbox will display <code>Huanglong and Jiuzhai Valley</code>.</p>
+<p>So if you want the location display to be correct, the most important thing is to write the travel article title correctly -- do not expect photo GPS to determine the frontend copy.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-the-metadata-script-only-processes-jpeg-standard-input-is-domain-relative-paths">2. The Metadata Script Only Processes JPEG; Standard Input Is Domain-Relative Paths<a href="#2-the-metadata-script-only-processes-jpeg-standard-input-is-domain-relative-paths" class="hash-link" aria-label="Direct link to 2. The Metadata Script Only Processes JPEG; Standard Input Is Domain-Relative Paths" title="Direct link to 2. The Metadata Script Only Processes JPEG; Standard Input Is Domain-Relative Paths">​</a></h3>
+<p>The current script recognizes <code>.jpg</code> / <code>.jpeg</code> image references. The standard syntax is a domain-relative path, for example:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">img_for_Typora/IMG_5867_WuHan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">JingXi/IMG_5867_WuHan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Travel/JingXi/IMG_5867_WuHan.jpg</span><br></span></code></pre></div></div>
-<p>也就是说：</p>
+<p>This means:</p>
 <ul>
-<li>旅游页面里应该引用 JPEG 文件</li>
-<li>新文章应该优先写域名相对路径，而不是只写文件名</li>
-<li>如果你的原图是 <code>HEIC</code> / <code>HEIF</code>，要先转成 JPEG</li>
+<li>Travel pages should reference JPEG files</li>
+<li>New articles should prefer domain-relative paths instead of bare filenames</li>
+<li>If your originals are <code>HEIC</code> / <code>HEIF</code>, convert to JPEG first</li>
 </ul>
-<p>为了兼容旧文章，组件仍然能接受只写文件名的写法，但它会自动把：</p>
+<p>For backward compatibility with legacy articles, the component still accepts bare filenames, but it will automatically interpret:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">IMG_5867_WuHan.jpg</span><br></span></code></pre></div></div>
-<p>解释成：</p>
+<p>as:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">img_for_Typora/IMG_5867_WuHan.jpg</span><br></span></code></pre></div></div>
-<p>这只是兼容规则，不是新的推荐规范。</p>
-<p>HEIF 转 JPEG 的具体命令可以继续参考：</p>
+<p>This is a compatibility rule, not a new recommended convention.</p>
+<p>For HEIF-to-JPEG conversion commands, continue referring to:</p>
 <ul>
-<li><a href="/en/docs/LabNotes/apple-heif-display-on-web">苹果 HEIF 照片网站展示指南</a></li>
+<li><a href="/en/docs/LabNotes/apple-heif-display-on-web">Apple HEIF Photo Display Guide</a></li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-iphone-镜头名称会被压缩成短标签">3. iPhone 镜头名称会被压缩成短标签<a href="#3-iphone-镜头名称会被压缩成短标签" class="hash-link" aria-label="Direct link to 3. iPhone 镜头名称会被压缩成短标签" title="Direct link to 3. iPhone 镜头名称会被压缩成短标签">​</a></h3>
-<p>当前前端和生成脚本都对 iPhone 镜头做了短标签归一化，最终只保留下面这几种：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-iphone-lens-names-are-compressed-to-short-labels">3. iPhone Lens Names Are Compressed to Short Labels<a href="#3-iphone-lens-names-are-compressed-to-short-labels" class="hash-link" aria-label="Direct link to 3. iPhone Lens Names Are Compressed to Short Labels" title="Direct link to 3. iPhone Lens Names Are Compressed to Short Labels">​</a></h3>
+<p>The current frontend and generation scripts both normalize iPhone lens names to short labels. The final output retains only these:</p>
 <ul>
-<li><code>超广角</code></li>
-<li><code>主摄</code></li>
-<li><code>长焦</code></li>
-<li><code>前置</code></li>
+<li><code>Ultra Wide</code></li>
+<li><code>Main</code></li>
+<li><code>Telephoto</code></li>
+<li><code>Front</code></li>
 </ul>
-<p>如果不是 iPhone，或者镜头型号无法命中这些规则，就会保留原始镜头字段。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="用户上传前的准备规范">用户上传前的准备规范<a href="#用户上传前的准备规范" class="hash-link" aria-label="Direct link to 用户上传前的准备规范" title="Direct link to 用户上传前的准备规范">​</a></h2>
-<p>如果你希望 AI 后续能把照片元数据正确带出来，上传前请先满足下面这些前提。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-源照片尽量保留原片链路">1. 源照片尽量保留“原片链路”<a href="#1-源照片尽量保留原片链路" class="hash-link" aria-label="Direct link to 1. 源照片尽量保留“原片链路”" title="Direct link to 1. 源照片尽量保留“原片链路”">​</a></h3>
-<p>优先级建议是：</p>
+<p>If the device is not an iPhone, or the lens model does not match these rules, the original lens field is preserved.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pre-upload-preparation-guide">Pre-Upload Preparation Guide<a href="#pre-upload-preparation-guide" class="hash-link" aria-label="Direct link to Pre-Upload Preparation Guide" title="Direct link to Pre-Upload Preparation Guide">​</a></h2>
+<p>If you want AI to correctly carry photo metadata going forward, satisfy these prerequisites before uploading.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-preserve-the-original-pipeline-for-source-photos">1. Preserve the &quot;Original Pipeline&quot; for Source Photos<a href="#1-preserve-the-original-pipeline-for-source-photos" class="hash-link" aria-label="Direct link to 1. Preserve the &quot;Original Pipeline&quot; for Source Photos" title="Direct link to 1. Preserve the &quot;Original Pipeline&quot; for Source Photos">​</a></h3>
+<p>Priority recommendation:</p>
 <ol>
-<li>手机或相机原片</li>
-<li>AirDrop / 数据线导出 / 相册“导出未修改的原片”</li>
-<li>明确声明保留 EXIF 的批量转换</li>
-<li>最后才是任何社交软件、聊天软件或网页中转</li>
+<li>Phone or camera originals</li>
+<li>AirDrop / cable export / &quot;Export Unmodified Originals&quot; from the photo library</li>
+<li>Batch conversions that explicitly preserve EXIF</li>
+<li>Last resort: any social app, chat app, or web intermediary</li>
 </ol>
-<p>不推荐直接拿下面这些来源当最终发布源：</p>
+<p>Do not use these as final publish sources:</p>
 <ul>
-<li>微信、QQ、微博、小红书等社交平台里转发过的图片</li>
-<li>聊天窗口里“另存为”的图片</li>
-<li>已经被网站二次压缩过的下载图</li>
-<li>在线压缩工具输出图</li>
+<li>Images forwarded through WeChat, QQ, Weibo, Xiaohongshu, or other social platforms</li>
+<li>Images &quot;saved as&quot; from chat windows</li>
+<li>Downloaded images already re-compressed by a website</li>
+<li>Output from online compression tools</li>
 </ul>
-<p>这些路径最容易把 <code>DateTimeOriginal</code>、<code>Model</code>、<code>LensModel</code>、GPS 等信息直接抹掉。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-尽量一篇旅行文章只对应一个地点标题">2. 尽量一篇旅行文章只对应一个地点标题<a href="#2-尽量一 篇旅行文章只对应一个地点标题" class="hash-link" aria-label="Direct link to 2. 尽量一篇旅行文章只对应一个地点标题" title="Direct link to 2. 尽量一篇旅行文章只对应一个地点标题">​</a></h3>
-<p>因为 <code>locationLabel</code> 仍然由文章标题继承，并且它现在承担“无 GPS 时的回退位置”职责，所以一篇 <code>docs/Travel/*.mdx</code> 最好只描述一个主地点。否则：</p>
+<p>These paths are most likely to strip <code>DateTimeOriginal</code>, <code>Model</code>, <code>LensModel</code>, GPS, and other information entirely.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-prefer-one-location-title-per-travel-article">2. Prefer One Location Title Per Travel Article<a href="#2-prefer-one-location-title-per-travel-article" class="hash-link" aria-label="Direct link to 2. Prefer One Location Title Per Travel Article" title="Direct link to 2. Prefer One Location Title Per Travel Article">​</a></h3>
+<p>Because <code>locationLabel</code> is still inherited from the article title and now serves as the &quot;fallback location when GPS is missing,&quot; each <code>docs/Travel/*.mdx</code> should describe one primary location. Otherwise:</p>
 <ul>
-<li>页面标题会变得模糊</li>
-<li>灯箱里每一张图都会显示同一个地点名</li>
-<li>没有 GPS 的照片会统一回退成这个标题地点</li>
+<li>The page title becomes vague</li>
+<li>Every image in the lightbox displays the same location name</li>
+<li>Photos without GPS all uniformly fall back to that title location</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-文件名尽量稳定可读一次定好">3. 文件名尽量稳定、可读、一次定好<a href="#3-文件名尽量稳定可读一次定好" class="hash-link" aria-label="Direct link to 3. 文件名尽量稳定、可读、一次定好" title="Direct link to 3. 文件名尽量稳定、可读、一次定好">​</a></h3>
-<p>当前仓库里旅游照片的末级文件名大多类似：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-keep-filenames-stable-readable-and-decided-once">3. Keep Filenames Stable, Readable, and Decided Once<a href="#3-keep-filenames-stable-readable-and-decided-once" class="hash-link" aria-label="Direct link to 3. Keep Filenames Stable, Readable, and Decided Once" title="Direct link to 3. Keep Filenames Stable, Readable, and Decided Once">​</a></h3>
+<p>Most travel photo filenames in the current repo look like:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">IMG_5867_WuHan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMG_7107_HongKong.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMG_0248_JiuzhaiValley.jpg</span><br></span></code></pre></div></div>
-<p>推荐继续保持这种风格：</p>
+<p>Continue this style:</p>
 <ul>
-<li>保留相机原始序号</li>
-<li>在后缀里带上地点英文标识</li>
-<li>上传之后不要再反复重命名</li>
+<li>Keep the original camera sequence number</li>
+<li>Append a location identifier in English to the suffix</li>
+<li>Do not repeatedly rename after uploading</li>
 </ul>
-<p>一旦文件名变了，你需要同时更新：</p>
+<p>Once a filename changes, you must also update:</p>
 <ul>
-<li>远端图片地址</li>
-<li><code>docs/Travel/*.mdx</code> 中的引用</li>
-<li>重新生成元数据清单</li>
+<li>The remote image URL</li>
+<li>The reference in <code>docs/Travel/*.mdx</code></li>
+<li>Regenerate the metadata manifest</li>
 </ul>
-<p>如果你用了多级目录，那路径本身也要稳定。例如：</p>
+<p>If you use multi-level directories, the path itself must be stable. For example:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">img_for_Typora/IMG_5867_WuHan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Travel/JingXi/IMG_5867_WuHan.jpg</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-图片链接最好已经是稳定的公网地址">4. 图片链接最好已经是稳定的公网地址<a href="#4-图片链接最好已经是稳定的公网地址" class="hash-link" aria-label="Direct link to 4. 图片链接最好已经是稳定的公网地址" title="Direct link to 4. 图片链接最好已经是稳定的公网地址">​</a></h3>
-<p>如果你下次给 AI 的是“全是图片链接的 Markdown”，最好这些链接已经满足：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-image-links-should-already-be-stable-public-urls">4. Image Links Should Already Be Stable Public URLs<a href="#4-image-links-should-already-be-stable-public-urls" class="hash-link" aria-label="Direct link to 4. Image Links Should Already Be Stable Public URLs" title="Direct link to 4. Image Links Should Already Be Stable Public URLs">​</a></h3>
+<p>If you give AI &quot;a Markdown file full of image links,&quot; those links should ideally:</p>
 <ul>
-<li>能直接在浏览器打开</li>
-<li>是稳定地址，不带临时鉴权参数</li>
-<li>最终落在 <code>https://picture.nevergpdzy.cn/</code> 这个域名下</li>
-<li>文件扩展名是 <code>.jpg</code> 或 <code>.jpeg</code></li>
+<li>Open directly in a browser</li>
+<li>Be stable URLs without temporary auth parameters</li>
+<li>Land under the <code>https://picture.nevergpdzy.cn/</code> domain</li>
+<li>Have a <code>.jpg</code> or <code>.jpeg</code> file extension</li>
 </ul>
-<p>如果你给的是临时链接、短链接、重定向链、网盘鉴权链接，AI 可以改文档，但元数据脚本不一定能稳定拉取到最终文件。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="上传前如何检查照片有没有被压缩掉有效元数据">上传前如何检查照片有没有被压缩掉有效元数据<a href="#上传前如何检查照片有没有被压缩掉有效元数据" class="hash-link" aria-label="Direct link to 上传前如何检查照片有没有被压缩掉有效元数据" title="Direct link to 上传前如何检查照片有没有被压缩掉有效元数据">​</a></h2>
-<p>这里的“有效元数据”，对当前仓库来说，至少指下面这几项里有一部分仍然存在：</p>
+<p>If you provide temporary links, short links, redirect chains, or cloud storage auth links, AI can modify the document, but the metadata script may not be able to stably fetch the final file.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-check-whether-photos-have-lost-valid-metadata-before-upload">How to Check Whether Photos Have Lost Valid Metadata Before Upload<a href="#how-to-check-whether-photos-have-lost-valid-metadata-before-upload" class="hash-link" aria-label="Direct link to How to Check Whether Photos Have Lost Valid Metadata Before Upload" title="Direct link to How to Check Whether Photos Have Lost Valid Metadata Before Upload">​</a></h2>
+<p>For this repo, &quot;valid metadata&quot; means at least some of the following still exist:</p>
 <ul>
-<li>拍摄时间 <code>DateTimeOriginal</code></li>
-<li>设备型号 <code>Model</code></li>
-<li>镜头型号 <code>LensModel</code></li>
-<li>可选的 GPS 信息</li>
+<li>Capture time <code>DateTimeOriginal</code></li>
+<li>Device model <code>Model</code></li>
+<li>Lens model <code>LensModel</code></li>
+<li>Optional GPS information</li>
 </ul>
-<p>如果这些字段全没了，灯箱里通常就只会剩地点，或者完全没有可显示的摄影信息。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="先看最直观的异常信号">先看最直观的异常信号<a href="#先看最直观的异常信号" class="hash-link" aria-label="Direct link to 先看最直观的异常信号" title="Direct link to 先看最直观的异常信号">​</a></h3>
-<p>如果一张图出现下面这些现象，通常就要怀疑它已经不是原始带 EXIF 的版本了：</p>
+<p>If all these fields are gone, the lightbox typically shows only the location or no photography information at all.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="obvious-red-flags-first">Obvious Red Flags First<a href="#obvious-red-flags-first" class="hash-link" aria-label="Direct link to Obvious Red Flags First" title="Direct link to Obvious Red Flags First">​</a></h3>
+<p>If an image shows any of these signs, suspect it is no longer the original EXIF-bearing version:</p>
 <ul>
-<li>文件体积明显异常小，只有几百 KB，但本来应该是手机原图</li>
-<li>分辨率被压到固定长边，比如 1280、1600、2048 一类</li>
-<li>拍摄时间、设备型号、镜头型号全部缺失</li>
-<li>同一组照片里只有极少数照片还带设备信息</li>
-<li>明明当时开了定位，但所有照片都完全没有 GPS</li>
+<li>File size is abnormally small -- only a few hundred KB for what should be a phone original</li>
+<li>Resolution is compressed to a fixed long edge, like 1280, 1600, 2048, etc.</li>
+<li>Capture time, device model, and lens model are all missing</li>
+<li>Within the same set of photos, only a very few still carry device info</li>
+<li>You had location services on, but all photos have zero GPS</li>
 </ul>
-<p>如果你拍的是 iPhone 原片，而你手上的 JPEG 普遍已经变成“体积明显变小 + 尺寸被统一压缩 + EXIF 基本空了”，基本可以认为这是中间平台处理过的版本。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="最推荐的检查方式exiftool">最推荐的检查方式：<code>exiftool</code><a href="#最推荐的检查方式exiftool" class="hash-link" aria-label="Direct link to 最推荐的检查方式exiftool" title="Direct link to 最推荐的检查方式exiftool">​</a></h3>
-<p>如果你机器里已经装了 <code>exiftool</code>，优先用它。它最适合检查“元数据还剩多少”。</p>
-<p>检查单张图：</p>
+<p>If you shot with an iPhone and your JPEGs have universally become &quot;noticeably smaller + uniformly compressed dimensions + EXIF essentially empty,&quot; they are almost certainly a version processed by an intermediary platform.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-method-exiftool">Recommended Method: <code>exiftool</code><a href="#recommended-method-exiftool" class="hash-link" aria-label="Direct link to recommended-method-exiftool" title="Direct link to recommended-method-exiftool">​</a></h3>
+<p>If your machine has <code>exiftool</code> installed, use it first. It is best for checking &quot;how much metadata remains.&quot;</p>
+<p>Check a single image:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">exiftool -DateTimeOriginal -Model -LensModel -GPSLatitude -GPSLongitude -ImageWidth -ImageHeight IMG_0001.jpg</span><br></span></code></pre></div></div>
-<p>如果想顺带看是否有后期软件痕迹，也可以再加一个 <code>Software</code>：</p>
+<p>To also check for post-processing software traces, add <code>Software</code>:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">exiftool -DateTimeOriginal -Model -LensModel -GPSLatitude -GPSLongitude -Software IMG_0001.jpg</span><br></span></code></pre></div></div>
-<p>理想状态一般是：</p>
+<p>The ideal state is:</p>
 <ul>
-<li><code>DateTimeOriginal</code> 有值</li>
-<li><code>Model</code> 有值</li>
-<li><code>LensModel</code> 有值</li>
-<li>如果当时开启了定位，<code>GPSLatitude</code> / <code>GPSLongitude</code> 也有值</li>
+<li><code>DateTimeOriginal</code> has a value</li>
+<li><code>Model</code> has a value</li>
+<li><code>LensModel</code> has a value</li>
+<li>If location services were on, <code>GPSLatitude</code> / <code>GPSLongitude</code> also have values</li>
 </ul>
-<p>如果只剩像素尺寸，而拍摄时间、设备、镜头都没了，就不要拿这份图去做旅游元数据展示。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="windows-无额外工具时的检查方式">Windows 无额外工具时的检查方式<a href="#windows-无额外工具时的检查方式" class="hash-link" aria-label="Direct link to Windows 无额外工具时的检查方式" title="Direct link to Windows 无额外工具时的检查方式">​</a></h3>
-<p>如果你没有 <code>exiftool</code>，可以直接用 PowerShell 读 EXIF 的几个关键字段：</p>
+<p>If only pixel dimensions remain and capture time, device, and lens are all gone, do not use this image for travel metadata display.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="windows-check-without-extra-tools">Windows Check Without Extra Tools<a href="#windows-check-without-extra-tools" class="hash-link" aria-label="Direct link to Windows Check Without Extra Tools" title="Direct link to Windows Check Without Extra Tools">​</a></h3>
+<p>If you do not have <code>exiftool</code>, use PowerShell to read the key EXIF fields directly:</p>
 <div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Add-Type -AssemblyName System.Drawing</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">function Read-ExifAscii($image, $id) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  $prop = $image.PropertyItems | Where-Object Id -eq $id | Select-Object -First 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  if (-not $prop) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    return $null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  return ([System.Text.Encoding]::ASCII.GetString($prop.Value)).Trim([char]0)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$path = (Resolve-Path .\IMG_0001.jpg).Path</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$image = [System.Drawing.Image]::FromFile($path)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[pscustomobject]@{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  DateTimeOriginal = Read-ExifAscii $image 0x9003</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Model            = Read-ExifAscii $image 0x0110</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  LensModel        = Read-ExifAscii $image 0xA434</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Width            = $image.Width</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Height           = $image.Height</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$image.Dispose()</span><br></span></code></pre></div></div>
-<p>如何判断结果是否合格：</p>
+<p>How to judge the results:</p>
 <ul>
-<li><code>DateTimeOriginal</code> 有值，说明拍摄时间大概率还在</li>
-<li><code>Model</code> 有值，说明设备信息还在</li>
-<li><code>LensModel</code> 有值，说明镜头信息大概率还在</li>
-<li>三项都空，基本可以判定这份 JPEG 的关键 EXIF 已经被剥离了</li>
+<li><code>DateTimeOriginal</code> has a value: capture time is likely still intact</li>
+<li><code>Model</code> has a value: device info is still intact</li>
+<li><code>LensModel</code> has a value: lens info is likely still intact</li>
+<li>All three are empty: this JPEG&#x27;s critical EXIF has almost certainly been stripped</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="macos-无额外工具时的检查方式">macOS 无额外工具时的检查方式<a href="#macos-无额外工具时的检查方式" class="hash-link" aria-label="Direct link to macOS 无额外工具时的检查方式" title="Direct link to macOS 无额外工具时的检查方式">​</a></h3>
-<p>macOS 可以先用内置的 <code>mdls</code> 做一个快速筛查：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="macos-check-without-extra-tools">macOS Check Without Extra Tools<a href="#macos-check-without-extra-tools" class="hash-link" aria-label="Direct link to macOS Check Without Extra Tools" title="Direct link to macOS Check Without Extra Tools">​</a></h3>
+<p>macOS can use the built-in <code>mdls</code> for a quick screening:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mdls -name kMDItemContentCreationDate \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     -name kMDItemAcquisitionMake \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     -name kMDItemAcquisitionModel \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     -name kMDItemPixelWidth \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     -name kMDItemPixelHeight \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">     IMG_0001.jpg</span><br></span></code></pre></div></div>
-<p>如果这里已经完全看不到拍摄时间和设备型号，那这张图大概率也不适合作为旅游元数据源。</p>
-<p>需要注意的是：</p>
+<p>If capture time and device model are completely invisible here, the image is likely unsuitable as a travel metadata source.</p>
+<p>Keep in mind:</p>
 <ul>
-<li><code>mdls</code> 更适合快速筛查</li>
-<li>镜头和 GPS 之类更完整的 EXIF，还是 <code>exiftool</code> 更稳</li>
+<li><code>mdls</code> is better for quick screening</li>
+<li>For lens and GPS and other more complete EXIF, <code>exiftool</code> is more reliable</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="图形界面也可以做第一轮检查">图形界面也可以做第一轮检查<a href="#图形界面也可以做第一轮检查" class="hash-link" aria-label="Direct link to 图形界面也可以做第一轮检查" title="Direct link to 图形界面也可以做第一轮检查">​</a></h3>
-<p>如果你不想先跑命令，也可以先用系统界面看一眼：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gui-first-round-check">GUI First-Round Check<a href="#gui-first-round-check" class="hash-link" aria-label="Direct link to GUI First-Round Check" title="Direct link to GUI First-Round Check">​</a></h3>
+<p>If you do not want to run commands first, you can also check via the system UI:</p>
 <ul>
-<li>Windows：右键图片，打开“属性 -&gt; 详细信息”</li>
-<li>macOS：选中文件，按空格预览或“显示简介”</li>
+<li>Windows: right-click the image, open &quot;Properties -&gt; Details&quot;</li>
+<li>macOS: select the file, press Space for preview or &quot;Get Info&quot;</li>
 </ul>
-<p>如果这里已经完全看不到拍摄日期、设备、尺寸等信息，就没必要再指望仓库脚本能从这张图里提取到完整数据。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="这个仓库里推荐的完整操作流程">这个仓库里推荐的完整操作流程<a href="#这个仓库里推荐的完整操作流程" class="hash-link" aria-label="Direct link to 这个仓库里推荐的完整操作流程" title="Direct link to 这个仓库里推荐的完整操作流程">​</a></h2>
-<p>下面这套流程，适合以后继续增加新的旅行页面。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="第一步准备照片">第一步：准备照片<a href="#第一步准备照片" class="hash-link" aria-label="Direct link to 第一步：准备照片" title="Direct link to 第一步：准备照片">​</a></h3>
-<p>要求：</p>
+<p>If capture date, device, dimensions, and other info are completely invisible here, there is no point expecting the repo scripts to extract complete data from this image.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-complete-workflow-for-this-repo">Recommended Complete Workflow for This Repo<a href="#recommended-complete-workflow-for-this-repo" class="hash-link" aria-label="Direct link to Recommended Complete Workflow for This Repo" title="Direct link to Recommended Complete Workflow for This Repo">​</a></h2>
+<p>This workflow is suitable for continuing to add new travel pages.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-prepare-photos">Step 1: Prepare Photos<a href="#step-1-prepare-photos" class="hash-link" aria-label="Direct link to Step 1: Prepare Photos" title="Direct link to Step 1: Prepare Photos">​</a></h3>
+<p>Requirements:</p>
 <ul>
-<li>尽量保留 EXIF</li>
-<li>最终使用 JPEG</li>
-<li>文件名和路径稳定</li>
-<li>图片已经上传到 <code>https://picture.nevergpdzy.cn/</code> 下的稳定地址</li>
+<li>Preserve EXIF as much as possible</li>
+<li>Final format must be JPEG</li>
+<li>Filename and path must be stable</li>
+<li>Images already uploaded to a stable URL under <code>https://picture.nevergpdzy.cn/</code></li>
 </ul>
-<p>如果原始格式是 HEIC，请先参考 <a href="/en/docs/LabNotes/apple-heif-display-on-web">苹果 HEIF 照片网站展示指南</a> 转成 JPEG，再做后续步骤。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="第二步准备给-ai-的-markdown">第二步：准备给 AI 的 Markdown<a href="#第二步准备给-ai-的-markdown" class="hash-link" aria-label="Direct link to 第二步：准备给 AI 的 Markdown" title="Direct link to 第二步：准备给 AI 的 Markdown">​</a></h3>
-<p>如果你希望以后 AI 能稳定接手，最好把源 Markdown 写成“标题 + 若干小节 + 每节若干图片链接”的结构。例如：</p>
-<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 武汉</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">##</span><span class="token title important"> 抵达</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_5867_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6001_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">##</span><span class="token title important"> 街头</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6069_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6076_WuHan.jpg)</span><br></span></code></pre></div></div>
-<p>这样 AI 可以直接按照小节来拆分 <code>createTravelPhotos([...])</code> 数组。</p>
-<p>如果你给的是一整坨没有标题、只有图片 URL 的 Markdown，AI 也能处理，但它就只能靠图片顺序、路径和文件名猜测分组，结果会不如显式分段稳定。</p>
-<p>如果 AI 需要先看图再决定分组、标题或  正文，默认不要直接读取原图：</p>
+<p>If the original format is HEIC, first refer to <a href="/en/docs/LabNotes/apple-heif-display-on-web">Apple HEIF Photo Display Guide</a> to convert to JPEG before proceeding.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-prepare-markdown-for-ai">Step 2: Prepare Markdown for AI<a href="#step-2-prepare-markdown-for-ai" class="hash-link" aria-label="Direct link to Step 2: Prepare Markdown for AI" title="Direct link to Step 2: Prepare Markdown for AI">​</a></h3>
+<p>If you want AI to stably take over in the future, write the source Markdown as &quot;title + sections + image links per section.&quot; For example:</p>
+<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> Wuhan</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">##</span><span class="token title important"> Arrival</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_5867_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6001_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">##</span><span class="token title important"> Streets</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6069_WuHan.jpg)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_6076_WuHan.jpg)</span><br></span></code></pre></div></div>
+<p>This way AI can directly map each section to a <code>createTravelPhotos([...])</code> array.</p>
+<p>If you provide a single block of Markdown with no headings and only image URLs, AI can handle it, but it will only guess groupings from image order, paths, and filenames -- the result will be less stable than explicit sections.</p>
+<p>If AI needs to look at photos first to decide grouping, headings, or body text, do not read originals directly by default:</p>
 <ul>
-<li>先生成压缩预览图，再让 AI 阅读</li>
-<li>直接读取原图容易触发对话上下文大小限制，经验风险线约在 <code>20MB</code> 左右</li>
-<li>默认第一档预览图使用长边 <code>1280px</code></li>
-<li>如果 <code>1280px</code> 看不清小字、路牌、菜单、票据或关键细节，再升到长边 <code>1920px</code></li>
-<li>多图任务要分批压缩、分批阅读，不要一次读取整组原图</li>
-<li>压缩预览图只用于 AI 理解画面、分组和写文案，不用于 EXIF 检查或元数据生成</li>
+<li>Generate compressed previews first for AI to read</li>
+<li>Reading originals directly easily triggers conversation context size limits; the empirical risk threshold is around <code>20MB</code></li>
+<li>Default first-tier preview uses a long edge of <code>1280px</code></li>
+<li>If <code>1280px</code> is still unclear for small text, signs, menus, receipts, or key details, step up to a long edge of <code>1920px</code></li>
+<li>For multi-image tasks, compress and read in batches -- do not feed the entire set of originals at once</li>
+<li>Compressed previews are only for AI to understand scenes, groupings, and write copy -- not for EXIF checks or metadata generation</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="你最常用的实际协作方式给地点--图片链接--几句描述">你最常用的实际协作方式：给地点 + 图片链接 + 几句描述<a href="#你最常用的实际协作方式给地点--图片链接--几句描述" class="hash-link" aria-label="Direct link to 你最常用的实际协作方式：给地点 + 图片链接 + 几句描述" title="Direct link to 你最常用的实际协作方式：给地点 + 图片链接 + 几句描述">​</a></h3>
-<p>如果你平时不是先自己写完整 Markdown，而是直接把下面这些信息丢给 AI：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="your-most-common-collaboration-style-location--image-links--a-few-sentences">Your Most Common Collaboration Style: Location + Image Links + A Few Sentences<a href="#your-most-common-collaboration-style-location--image-links--a-few-sentences" class="hash-link" aria-label="Direct link to Your Most Common Collaboration Style: Location + Image Links + A Few Sentences" title="Direct link to Your Most Common Collaboration Style: Location + Image Links + A Few Sentences">​</a></h3>
+<p>If you do not first write a complete Markdown yourself but instead give AI these pieces:</p>
 <ul>
-<li>这次旅行的地点名</li>
-<li>一批已经上传好的 OSS 图片链接</li>
-<li>几句很短的主观描述
-比如“这次整体偏海边和夜景”“前半段是抵达和街头，后半段是夜景和返程”“文字想写得克制一点，不要像攻略”</li>
+<li>The location name for this trip</li>
+<li>A batch of already-uploaded OSS image links</li>
+<li>A few short subjective descriptions
+For example: &quot;this trip leans toward seaside and night scenes,&quot; &quot;first half is arrival and streets, second half is night scenes and return,&quot; &quot;keep the writing restrained, not like a travel guide&quot;</li>
 </ul>
-<p>那也完全可以直接走当前仓库的标准流程。</p>
-<p>推荐输入最少包含：</p>
+<p>That works perfectly with the current repo&#x27;s standard pipeline.</p>
+<p>Recommended minimum input:</p>
 <ul>
-<li>地点名称
-例如：<code>济南 Jinan</code></li>
-<li>稳定可访问的 JPEG OSS 链接
-最好都在 <code>https://picture.nevergpdzy.cn/</code> 下</li>
-<li>至少 2 到 5 句你自己的感受、顺序提示或风格要求
-例如：<!-- -->
+<li>Location name
+Example: <code>Jinan</code></li>
+<li>Stable, accessible JPEG OSS links
+Preferably all under <code>https://picture.nevergpdzy.cn/</code></li>
+<li>At least 2 to 5 sentences of your own feelings, order hints, or style requirements
+For example:<!-- -->
 <ul>
-<li>想突出什么场景</li>
-<li>照片大概按什么顺序看</li>
-<li>想写得偏平静、偏叙述，还是偏日记感</li>
-<li>哪些照片一定  要单独成节，哪些可以放一起</li>
+<li>What scenes to emphasize</li>
+<li>Roughly what order to view the photos</li>
+<li>Whether the tone should be calm, narrative, or diary-like</li>
+<li>Which photos must be standalone sections, which can be grouped</li>
 </ul>
 </li>
 </ul>
-<p>AI 接手时，应该按下面的顺序做：</p>
+<p>When AI takes over, it should follow this order:</p>
 <ol>
-<li>先检查链接是否稳定可访问，且是否为 JPEG。</li>
-<li>如果只有链接没有分组，先按文件顺序、场景变化和你的描述做初步分组。</li>
-<li>如果分组仍然不够确定，再读取压缩预览图，只用来判断场景和写正文，不直接读取整批原图。</li>
-<li>先补出一份“源 Markdown 原稿”，把标题、<code>##</code> 小节、正文段落和图片链接整理好。</li>
-<li>再把这份源稿交给 <code>scripts/create-travel-article.mjs</code> 转成最终 <code>docs/Travel/&lt;slug&gt;.mdx</code>。</li>
-<li>生成后刷新照片元数据、地图数据，并做构建验证。</li>
-<li>如果发现某些图片没有有效 EXIF、没有 GPS、链接失效，或者地点命名明显不稳，必须明确告诉用户。</li>
+<li>First check whether the links are stable and accessible, and whether they are JPEG.</li>
+<li>If there are only links and no groupings, do an initial grouping by file order, scene changes, and your descriptions.</li>
+<li>If groupings are still uncertain, read compressed previews -- only to judge scenes and write body text, not to read the entire set of originals.</li>
+<li>First produce a &quot;source Markdown draft,&quot; organizing headings, <code>##</code> sections, body paragraphs, and image links.</li>
+<li>Then hand this source draft to <code>scripts/create-travel-article.mjs</code> to convert into the final <code>docs/Travel/&lt;slug&gt;.mdx</code>.</li>
+<li>After generation, refresh photo metadata, map data, and run build verification.</li>
+<li>If any images lack valid EXIF, lack GPS, have broken links, or the location naming is clearly unstable, explicitly tell the user.</li>
 </ol>
-<p>也就是说，AI 不应该一上来就直接手写最终 MDX。更稳妥的做法是：</p>
+<p>In other words, AI should not hand-write the final MDX directly. A more reliable approach:</p>
 <ol>
-<li>先整理出一份人类也能读的源稿</li>
-<li>再用脚本生成最终 MDX</li>
-<li>再跑验证</li>
+<li>First produce a source draft that a human can also read</li>
+<li>Then use the script to generate the final MDX</li>
+<li>Then run verification</li>
 </ol>
-<p>这样后续你想改文案、调分组、增删图片时，都能复用同一条链路，不会退回到一次性手工拼页面。</p>
-<p>一个最贴合你当前习惯的输入模板可以是：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">地点：济南 Jinan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">要求：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- 文字不要写成攻略，偏相册叙述</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- 前半段是抵达和泉水，后半段是夜景</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- 语气克制一点，不要太抒情</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">图片：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6319_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6352_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6376_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6386_Jinan.jpg</span><br></span></code></pre></div></div>
-<p>AI 收到这类输入后，标准输出应该依次是：</p>
+<p>This way, when you later want to revise copy, adjust groupings, add or remove images, you can reuse the same pipeline without regressing to one-off manual page assembly.</p>
+<p>An input template that best fits your current habits:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Location: Jinan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Requirements:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Don&#x27;t write it like a travel guide; lean toward album narration</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- First half is arrival and springs, second half is night scenes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Tone: restrained, not too lyrical</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Images:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6319_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6352_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6376_Jinan.jpg</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">https://picture.nevergpdzy.cn/Travel/Jinan/IMG_6386_Jinan.jpg</span><br></span></code></pre></div></div>
+<p>When AI receives this kind of input, the standard output should be:</p>
 <ol>
-<li>先整理出 <code>drafts/travel/&lt;slug&gt;-source.md</code> 这类源稿</li>
-<li>再运行：</li>
+<li>First produce a source draft like <code>drafts/travel/&lt;slug&gt;-source.md</code></li>
+<li>Then run:</li>
 </ol>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md --verify</span><br></span></code></pre></div></div>
-<p>这条命令会生成最终 <code>docs/Travel/&lt;slug&gt;.mdx</code>，随后刷新 Travel 照片元数据、地图数据并构建站点。它等价于先生成文章，再跑 <code>npm run verify:travel</code>。</p>
+<p>This command generates the final <code>docs/Travel/&lt;slug&gt;.mdx</code>, then refreshes Travel photo metadata, map data, and builds the site. It is equivalent to generating the article then running <code>npm run verify:travel</code>.</p>
 <ol start="3">
-<li>最后把结果回报给用户，包括：</li>
+<li>Finally report back to the user, including:</li>
 </ol>
 <ul>
-<li>新生成的 Travel 页面路径</li>
-<li>是否成功刷新元数据和地图</li>
-<li>是否构建通过</li>
-<li>哪些图片缺失 EXIF / GPS / 逆地理编码</li>
+<li>The path of the newly generated Travel page</li>
+<li>Whether metadata and map refresh succeeded</li>
+<li>Whether the build passed</li>
+<li>Which images are missing EXIF / GPS / reverse geocoding</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="第三步ai-把-markdown-转成仓库里的旅行页面">第三步：AI 把 Markdown 转成仓库里的旅行页面<a href="#第三步ai-把-markdown-转成仓库里的旅行页面" class="hash-link" aria-label="Direct link to 第三步：AI 把 Markdown 转成仓库里的旅行页面" title="Direct link to 第三步：AI 把 Markdown 转成仓库里的旅行页面">​</a></h3>
-<p>AI 在这个仓库里接手时，应按下面的规则执行。</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-页面落点">1. 页面落点<a href="#1-页面落点" class="hash-link" aria-label="Direct link to 1. 页面落点" title="Direct link to 1. 页面落点">​</a></h4>
-<p>新文章应放在：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-ai-converts-markdown-into-a-travel-page-in-this-repo">Step 3: AI Converts Markdown into a Travel Page in This Repo<a href="#step-3-ai-converts-markdown-into-a-travel-page-in-this-repo" class="hash-link" aria-label="Direct link to Step 3: AI Converts Markdown into a Travel Page in This Repo" title="Direct link to Step 3: AI Converts Markdown into a Travel Page in This Repo">​</a></h3>
+<p>When AI takes over in this repo, it should follow these rules.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-page-location">1. Page Location<a href="#1-page-location" class="hash-link" aria-label="Direct link to 1. Page Location" title="Direct link to 1. Page Location">​</a></h4>
+<p>New articles go to:</p>
 <ul>
 <li><code>docs/Travel/&lt;slug&gt;.mdx</code></li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-front-matter">2. front matter<a href="#2-front-matter" class="hash-link" aria-label="Direct link to 2. front matter" title="Direct link to 2. front matter">​</a></h4>
-<p>必须至少有：</p>
-<div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">title: 武汉 Wuhan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">description: 这里写这一篇旅行相册的简短摘要。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sidebar_position: -20241218</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">hide_table_of_contents: true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span></code></pre></div></div>
-<p>其中：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-front-matter">2. Front Matter<a href="#2-front-matter" class="hash-link" aria-label="Direct link to 2. Front Matter" title="Direct link to 2. Front Matter">​</a></h4>
+<p>Must have at minimum:</p>
+<div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">title: Wuhan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">description: A short summary of this travel album.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sidebar_position: -20241218</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">hide_table_of_contents: true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span></code></pre></div></div>
+<p>Where:</p>
 <ul>
-<li><code>title</code> 会影响灯箱里显示的地点名</li>
-<li>如果你想让地点显示成中文，标题里必须把中文地点放在前面</li>
-<li><code>sidebar_position</code> 使用旅行开始日期的负数，格式是 <code>-YYYYMMDD</code>，用于让 Travel 卡片、侧栏和上一篇/下一篇按最新旅行在前排列</li>
+<li><code>title</code> affects the location name displayed in the lightbox</li>
+<li>If you want the location to display in Chinese, the Chinese location must come first in the title</li>
+<li><code>sidebar_position</code> uses the negative of the trip start date in <code>-YYYYMMDD</code> format, used to sort Travel cards, sidebar, and prev/next navigation with the newest trip first</li>
 </ul>
-<p><code>sidebar_position</code> 不要写成普通顺序号，例如 <code>1, 2, 3...</code>，否则以后新增最新旅行时需要整体改号。也不要为了排序改 Travel 文件名；当前地图数据和首页卡片仍使用文件名 basename 作为文章 <code>id</code>。</p>
-<p>同一天多篇文章需要微调顺序时，用小数后缀，例如：</p>
+<p>Do not write <code>sidebar_position</code> as a plain sequence number like <code>1, 2, 3...</code>, or you will need to renumber everything when adding a newer trip later. Do not rename Travel files for sorting; the current map data and homepage cards still use the file basename as the article <code>id</code>.</p>
+<p>For multiple articles on the same day needing fine-tuned order, use decimal suffixes:</p>
 <div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.02</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.01</span><br></span></code></pre></div></div>
-<p>不要写 <code>-2026043001</code> 这类追加整数位的值，它会比普通日期小很多，导致文章长期排在不该排的位置。</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-引入组件">3. 引入组件<a href="#3-引入组件" class="hash-link" aria-label="Direct link to 3. 引入组件" title="Direct link to 3. 引入组件">​</a></h4>
-<p>页面顶部统一使用：</p>
+<p>Do not write appended integer-digit values like <code>-2026043001</code>, as it will be much smaller than a normal date and cause the article to permanently rank in the wrong position.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-component-imports">3. Component Imports<a href="#3-component-imports" class="hash-link" aria-label="Direct link to 3. Component Imports" title="Direct link to 3. Component Imports">​</a></h4>
+<p>At the top of the page, uniformly use:</p>
 <div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">import TravelGallery, {createTravelPhotos} from &#x27;@site/src/components/TravelGallery&#x27;;</span><br></span></code></pre></div></div>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-图片数组写法">4. 图片数组写法<a href="#4-图片数组写法" class="hash-link" aria-label="Direct link to 4. 图片数组写法" title="Direct link to 4. 图片数组写法">​</a></h4>
-<p>图片数组应该写域名相对路径，不要直接把整条 URL 写进 <code>createTravelPhotos([...])</code>：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-image-array-syntax">4. Image Array Syntax<a href="#4-image-array-syntax" class="hash-link" aria-label="Direct link to 4. Image Array Syntax" title="Direct link to 4. Image Array Syntax">​</a></h4>
+<p>Image arrays should use domain-relative paths. Do not write full URLs into <code>createTravelPhotos([...])</code>:</p>
 <div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">export const arrivalPhotos = createTravelPhotos([</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_5867_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6001_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]);</span><br></span></code></pre></div></div>
-<p>原因是：</p>
+<p>The reasons:</p>
 <ul>
-<li>这种写法可以稳定支持多目录</li>
-<li>元数据脚本当前也是围绕“相对路径 -&gt; 下载 -&gt; 解析 EXIF”这条链路工作的</li>
-<li>如果不同目录里有同名图片，相对路径可以避免冲突</li>
+<li>This syntax reliably supports multi-directory structures</li>
+<li>The metadata script currently works around the &quot;relative path -&gt; download -&gt; parse EXIF&quot; pipeline</li>
+<li>If different directories contain same-named images, relative paths avoid conflicts</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="5-分组规则">5. 分组规则<a href="#5-分组规则" class="hash-link" aria-label="Direct link to 5. 分组规则" title="Direct link to 5. 分组规则">​</a></h4>
-<p>AI 处理用户上传的 Markdown 时，优先按这个顺序分组：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="5-grouping-rules">5. Grouping Rules<a href="#5-grouping-rules" class="hash-link" aria-label="Direct link to 5. Grouping Rules" title="Direct link to 5. Grouping Rules">​</a></h4>
+<p>When AI processes user-uploaded Markdown, prioritize grouping by this order:</p>
 <ol>
-<li>按源 Markdown 的二级标题或三级标题分组</li>
-<li>如果没有标题，按明显的场景段落分组</li>
-<li>如果仍然没有信息，就按原始顺序拆成 2 到 4 组</li>
+<li>Group by the source Markdown&#x27;s H2 or H3 headings</li>
+<li>If no headings, group by obvious scene paragraphs</li>
+<li>If still no information, split by original order into 2 to 4 groups</li>
 </ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="6-保留图片顺序">6. 保留图片顺序<a href="#6-保留图片顺序" class="hash-link" aria-label="Direct link to 6. 保留图片顺序" title="Direct link to 6. 保留图片顺序">​</a></h4>
-<p>同一组里的图片顺序，默认不要调整。因为：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="6-preserve-image-order">6. Preserve Image Order<a href="#6-preserve-image-order" class="hash-link" aria-label="Direct link to 6. Preserve Image Order" title="Direct link to 6. Preserve Image Order">​</a></h4>
+<p>Do not adjust the order of images within a group by default. Because:</p>
 <ul>
-<li>拍摄时间在多数情况下本来就是顺序信息</li>
-<li>用户通常已经按浏览叙事排过一次</li>
+<li>Capture time is, in most cases, already sequential</li>
+<li>The user has usually already arranged them once for browsing narrative</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="7-文案与图片的关系">7. 文案与图片的关系<a href="#7-文案与图片的关系" class="hash-link" aria-label="Direct link to 7. 文案与图片的关系" title="Direct link to 7. 文案与图片的关系">​</a></h4>
-<p>图片下面的元数据会自动显示，所以 AI 不需要把拍摄时间、设备、镜头手工写进正文。</p>
-<p>正文更适合承担的是：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="7-relationship-between-copy-and-images">7. Relationship Between Copy and Images<a href="#7-relationship-between-copy-and-images" class="hash-link" aria-label="Direct link to 7. Relationship Between Copy and Images" title="Direct link to 7. Relationship Between Copy and Images">​</a></h4>
+<p>The metadata below images displays automatically, so AI does not need to manually write capture time, device, or lens into the body text.</p>
+<p>The body text is better suited for:</p>
 <ul>
-<li>旅行叙述</li>
-<li>场景切换</li>
-<li>各组照片之  间的节奏说明</li>
+<li>Travel narration</li>
+<li>Scene transitions</li>
+<li>Rhythm descriptions between image groups</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="8-推荐的最小-mdx-模板">8. 推荐的最小 MDX 模板<a href="#8-推荐的最小-mdx-模板" class="hash-link" aria-label="Direct link to 8. 推荐的最小 MDX 模板" title="Direct link to 8. 推荐的最小 MDX 模板">​</a></h4>
-<div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">title: 武汉 Wuhan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">description: 以相册的方式记录一次在武汉放慢脚步的短暂停留。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sidebar_position: -20241218</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">hide_table_of_contents: true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">import TravelGallery, {createTravelPhotos} from &#x27;@site/src/components/TravelGallery&#x27;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export const arrivalPhotos = createTravelPhotos([</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_5867_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6001_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export const streetPhotos = createTravelPhotos([</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6069_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6076_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">这里写开场文字。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;TravelGallery images={arrivalPhotos} /&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">## 把脚步放慢一点</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">这里写第二段文字。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;TravelGallery images={streetPhotos} /&gt;</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="第四步生成元数据清单">第四步：生成元数据清单<a href="#第四步生成元数据清单" class="hash-link" aria-label="Direct link to 第四步：生成元数据清单" title="Direct link to 第四步：生成元数据清单">​</a></h3>
-<p>先在仓库根目录配置一次本地环境变量文件：</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="35-原始-markdown--oss-链接到-travel-mdx-的自动生成">3.5 原始 Markdown / OSS 链接到 Travel MDX 的自动生成<a href="#35-原始-markdown--oss-链接到-travel-mdx-的自动生成" class="hash-link" aria-label="Direct link to 3.5 原始 Markdown / OSS 链接到 Travel MDX 的自动生成" title="Direct link to 3.5 原始 Markdown / OSS 链接到 Travel MDX 的自动生成">​</a></h3>
-<p>如果你手里的是一份普通 Markdown 原稿，里面已经有正文、<code>##</code> 小节和 <code>https://picture.nevergpdzy.cn/</code> 的图片 OSS 链接，可以直接运行：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="8-recommended-minimal-mdx-template">8. Recommended Minimal MDX Template<a href="#8-recommended-minimal-mdx-template" class="hash-link" aria-label="Direct link to 8. Recommended Minimal MDX Template" title="Direct link to 8. Recommended Minimal MDX Template">​</a></h4>
+<div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">title: Wuhan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">description: A short album-style record of a brief stay in Wuhan, slowing down to take it in.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sidebar_position: -20241218</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">hide_table_of_contents: true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">import TravelGallery, {createTravelPhotos} from &#x27;@site/src/components/TravelGallery&#x27;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export const arrivalPhotos = createTravelPhotos([</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_5867_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6001_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export const streetPhotos = createTravelPhotos([</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6069_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &#x27;img_for_Typora/IMG_6076_WuHan.jpg&#x27;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">]);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Opening text goes here.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;TravelGallery images={arrivalPhotos} /&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">## Slowing Down the Pace</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Second paragraph text goes here.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;TravelGallery images={streetPhotos} /&gt;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-4-generate-the-metadata-manifest">Step 4: Generate the Metadata Manifest<a href="#step-4-generate-the-metadata-manifest" class="hash-link" aria-label="Direct link to Step 4: Generate the Metadata Manifest" title="Direct link to Step 4: Generate the Metadata Manifest">​</a></h3>
+<p>First configure a local environment variable file in the repo root once:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="35-auto-generation-from-raw-markdown--oss-links-to-travel-mdx">3.5 Auto-Generation from Raw Markdown / OSS Links to Travel MDX<a href="#35-auto-generation-from-raw-markdown--oss-links-to-travel-mdx" class="hash-link" aria-label="Direct link to 3.5 Auto-Generation from Raw Markdown / OSS Links to Travel MDX" title="Direct link to 3.5 Auto-Generation from Raw Markdown / OSS Links to Travel MDX">​</a></h3>
+<p>If you have a plain Markdown source draft with body text, <code>##</code> sections, and image OSS links under <code>https://picture.nevergpdzy.cn/</code>, run:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/jinan-source.md</span><br></span></code></pre></div></div>
-<p>如果希望在生成 <code>docs/Travel/*.mdx</code> 后，顺手把照片元数据和地图数据一并刷新，运行：</p>
+<p>If you want to also refresh photo metadata and map data after generating <code>docs/Travel/*.mdx</code>:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run sync:travel-article -- --source drafts/travel/jinan-source.md</span><br></span></code></pre></div></div>
-<p>脚本会自动：</p>
+<p>The script will automatically:</p>
 <ul>
-<li>读取 front matter</li>
-<li>根据 <code>slug</code>、<code>file_name</code>、<code>fileName</code>、<code>title</code> 或源文件名推导输出文件名；也可以用 front matter 的 <code>output</code> 显式指定输出位置</li>
-<li>保留 <code>##</code> 章节结构</li>
-<li>提取 <code>picture.nevergpdzy.cn</code> 下的 JPEG 图片链接，并转成域名相对路径</li>
-<li>生成 <code>createTravelPhotos([...])</code></li>
-<li>注入 <code>TravelStoryMap</code> 与 <code>TravelGallery</code></li>
-<li>输出最终的 <code>docs/Travel/&lt;slug&gt;.mdx</code></li>
+<li>Read front matter</li>
+<li>Derive the output filename from <code>slug</code>, <code>file_name</code>, <code>fileName</code>, <code>title</code>, or the source filename; front matter <code>output</code> can also explicitly specify the output path</li>
+<li>Preserve <code>##</code> section structure</li>
+<li>Extract JPEG image links under <code>picture.nevergpdzy.cn</code> and convert to domain-relative paths</li>
+<li>Generate <code>createTravelPhotos([...])</code></li>
+<li>Inject <code>TravelStoryMap</code> and <code>TravelGallery</code></li>
+<li>Output the final <code>docs/Travel/&lt;slug&gt;.mdx</code></li>
 </ul>
-<p><code>scripts/create-travel-article.mjs</code> 会保留源稿 front matter 里的 <code>sidebar_position</code>。因此源稿模板里要提前写好 <code>sidebar_position: -YYYYMMDD</code>，不要等生成 MDX 后再手动补。</p>
-<p>几个参数边界需要记住：</p>
+<p><code>scripts/create-travel-article.mjs</code> preserves the <code>sidebar_position</code> from the source draft&#x27;s front matter. So the source template should have <code>sidebar_position: -YYYYMMDD</code> written in advance -- do not wait to manually add it after generating the MDX.</p>
+<p>Several parameter boundaries to remember:</p>
 <ul>
-<li><code>--source</code> 或 <code>-s</code> 必填，指向源稿 Markdown。</li>
-<li><code>--sync</code> 会在写入最终 MDX 后运行 <code>npm run generate:travel</code>。</li>
-<li><code>--verify</code> 会在写入最终 MDX 后依次运行 <code>npm run generate:travel</code> 和 <code>npm run build</code>。</li>
-<li>如果目标文件已经存在，脚本默认拒绝覆盖；确实要覆盖时再加 <code>--force</code>。</li>
-<li>源稿里的 <code>output</code> 只用于指定输出路径，不会写进最终 front matter。</li>
+<li><code>--source</code> or <code>-s</code> is required and points to the source Markdown.</li>
+<li><code>--sync</code> runs <code>npm run generate:travel</code> after writing the final MDX.</li>
+<li><code>--verify</code> runs <code>npm run generate:travel</code> and <code>npm run build</code> after writing the final MDX.</li>
+<li>If the target file already exists, the script refuses to overwrite by default; add <code>--force</code> only when you truly need to overwrite.</li>
+<li>The <code>output</code> field in the source is only used to specify the output path and is not written into the final front matter.</li>
 </ul>
-<p>模板见：</p>
+<p>Template location:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">scripts/templates/travel-article-source.example.md</span><br></span></code></pre></div></div>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Copy-Item .env.example .env.local</span><br></span></code></pre></div></div>
-<p>然后把 <code>.env.local</code> 里的高德 key 填好：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_WEB_SERVICE_KEY=你的高德 Web 服务 key</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_JSAPI_KEY=你的高德 JSAPI key</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_SERVICE_HOST=</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_SECURITY_JS_CODE=你的高德安全密钥</span><br></span></code></pre></div></div>
-<p>说明：</p>
+<p>Then fill in the AMap keys in <code>.env.local</code>:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_WEB_SERVICE_KEY=your-amap-web-service-key</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_JSAPI_KEY=your-amap-jsapi-key</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_SERVICE_HOST=</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_SECURITY_JS_CODE=your-amap-security-code</span><br></span></code></pre></div></div>
+<p>Details:</p>
 <ul>
-<li><code>scripts/generate-travel-photo-metadata.mjs</code> 会自动读取仓库根目录下的 <code>.env.local</code> 和 <code>.env.development.local</code></li>
-<li>如果当前 shell 里已经显式设置了 <code>AMAP_WEB_SERVICE_KEY</code>，它会优先于本地文件</li>
-<li><code>AMAP_WEB_SERVICE_KEY</code> 只给照片元数据脚本用；<code>AMAP_JSAPI_KEY</code> 和 <code>AMAP_SERVICE_HOST</code> / <code>AMAP_SECURITY_JS_CODE</code> 给前端 Travel 地图组件用</li>
-<li>前端地图通过 <code>npm</code> 安装的 <code>@amap/amap-jsapi-loader</code> 加载，不再使用页面注入 <code>loader.js</code></li>
-<li><code>.env.local</code> 已被 <code>.gitignore</code> 忽略，不要提交真实 key</li>
-<li>生产环境优先使用 <code>AMAP_SERVICE_HOST</code></li>
-<li><code>AMAP_SECURITY_JS_CODE</code> 只作为本地开发或无代理环境下的兜底方案</li>
-<li>如果把 <code>AMAP_SECURITY_JS_CODE</code> 直接注入 Docusaurus 前端配置，它会进入构建产物，部署到服务器后仍然能被客户端看到</li>
-<li>当前仓库已经做了保护：只要配置了 <code>AMAP_SERVICE_HOST</code>，构建时就不再把 <code>AMAP_SECURITY_JS_CODE</code> 注入 <code>customFields.amap</code></li>
+<li><code>scripts/generate-travel-photo-metadata.mjs</code> automatically reads <code>.env.local</code> and <code>.env.development.local</code> from the repo root</li>
+<li>If <code>AMAP_WEB_SERVICE_KEY</code> is already explicitly set in the current shell, it takes precedence over local files</li>
+<li><code>AMAP_WEB_SERVICE_KEY</code> is only used by the photo metadata script; <code>AMAP_JSAPI_KEY</code> and <code>AMAP_SERVICE_HOST</code> / <code>AMAP_SECURITY_JS_CODE</code> are used by the frontend Travel map component</li>
+<li>The frontend map loads via <code>@amap/amap-jsapi-loader</code> installed through <code>npm</code>; it no longer uses page-injected <code>loader.js</code></li>
+<li><code>.env.local</code> is already ignored by <code>.gitignore</code>; do not commit real keys</li>
+<li>Production prefers <code>AMAP_SERVICE_HOST</code></li>
+<li><code>AMAP_SECURITY_JS_CODE</code> is only a fallback for local development or no-proxy environments</li>
+<li>If you inject <code>AMAP_SECURITY_JS_CODE</code> directly into the Docusaurus frontend config, it will enter the build artifacts and remain visible to clients even after server deployment</li>
+<li>The current repo has protection: once <code>AMAP_SERVICE_HOST</code> is configured, the build no longer injects <code>AMAP_SECURITY_JS_CODE</code> into <code>customFields.amap</code></li>
 </ul>
-<p>例如生产环境可以把：</p>
+<p>For example, in production you can set:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">AMAP_SERVICE_HOST=/_AMapService</span><br></span></code></pre></div></div>
-<p>交给你自己的服务器代理，由服务器再去请求高德服务。</p>
-<p>如果你只是把纯静态 <code>build/</code> 目录直接上传到服务器，而没有额外配置代理，那么想让别人正常加载地图，就只能继续走前端直传 <code>AMAP_SECURITY_JS_CODE</code> 的模式；这样地图能用，但安全密钥也会跟着构建产物一起暴露。</p>
-<p>一个最小可维护的做法是：</p>
+<p>and let your own server proxy handle the actual AMap requests.</p>
+<p>If you only upload the raw static <code>build/</code> directory to a server without configuring a proxy, and you want others to load the map normally, you must continue using the frontend direct <code>AMAP_SECURITY_JS_CODE</code> approach. The map will work, but the security key will also be exposed in the build artifacts.</p>
+<p>A minimal maintainable approach:</p>
 <ol>
-<li>前端构建环境只保留 <code>AMAP_JSAPI_KEY</code> 和 <code>AMAP_SERVICE_HOST=/_AMapService</code></li>
-<li>服务器反向代理 <code>/_AMapService</code></li>
-<li>由服务器在代理转发时补上真正的高德安全密钥</li>
+<li>Frontend build environment keeps only <code>AMAP_JSAPI_KEY</code> and <code>AMAP_SERVICE_HOST=/_AMapService</code></li>
+<li>Server reverse-proxies <code>/_AMapService</code></li>
+<li>The server injects the real AMap security key during proxy forwarding</li>
 </ol>
-<p>例如 <code>nginx</code> 最少可以先配 Web 服务代理：</p>
-<div class="language-nginx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-nginx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">location /_AMapService/ {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  set $args &quot;$args&amp;jscode=你的安全密钥&quot;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  proxy_pass https://restapi.amap.com/;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  proxy_set_header Host restapi.amap.com;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
-<p>如果你后面启用了自定义地图样式，再按高德官方安全文档补上 <code>/_AMapService/v4/map/styles</code> 那一段代理规则。</p>
-<p>页面内容完成后，如果只是想单独刷新照片元数据，运行：</p>
+<p>For example, <code>nginx</code> can start with a minimal Web service proxy:</p>
+<div class="language-nginx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-nginx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">location /_AMapService/ {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  set $args &quot;$args&amp;jscode=your-security-code&quot;;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  proxy_pass https://restapi.amap.com/;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  proxy_set_header Host restapi.amap.com;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>If you later enable custom map styles, add the <code>/_AMapService/v4/map/styles</code> proxy rule per AMap&#x27;s official security documentation.</p>
+<p>After the page content is complete, if you only want to refresh photo metadata independently:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel-metadata</span><br></span></code></pre></div></div>
-<p>如果只想单独刷新 Travel 地图数据，运行：</p>
+<p>If you only want to refresh Travel map data independently:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel-map-data</span><br></span></code></pre></div></div>
-<p>如果想一次性把 travel 的照片元数据和地图都刷新，运行：</p>
+<p>If you want to refresh both travel photo metadata and maps in one go:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel</span><br></span></code></pre></div></div>
-<p>如果这次只是临时覆盖本地文件里的 key，也可以直接在当前 shell 里设置：</p>
-<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$env:AMAP_WEB_SERVICE_KEY=&#x27;你的高德 Web 服务 key&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel-metadata</span><br></span></code></pre></div></div>
-<p>这个命令会：</p>
+<p>If you are only temporarily overriding local file keys for this session, you can also set them directly in the current shell:</p>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$env:AMAP_WEB_SERVICE_KEY=&#x27;your-amap-web-service-key&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel-metadata</span><br></span></code></pre></div></div>
+<p>This command will:</p>
 <ul>
-<li>扫描 <code>docs/Travel</code> 目录下的 <code>.mdx</code> 文件</li>
-<li>提取所有 <code>createTravelPhotos([...])</code> 里的 JPEG 相对路径</li>
-<li>复用 <code>src/data/travelPhotoMetadata.generated.json</code> 里已经存在的有效元数据</li>
-<li>只下载新增图片，或已有记录里还没有完成 EXIF / GPS 提取的图片</li>
-<li>读取这些缺失图片的 EXIF / GPS</li>
-<li>对有 GPS 且还没有逆地理编码缓存的图片调用高德逆地理编码</li>
-<li>自动把高德请求节流到不超过 <code>3 次/秒</code></li>
-<li>生成 <code>src/data/travelPhotoMetadata.generated.json</code></li>
+<li>Scan <code>.mdx</code> files under <code>docs/Travel</code></li>
+<li>Extract all JPEG relative paths from <code>createTravelPhotos([...])</code></li>
+<li>Reuse valid metadata already in <code>src/data/travelPhotoMetadata.generated.json</code></li>
+<li>Only download new images or images whose EXIF / GPS extraction is still incomplete</li>
+<li>Read the missing EXIF / GPS for these images</li>
+<li>Call AMap reverse geocoding for images with GPS but no reverse geocoding cache</li>
+<li>Automatically throttle AMap requests to no more than <code>3/second</code></li>
+<li>Generate <code>src/data/travelPhotoMetadata.generated.json</code></li>
 </ul>
-<p>如果命令成功，终端最后会看到类似：</p>
+<p>If the command succeeds, you will see something like this at the end of the terminal:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Wrote N travel photo records to .../src/data/travelPhotoMetadata.generated.json (X metadata cached, Y metadata fetched, A regeo cached, B regeo requested, AMap capped at &lt;= 3/s)</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="第五步构建验证">第五步：构建验证<a href="#第五步构建验证" class="hash-link" aria-label="Direct link to 第五步：构建验证" title="Direct link to 第五步：构建验证">​</a></h3>
-<p>默认推荐直接运行一条完整验证命令：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-5-build-verification">Step 5: Build Verification<a href="#step-5-build-verification" class="hash-link" aria-label="Direct link to Step 5: Build Verification" title="Direct link to Step 5: Build Verification">​</a></h3>
+<p>The default recommendation is to run one complete verification command:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run verify:travel</span><br></span></code></pre></div></div>
-<p>它会顺序执行：</p>
+<p>It sequentially runs:</p>
 <ul>
 <li><code>npm run generate:travel</code></li>
 <li><code>npm run build</code></li>
 </ul>
-<p>适用场景：</p>
+<p>Applicable scenarios:</p>
 <ul>
-<li>新增了 travel 页面</li>
-<li>新增了照片</li>
-<li>新增了 GPS / 逆地理编码缓存</li>
-<li>调整了 <code>TravelGallery</code> 或照片元数据展示逻辑</li>
+<li>Added a new travel page</li>
+<li>Added new photos</li>
+<li>Added new GPS / reverse geocoding caches</li>
+<li>Adjusted <code>TravelGallery</code> or photo metadata display logic</li>
 </ul>
-<p>至少 检查下面几件事：</p>
+<p>Check at least:</p>
 <ul>
-<li>页面能成功构建</li>
-<li>旅游页面能正常打开</li>
-<li>灯箱能正常打开和切换</li>
-<li>照片下方的一行元数据能正常显示</li>
-<li>宽屏和窄屏下，日期与“设备 + 镜头”换行逻辑正常</li>
+<li>The page builds successfully</li>
+<li>The travel page opens normally</li>
+<li>The lightbox opens and navigates normally</li>
+<li>The one-line metadata below each photo displays correctly</li>
+<li>On wide and narrow screens, the date and &quot;device + lens&quot; line-break logic is correct</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-接手全是图片链接的-markdown时的规范动作">AI 接手“全是图片链接的 Markdown”时的规范动作<a href="#ai-接手全是图片链接的-markdown时的规范动作" class="hash-link" aria-label="Direct link to AI 接手“全是图片链接的 Markdown”时的规范动作" title="Direct link to AI 接手“全是图片链接的 Markdown”时的规范动作">​</a></h2>
-<p>以后如果你上传一份 Markdown 给 AI，希望它直接补完这个仓库里的旅游页面，AI 应该按下面的顺序执行。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-先提取图片相对路径">1. 先提取图片相对路径<a href="#1-先提取图片相对路径" class="hash-link" aria-label="Direct link to 1. 先提取图片相对路径" title="Direct link to 1. 先提取图片相对路径">​</a></h3>
-<p>如果源内容是：</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-norms-when-handling-markdown-full-of-image-links">AI Norms When Handling &quot;Markdown Full of Image Links&quot;<a href="#ai-norms-when-handling-markdown-full-of-image-links" class="hash-link" aria-label="Direct link to AI Norms When Handling &quot;Markdown Full of Image Links&quot;" title="Direct link to AI Norms When Handling &quot;Markdown Full of Image Links&quot;">​</a></h2>
+<p>Going forward, when you upload a Markdown to AI and want it to complete the travel page in this repo, AI should follow this order.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-extract-image-relative-paths-first">1. Extract Image Relative Paths First<a href="#1-extract-image-relative-paths-first" class="hash-link" aria-label="Direct link to 1. Extract Image Relative Paths First" title="Direct link to 1. Extract Image Relative Paths First">​</a></h3>
+<p>If the source content is:</p>
 <div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/img_for_Typora/IMG_5867_WuHan.jpg)</span><br></span></code></pre></div></div>
-<p>AI 最终在仓库里应该写成：</p>
+<p>AI should write this in the repo:</p>
 <div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&#x27;img_for_Typora/IMG_5867_WuHan.jpg&#x27;</span><br></span></code></pre></div></div>
-<p>不是保留整条 URL。</p>
-<p>如果源内容是：</p>
+<p>Not the full URL.</p>
+<p>If the source content is:</p>
 <div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">![](https://picture.nevergpdzy.cn/Travel/JingXi/IMG_5867_WuHan.jpg)</span><br></span></code></pre></div></div>
-<p>AI 最终应该写成：</p>
+<p>AI should write:</p>
 <div class="language-mdx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-mdx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&#x27;Travel/JingXi/IMG_5867_WuHan.jpg&#x27;</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-保留原-markdown-的章节结构">2. 保留原 Markdown 的章节结构<a href="#2-保留原-markdown-的章节结构" class="hash-link" aria-label="Direct link to 2. 保留原 Markdown 的章节结构" title="Direct link to 2. 保留原 Markdown 的章节结构">​</a></h3>
-<p>如果源 Markdown 已经有：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-preserve-the-original-markdowns-section-structure">2. Preserve the Original Markdown&#x27;s Section Structure<a href="#2-preserve-the-original-markdowns-section-structure" class="hash-link" aria-label="Direct link to 2. Preserve the Original Markdown&#x27;s Section Structure" title="Direct link to 2. Preserve the Original Markdown&#x27;s Section Structure">​</a></h3>
+<p>If the source Markdown already has:</p>
 <ul>
-<li>标题</li>
-<li>小标题</li>
-<li>段落</li>
+<li>Headings</li>
+<li>Sub-headings</li>
+<li>Paragraphs</li>
 </ul>
-<p>AI 应尽量保留这些结构，并把每一节对应成一个 <code>createTravelPhotos([...])</code> 数组和一个 <code>&lt;TravelGallery /&gt;</code>。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-用标题决定地点文案">3. 用标题决定地点文案<a href="#3-用标题决定地点文案" class="hash-link" aria-label="Direct link to 3. 用标题决定地点文案" title="Direct link to 3. 用标题决定地点文案">​</a></h3>
-<p>如果用户说这篇是“武汉”，那 front matter 标题应该写成类似：</p>
-<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">title: 武汉 Wuhan</span><br></span></code></pre></div></div>
-<p>不要只写英文，否则灯箱里显示的地点文案也会跟着变成英文。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-不要手工伪造-exif">4. 不要手工伪造 EXIF<a href="#4-不要手工伪造-exif" class="hash-link" aria-label="Direct link to 4. 不要手工伪造 EXIF" title="Direct link to 4. 不要手工伪造 EXIF">​</a></h3>
-<p>AI 可以整理页面结构，但不应该在页面里手工伪造如下字段：</p>
+<p>AI should preserve this structure as much as possible, mapping each section to a <code>createTravelPhotos([...])</code> array and a <code>&lt;TravelGallery /&gt;</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-use-the-title-to-determine-location-copy">3. Use the Title to Determine Location Copy<a href="#3-use-the-title-to-determine-location-copy" class="hash-link" aria-label="Direct link to 3. Use the Title to Determine Location Copy" title="Direct link to 3. Use the Title to Determine Location Copy">​</a></h3>
+<p>If the user says this is about &quot;Wuhan,&quot; the front matter title should be something like:</p>
+<div class="language-md codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-md codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">title: Wuhan</span><br></span></code></pre></div></div>
+<p>Do not write only the English name, or the lightbox location copy will also display in English.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-do-not-fabricate-exif-data">4. Do Not Fabricate EXIF Data<a href="#4-do-not-fabricate-exif-data" class="hash-link" aria-label="Direct link to 4. Do Not Fabricate EXIF Data" title="Direct link to 4. Do Not Fabricate EXIF Data">​</a></h3>
+<p>AI can organize page structure, but should not hand-fabricate these fields:</p>
 <ul>
-<li>拍摄时间</li>
-<li>设备型号</li>
-<li>镜头型号</li>
+<li>Capture time</li>
+<li>Device model</li>
+<li>Lens model</li>
 <li>GPS</li>
 </ul>
-<p>这些应该来自照片本身。如果照片元数据已经丢了，就应该接受灯箱里少显示，或者直接提醒用户这批图不适合做摄影元数据展示。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-读图时只读压缩预览">5. 读图时只读压缩预览<a href="#5-读图时只读压缩预览" class="hash-link" aria-label="Direct link to 5. 读图时只读压缩预览" title="Direct link to 5. 读图时只读压缩预览">​</a></h3>
-<p>如果 AI 需要看照片内容，必须先读压缩预览图，不要直接读取原图。</p>
-<p>默认规则是：</p>
+<p>These should come from the photos themselves. If the photo metadata is already lost, accept that the lightbox will show less information, or explicitly tell the user that these images are not suitable for photography metadata display.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-only-read-compressed-previews">5. Only Read Compressed Previews<a href="#5-only-read-compressed-previews" class="hash-link" aria-label="Direct link to 5. Only Read Compressed Previews" title="Direct link to 5. Only Read Compressed Previews">​</a></h3>
+<p>If AI needs to look at photo content, it must read compressed previews first, not originals.</p>
+<p>Default rules:</p>
 <ul>
-<li>第一档使用长边 <code>1280px</code></li>
-<li>细节不清时再升到长边 <code>1920px</code></li>
-<li>接近约 <code>20MB</code> 的原图或多图输入都必须先压缩、拆批</li>
-<li>预览图只用于判断场景、顺序、分组和正文描述</li>
-<li><code>capturedAt</code>、<code>device</code>、<code>lens</code>、GPS 仍然只能来自原始 JPEG、远端稳定 JPEG、<code>exiftool</code> 或 <code>npm run generate:travel-metadata</code></li>
+<li>First tier uses a long edge of <code>1280px</code></li>
+<li>Step up to <code>1920px</code> when details are unclear</li>
+<li>Approaching <code>20MB</code> originals or multi-image inputs must be compressed and batched first</li>
+<li>Previews are only for judging scenes, order, groupings, and body descriptions</li>
+<li><code>capturedAt</code>, <code>device</code>, <code>lens</code>, and GPS can still only come from original JPEGs, remote stable JPEGs, <code>exiftool</code>, or <code>npm run generate:travel-metadata</code></li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-生成后默认跑一条验证命令">6. 生成后默认跑一条验证命令<a href="#6-生成后默认跑一条验证命令" class="hash-link" aria-label="Direct link to 6. 生成后默认跑一条验证命令" title="Direct link to 6. 生成后默认跑一条验证命令">​</a></h3>
-<p>如果仓库已经在根目录配置好 <code>.env.local</code>，AI 在改完 travel 文件之后，默认应该跑：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-run-a-verification-command-after-generation">6. Run a Verification Command After Generation<a href="#6-run-a-verification-command-after-generation" class="hash-link" aria-label="Direct link to 6. Run a Verification Command After Generation" title="Direct link to 6. Run a Verification Command After Generation">​</a></h3>
+<p>If the repo already has <code>.env.local</code> configured at the root, AI should run this by default after modifying travel files:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run verify:travel</span><br></span></code></pre></div></div>
-<p>只有在明确只想刷新元数据、不做构建验证时，才单独运行：</p>
+<p>Only when explicitly wanting to refresh metadata without build verification, run:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel-metadata</span><br></span></code></pre></div></div>
-<p>如果没有跑 <code>npm run verify:travel</code>，通常就不能算 travel 流程完成。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="推荐给未来-ai-的直接指令模板">推荐给未来 AI 的直接指令模板<a href="#推荐给未来-ai-的直接指令模板" class="hash-link" aria-label="Direct link to 推荐给未来 AI 的直接指令模板" title="Direct link to 推荐给未来 AI 的直接指令模板">​</a></h2>
-<p>以后你可以直接把下面这段要求连同 Markdown 一起给 AI：</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">请把我上传的 Markdown 转成这个仓库里的旅游相册页面，要求：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1. 新文件放到 docs/Travel 下，使用 MDX。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2. front matter 的 title 先写中文地点，再写英文地点。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3. front matter 必须写 `sidebar_position: -YYYYMMDD`，日期取旅行开始日期，用于让 Travel 卡片、侧栏和上一篇/下一篇按最新旅行在前排序。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4. 保留原 Markdown 的章节结构，并按章节生成 createTravelPhotos([...])。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5. createTravelPhotos 里只保留 `https://picture.nevergpdzy.cn/` 后面的相对路径，不要保留完整 URL。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">6. 使用 `TravelGallery` 渲染每一组图片。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">7. 在第一组 `TravelGallery` 之前插入 `&lt;TravelStoryMap /&gt;`，让文章页自动复用默认折叠的拍摄点地图。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">8. 不要手工编造拍摄时间、设备、镜头、GPS。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">9. 如果需要看图，先生成压缩预览图再读；默认长边 1280px，必要时升到 1920px，不要直接读取原图。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">10. 默认使用仓库根目录 `.env.local` 里的 `AMAP_WEB_SERVICE_KEY`、`AMAP_JSAPI_KEY`、`AMAP_SERVICE_HOST` / `AMAP_SECURITY_JS_CODE`。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">11. 改完后运行 `npm run verify:travel`。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">12. 如果发现照片没有有效 EXIF，请明确告诉我哪些图缺失元数据。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">13. 如果要覆盖已有 Travel 页面，必须确认后再使用 `--force`。</span><br></span></code></pre></div></div>
-<p>这段模板的目的，是让 AI 直接走当前仓库已经存在的实现，而不是临时发明另一套图片组件或另一份元数据结构。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="验收清单">验收清单<a href="#验收清单" class="hash-link" aria-label="Direct link to 验收清单" title="Direct link to 验收清单">​</a></h2>
-<p>每次新增旅行页面后，建议至少核对下面这些点：</p>
+<p>Without running <code>npm run verify:travel</code>, the travel workflow is usually not considered complete.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-direct-instruction-template-for-future-ai">Recommended Direct Instruction Template for Future AI<a href="#recommended-direct-instruction-template-for-future-ai" class="hash-link" aria-label="Direct link to Recommended Direct Instruction Template for Future AI" title="Direct link to Recommended Direct Instruction Template for Future AI">​</a></h2>
+<p>Going forward, you can give AI this instruction block along with your Markdown:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Please convert the Markdown I uploaded into a travel album page in this repo, with these requirements:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1. New file goes under docs/Travel, using MDX.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2. Front matter title: Chinese location first, then English location.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3. Front matter must include `sidebar_position: -YYYYMMDD` using the trip start date, for sorting Travel cards, sidebar, and prev/next with newest trip first.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4. Preserve the original Markdown&#x27;s section structure and generate createTravelPhotos([...]) per section.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5. createTravelPhotos keeps only the relative path after `https://picture.nevergpdzy.cn/`, not the full URL.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">6. Use `TravelGallery` to render each image group.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">7. Insert `&lt;TravelStoryMap /&gt;` before the first `TravelGallery`, so the article page auto-reuses the default-collapsed capture point map.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">8. Do not fabricate capture time, device, lens, or GPS.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">9. If image reading is needed, generate compressed previews first; default long edge 1280px, step up to 1920px if needed, do not read originals directly.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">10. Default to using `AMAP_WEB_SERVICE_KEY`, `AMAP_JSAPI_KEY`, `AMAP_SERVICE_HOST` / `AMAP_SECURITY_JS_CODE` from the repo root `.env.local`.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">11. Run `npm run verify:travel` after making changes.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">12. If photos lack valid EXIF, explicitly tell me which images are missing metadata.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">13. To overwrite an existing Travel page, confirm first, then use `--force`.</span><br></span></code></pre></div></div>
+<p>The purpose of this template is to have AI directly use the implementation already in this repo, not to invent another image component or metadata structure on the fly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="acceptance-checklist">Acceptance Checklist<a href="#acceptance-checklist" class="hash-link" aria-label="Direct link to Acceptance Checklist" title="Direct link to Acceptance Checklist">​</a></h2>
+<p>After every new travel page, verify at least:</p>
 <ul>
-<li>front matter 写了 <code>sidebar_position: -YYYYMMDD</code>，日期取旅行开始日期</li>
-<li><code>/docs/Travel</code> 卡片顺序、Travel 侧栏顺序和上一篇/下一篇导航都按最新旅行在前排列</li>
-<li><code>docs/Travel/&lt;slug&gt;.mdx</code> 中所有图片都只写 <code>https://picture.nevergpdzy.cn/</code> 后面的相对路径</li>
-<li>这些相对路径都能在远端域名下访问到</li>
-<li>仓库根目录已经配置 <code>.env.local</code>，且其中的 <code>AMAP_WEB_SERVICE_KEY</code>、<code>AMAP_JSAPI_KEY</code>、<code>AMAP_SERVICE_HOST</code> / <code>AMAP_SECURITY_JS_CODE</code> 可用</li>
-<li><code>npm run verify:travel</code> 成功执行</li>
-<li><code>src/data/travelPhotoMetadata.generated.json</code> 里能找到新增图片</li>
-<li><code>src/data/travelMap.generated.json</code> 已同步刷新</li>
-<li>如果用了 <code>--force</code> 覆盖旧页面，确认覆盖的是预期文件，并且没有丢失手工写过的正文</li>
-<li>有 GPS 的关键图片已经补齐 <code>reverseGeocode</code> 与简化后的 <code>displayLocation</code></li>
-<li>关键图片至少能看到 <code>capturedAt</code> 或 <code>device</code> 或 <code>lens</code></li>
-<li>页面构建成功</li>
-<li>灯箱中的地点文案正确</li>
-<li>分类页和文章页里的 Travel 地图能正常出现，且文章页地图会按按钮展开</li>
-<li>手机端和桌面端的灯箱布局都正常</li>
+<li>Front matter has <code>sidebar_position: -YYYYMMDD</code> using the trip start date</li>
+<li><code>/docs/Travel</code> card order, Travel sidebar order, and prev/next navigation all sort newest trip first</li>
+<li>All images in <code>docs/Travel/&lt;slug&gt;.mdx</code> use only the relative path after <code>https://picture.nevergpdzy.cn/</code></li>
+<li>These relative paths are accessible on the remote domain</li>
+<li>Repo root has <code>.env.local</code> configured with working <code>AMAP_WEB_SERVICE_KEY</code>, <code>AMAP_JSAPI_KEY</code>, <code>AMAP_SERVICE_HOST</code> / <code>AMAP_SECURITY_JS_CODE</code></li>
+<li><code>npm run verify:travel</code> runs successfully</li>
+<li><code>src/data/travelPhotoMetadata.generated.json</code> contains the new images</li>
+<li><code>src/data/travelMap.generated.json</code> is refreshed</li>
+<li>If <code>--force</code> was used to overwrite an old page, confirm it overwrote the expected file and no hand-written body text was lost</li>
+<li>Key images with GPS have <code>reverseGeocode</code> and simplified <code>displayLocation</code> filled in</li>
+<li>Key images show at least <code>capturedAt</code> or <code>device</code> or <code>lens</code></li>
+<li>Page builds successfully</li>
+<li>Location copy in the lightbox is correct</li>
+<li>Travel maps in the category page and article page appear correctly, and the article page map expands on button click</li>
+<li>Lightbox layout is correct on both mobile and desktop</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="常见故障与处理">常见故障与处理<a href="#常见故障与处理" class="hash-link" aria-label="Direct link to 常见故障与处理" title="Direct link to 常见故障与处理">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-生成脚本成功了但某些图片元数据全是空">1. 生成脚本成功了，但某些图片元数据全是空<a href="#1-生成脚本成功了但某些图片元数据全是空" class="hash-link" aria-label="Direct link to 1. 生成脚本成功了，但某些图片元数据全是空" title="Direct link to 1. 生成脚本成功了，但某些图片元数据全是空">​</a></h3>
-<p>常见原因：</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-issues-and-fixes">Common Issues and Fixes<a href="#common-issues-and-fixes" class="hash-link" aria-label="Direct link to Common Issues and Fixes" title="Direct link to Common Issues and Fixes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-generation-script-succeeded-but-some-image-metadata-is-empty">1. Generation Script Succeeded but Some Image Metadata Is Empty<a href="#1-generation-script-succeeded-but-some-image-metadata-is-empty" class="hash-link" aria-label="Direct link to 1. Generation Script Succeeded but Some Image Metadata Is Empty" title="Direct link to 1. Generation Script Succeeded but Some Image Metadata Is Empty">​</a></h3>
+<p>Common causes:</p>
 <ul>
-<li>图片本身已经被压缩或清洗过 EXIF</li>
-<li>下载到的并不是原始 JPEG</li>
-<li>这张图本来就没有镜头或时间字段</li>
+<li>The image itself was compressed or had its EXIF stripped</li>
+<li>What was downloaded is not the original JPEG</li>
+<li>The image never had lens or time fields to begin with</li>
 </ul>
-<p>优先处理顺序：</p>
+<p>Priority order:</p>
 <ol>
-<li>先用 <code>exiftool</code> 或系统命令确认这张 JPEG 本地是否还有元数据</li>
-<li>再确认远端链接是不是同一份文件</li>
-<li>如果远端不是原图，重新上传保留 EXIF 的版本</li>
+<li>First use <code>exiftool</code> or a system command to check whether this JPEG still has metadata locally</li>
+<li>Then confirm whether the remote link points to the same file</li>
+<li>If the remote version is not the original, re-upload the EXIF-preserving version</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-页面地点显示不对">2. 页面地点显示不对<a href="#2-页面地点显示不对" class="hash-link" aria-label="Direct link to 2. 页面地点显示不对" title="Direct link to 2. 页面地点显示不对">​</a></h3>
-<p>优先检查这几个东西：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-page-location-display-is-wrong">2. Page Location Display Is Wrong<a href="#2-page-location-display-is-wrong" class="hash-link" aria-label="Direct link to 2. Page Location Display Is Wrong" title="Direct link to 2. Page Location Display Is Wrong">​</a></h3>
+<p>Check these first:</p>
 <ol>
-<li><code>src/data/travelPhotoMetadata.generated.json</code> 里这张图的 <code>gps</code>、<code>reverseGeocode</code>、<code>displayLocation</code></li>
-<li>高德逆地理编码返回的地点是否过长，最终是否被正确简化</li>
-<li>如果这张图没有 GPS，或逆地理编码失败，再检查文章 front matter 的 <code>title</code></li>
+<li><code>src/data/travelPhotoMetadata.generated.json</code> -- this image&#x27;s <code>gps</code>, <code>reverseGeocode</code>, and <code>displayLocation</code></li>
+<li>Whether the AMap reverse geocoding result was too long and was correctly simplified</li>
+<li>If this image has no GPS or reverse geocoding failed, check the article front matter <code>title</code></li>
 </ol>
-<p>因为当前前端显示的地点优先来自照片 GPS 对应的逆地理编码简化结果；只有缺少 GPS 或请求失败时，才回退到文章标题。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-同一张图被多个旅行页面复用后报错">3. 同一张图被多个旅行页面复用后报错<a href="#3-同一张图被多个旅行页面复用后报错" class="hash-link" aria-label="Direct link to 3. 同一张图被多个旅行页面复用后报错" title="Direct link to 3. 同一张图被多个旅行页面复用后报错">​</a></h3>
-<p>当前脚本会检查同一路径是否被多个旅行页面赋予了不同的地点标签。如果同一张图在两篇文章里出现，而且两篇文章标题不一致，脚本可能报：</p>
+<p>The current frontend displays location primarily from the photo GPS reverse geocoding simplified result. Only when GPS is missing or the request fails does it fall back to the article title.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-the-same-image-reused-across-multiple-travel-pages-causes-an-error">3. The Same Image Reused Across Multiple Travel Pages Causes an Error<a href="#3-the-same-image-reused-across-multiple-travel-pages-causes-an-error" class="hash-link" aria-label="Direct link to 3. The Same Image Reused Across Multiple Travel Pages Causes an Error" title="Direct link to 3. The Same Image Reused Across Multiple Travel Pages Causes an Error">​</a></h3>
+<p>The current script checks whether the same path has been assigned different location labels by multiple travel pages. If the same image appears in two articles and the two article titles differ, the script may throw:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Conflicting location labels for ...</span><br></span></code></pre></div></div>
-<p>这种情况要么：</p>
+<p>In this case, either:</p>
 <ul>
-<li>不要跨页面复用同一张图</li>
-<li>要么确保它们继承到的是同一个地点标题</li>
+<li>Do not reuse the same image across pages</li>
+<li>Or ensure they inherit the same location title</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-用户给的是-heicpng-或带查询参数的奇怪链接">4. 用户给的是 HEIC、PNG 或带查询参数的奇怪链接<a href="#4-用户给的是-heicpng-或带查询参数的奇怪链接" class="hash-link" aria-label="Direct link to 4. 用户给的是 HEIC、PNG 或带查询参数的奇怪链接" title="Direct link to 4. 用户给的是 HEIC、PNG 或带查询参数的奇怪链接">​</a></h3>
-<p>当前旅游元数据链路最稳的是：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-user-provided-heic-png-or-links-with-query-parameters">4. User Provided HEIC, PNG, or Links with Query Parameters<a href="#4-user-provided-heic-png-or-links-with-query-parameters" class="hash-link" aria-label="Direct link to 4. User Provided HEIC, PNG, or Links with Query Parameters" title="Direct link to 4. User Provided HEIC, PNG, or Links with Query Parameters">​</a></h3>
+<p>The most stable form for the current travel metadata pipeline is:</p>
 <ul>
-<li>公网 JPEG</li>
-<li>路径稳定</li>
-<li>能直接下载</li>
+<li>Public JPEG</li>
+<li>Stable path</li>
+<li>Directly downloadable</li>
 </ul>
-<p>如果不是这个形态，先把素材整理成符合要求的 JPEG，再进入旅行页面流程。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-powershell-里看文档或-json-出现中文乱码">5. PowerShell 里看文档或 JSON 出现中文乱码<a href="#5-powershell-里看文档或-json-出现中文乱码" class="hash-link" aria-label="Direct link to 5. PowerShell 里看文档或 JSON 出现中文乱码" title="Direct link to 5. PowerShell 里看文档或 JSON 出现中文乱码">​</a></h3>
-<p>这个仓库在 Windows PowerShell 里偶尔会出现中文显示异常，但文件本身通常还是正常的 UTF-8。</p>
-<p>遇到这种情况：</p>
+<p>If the source does not match this, first organize the assets into compliant JPEG, then enter the travel page workflow.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-chinese-garbled-text-in-powershell-when-viewing-documents-or-json">5. Chinese Garbled Text in PowerShell When Viewing Documents or JSON<a href="#5-chinese-garbled-text-in-powershell-when-viewing-documents-or-json" class="hash-link" aria-label="Direct link to 5. Chinese Garbled Text in PowerShell When Viewing Documents or JSON" title="Direct link to 5. Chinese Garbled Text in PowerShell When Viewing Documents or JSON">​</a></h3>
+<p>This repo occasionally shows Chinese display issues in Windows PowerShell, but the files themselves are usually still valid UTF-8.</p>
+<p>If this happens:</p>
 <ul>
-<li>优先用编辑器直接打开文件确认</li>
-<li>或者用 <code>node</code> 读取 UTF-8 内容再看</li>
+<li>Open the file directly in an editor to confirm</li>
+<li>Or use <code>node</code> to read the UTF-8 content</li>
 </ul>
-<p>不要因为终端显示乱码，就误判文档本身已经损坏。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="相关文档">相关文档<a href="#相关文档" class="hash-link" aria-label="Direct link to 相关文档" title="Direct link to 相关文档">​</a></h2>
+<p>Do not misjudge the document as corrupted just because the terminal displays garbled text.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="related-documents">Related Documents<a href="#related-documents" class="hash-link" aria-label="Direct link to Related Documents" title="Direct link to Related Documents">​</a></h2>
 <ul>
-<li><a href="/en/docs/LabNotes/travel-album-map-implementation">Travel 相册与地图实现说明</a></li>
-<li><a href="/en/docs/LabNotes/amap-coordinate-drift">高德地图坐标侧漂记录</a></li>
-<li><a href="/en/docs/LabNotes/apple-heif-display-on-web">苹果 HEIF 照片网站展示指南</a></li>
-<li><a href="/en/docs/WebNotes/operations/image-and-static-assets">图片与静态资源优化</a></li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/docs/LabNotes/travel-album-map-implementation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Travel 相册与地图实现说明</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#先理解当前实现" class="table-of-contents__link toc-highlight">先理解当前实现</a></li><li><a href="#需要记住的几个关键事实" class="table-of-contents__link toc-highlight">需要记住的几个关键事实</a><ul><li><a href="#1-页面显示的地点优先来自逆地理编码缺-gps-时才回退标题" class="table-of-contents__link toc-highlight">1. 页面显示的地点优先来自逆地理编码，缺 GPS 时才回退标题</a></li><li><a href="#2-当前元数据脚本只处理-jpeg标准输入是域名相对路径" class="table-of-contents__link toc-highlight">2. 当前元数据脚本只处理 JPEG，标准输入是域名相对路径</a></li><li><a href="#3-iphone-镜头名称会被压缩成短标签" class="table-of-contents__link toc-highlight">3. iPhone 镜头名称会被压缩成短标签</a></li></ul></li><li><a href="#用户上传前的准备规范" class="table-of-contents__link toc-highlight">用户上传前的准备规范</a><ul><li><a href="#1-源照片尽量保留原片链路" class="table-of-contents__link toc-highlight">1. 源照片尽量保留“原片链路”</a></li><li><a href="#2-尽量一篇旅行文章只对应一个地点标题" class="table-of-contents__link toc-highlight">2. 尽量一篇旅行文章只对应一个地点标题</a></li><li><a href="#3-文件名尽量稳定可读一次定好" class="table-of-contents__link toc-highlight">3. 文件名尽量稳定、可读、一次定好</a></li><li><a href="#4-图片链接最好已经是稳定的公网地址" class="table-of-contents__link toc-highlight">4. 图片链接最好已经是稳定的公网地址</a></li></ul></li><li><a href="#上传前如何检查照片有没有被压缩掉有效元数据" class="table-of-contents__link toc-highlight">上传前如何检查照片有没有被压缩掉有效元数据</a><ul><li><a href="#先看最直观的异常信号" class="table-of-contents__link toc-highlight">先看最直观的异常信号</a></li><li><a href="#最推荐的检查方式exiftool" class="table-of-contents__link toc-highlight">最推荐的检查方式：<code>exiftool</code></a></li><li><a href="#windows-无额外工具时的检查方式" class="table-of-contents__link toc-highlight">Windows 无额外工具时的检查方式</a></li><li><a href="#macos-无额外工具时的检查方式" class="table-of-contents__link toc-highlight">macOS 无额外工具时的检查方式</a></li><li><a href="#图形界面也可以做第一轮检查" class="table-of-contents__link toc-highlight">图形界面也可以做第一轮检查</a></li></ul></li><li><a href="#这个仓库里推荐的完整操作流程" class="table-of-contents__link toc-highlight">这个仓库里推荐的完整操作流程</a><ul><li><a href="#第一步准备照片" class="table-of-contents__link toc-highlight">第一步：准备照片</a></li><li><a href="#第二步准备给-ai-的-markdown" class="table-of-contents__link toc-highlight">第二步：准备给 AI 的 Markdown</a></li><li><a href="#你最常用的实际协作方式给地点--图片链接--几句描述" class="table-of-contents__link toc-highlight">你最常用的实际协作方式：给地点 + 图片链接 + 几句描述</a></li><li><a href="#第三步ai-把-markdown-转成仓库里的旅行页面" class="table-of-contents__link toc-highlight">第三步：AI 把 Markdown   转成仓库里的旅行页面</a></li><li><a href="#第四步生成元数据清单" class="table-of-contents__link toc-highlight">第四步：生成元数据清单</a></li><li><a href="#35-原始-markdown--oss-链接到-travel-mdx-的自动生成" class="table-of-contents__link toc-highlight">3.5 原始 Markdown / OSS 链接到 Travel MDX 的自动生成</a></li><li><a href="#第五步构建验证" class="table-of-contents__link toc-highlight">第五步：构建验证</a></li></ul></li><li><a href="#ai-接手全是图片链接的-markdown时的规范动作" class="table-of-contents__link toc-highlight">AI 接手“全是图片链接的 Markdown”时的规范动作</a><ul><li><a href="#1-先提取图片相对路径" class="table-of-contents__link toc-highlight">1. 先提取图片相对路径</a></li><li><a href="#2-保留原-markdown-的章节结构" class="table-of-contents__link toc-highlight">2. 保留原 Markdown 的章节结构</a></li><li><a href="#3-用标题决定地点文案" class="table-of-contents__link toc-highlight">3. 用标题决定地点文案</a></li><li><a href="#4-不要手工伪造-exif" class="table-of-contents__link toc-highlight">4. 不要手工伪造 EXIF</a></li><li><a href="#5-读图时只读压缩预览" class="table-of-contents__link toc-highlight">5. 读图时只读压缩预览</a></li><li><a href="#6-生成后默认跑一条验证命令" class="table-of-contents__link toc-highlight">6. 生成后默认跑一条验证命令</a></li></ul></li><li><a href="#推荐给未来-ai-的直接指令模板" class="table-of-contents__link toc-highlight">推荐给未来 AI 的直接指令模板</a></li><li><a href="#验收清单" class="table-of-contents__link toc-highlight">验收清单</a></li><li><a href="#常见故障与处理" class="table-of-contents__link toc-highlight">常见故障与处理</a><ul><li><a href="#1-生成脚本成功了但某些图片元数据全是空" class="table-of-contents__link toc-highlight">1. 生成脚本成功了，但某些图片元数据全是空</a></li><li><a href="#2-页面地点显示不对" class="table-of-contents__link toc-highlight">2. 页面地点显示不对</a></li><li><a href="#3-同一张图被多个旅行页面复用后报错" class="table-of-contents__link toc-highlight">3. 同一张图被多个旅行页面复用后报错</a></li><li><a href="#4-用户给的是-heicpng-或带查询参数的奇怪链接" class="table-of-contents__link toc-highlight">4. 用户给的是 HEIC、PNG 或带查询参数的奇怪链接</a></li><li><a href="#5-powershell-里看文档或-json-出现中文乱码" class="table-of-contents__link toc-highlight">5. PowerShell 里看文档或 JSON 出现中文乱码</a></li></ul></li><li><a href="#相关文档" class="table-of-contents__link toc-highlight">相关文档</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/en/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/en/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.12.0</span></div></div></div></footer></div>
+<li><a href="/en/docs/LabNotes/travel-album-map-implementation">Travel Album and Map Feature Implementation Notes</a></li>
+<li><a href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
+<li><a href="/en/docs/LabNotes/apple-heif-display-on-web">Apple HEIF Photo Display Guide</a></li>
+<li><a href="/en/docs/WebNotes/operations/image-and-static-assets">Image and Static Assets Optimization</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/docs/LabNotes/travel-album-map-implementation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Travel Album and Map Implementation Notes</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#understanding-the-current-implementation" class="table-of-contents__link toc-highlight">Understanding the Current Implementation</a></li><li><a href="#key-facts-to-remember" class="table-of-contents__link toc-highlight">Key Facts to Remember</a><ul><li><a href="#1-displayed-location-prefers-reverse-geocoding-title-is-the-fallback" class="table-of-contents__link toc-highlight">1. Displayed Location Prefers Reverse Geocoding; Title Is the Fallback</a></li><li><a href="#2-the-metadata-script-only-processes-jpeg-standard-input-is-domain-relative-paths" class="table-of-contents__link toc-highlight">2. The Metadata Script Only Processes JPEG; Standard Input Is Domain-Relative Paths</a></li><li><a href="#3-iphone-lens-names-are-compressed-to-short-labels" class="table-of-contents__link toc-highlight">3. iPhone Lens Names Are Compressed to Short Labels</a></li></ul></li><li><a href="#pre-upload-preparation-guide" class="table-of-contents__link toc-highlight">Pre-Upload Preparation Guide</a><ul><li><a href="#1-preserve-the-original-pipeline-for-source-photos" class="table-of-contents__link toc-highlight">1. Preserve the &quot;Original Pipeline&quot; for Source Photos</a></li><li><a href="#2-prefer-one-location-title-per-travel-article" class="table-of-contents__link toc-highlight">2. Prefer One Location Title Per Travel Article</a></li><li><a href="#3-keep-filenames-stable-readable-and-decided-once" class="table-of-contents__link toc-highlight">3. Keep Filenames Stable, Readable, and Decided Once</a></li><li><a href="#4-image-links-should-already-be-stable-public-urls" class="table-of-contents__link toc-highlight">4. Image Links Should Already Be Stable Public URLs</a></li></ul></li><li><a href="#how-to-check-whether-photos-have-lost-valid-metadata-before-upload" class="table-of-contents__link toc-highlight">How to Check Whether Photos Have Lost Valid Metadata Before Upload</a><ul><li><a href="#obvious-red-flags-first" class="table-of-contents__link toc-highlight">Obvious Red Flags First</a></li><li><a href="#recommended-method-exiftool" class="table-of-contents__link toc-highlight">Recommended Method: <code>exiftool</code></a></li><li><a href="#windows-check-without-extra-tools" class="table-of-contents__link toc-highlight">Windows Check Without Extra Tools</a></li><li><a href="#macos-check-without-extra-tools" class="table-of-contents__link toc-highlight">macOS Check Without Extra Tools</a></li><li><a href="#gui-first-round-check" class="table-of-contents__link toc-highlight">GUI First-Round Check</a></li></ul></li><li><a href="#recommended-complete-workflow-for-this-repo" class="table-of-contents__link toc-highlight">Recommended Complete Workflow for This Repo</a><ul><li><a href="#step-1-prepare-photos" class="table-of-contents__link toc-highlight">Step 1: Prepare Photos</a></li><li><a href="#step-2-prepare-markdown-for-ai" class="table-of-contents__link toc-highlight">Step 2: Prepare Markdown for AI</a></li><li><a href="#your-most-common-collaboration-style-location--image-links--a-few-sentences" class="table-of-contents__link toc-highlight">Your Most Common Collaboration Style: Location + Image Links + A Few Sentences</a></li><li><a href="#step-3-ai-converts-markdown-into-a-travel-page-in-this-repo" class="table-of-contents__link toc-highlight">Step 3: AI Converts Markdown into a Travel Page in This Repo</a></li><li><a href="#step-4-generate-the-metadata-manifest" class="table-of-contents__link toc-highlight">Step 4: Generate the Metadata Manifest</a></li><li><a href="#35-auto-generation-from-raw-markdown--oss-links-to-travel-mdx" class="table-of-contents__link toc-highlight">3.5 Auto-Generation from Raw Markdown / OSS Links to Travel MDX</a></li><li><a href="#step-5-build-verification" class="table-of-contents__link toc-highlight">Step 5: Build Verification</a></li></ul></li><li><a href="#ai-norms-when-handling-markdown-full-of-image-links" class="table-of-contents__link toc-highlight">AI Norms When Handling &quot;Markdown Full of Image Links&quot;</a><ul><li><a href="#1-extract-image-relative-paths-first" class="table-of-contents__link toc-highlight">1. Extract Image Relative Paths First</a></li><li><a href="#2-preserve-the-original-markdowns-section-structure" class="table-of-contents__link toc-highlight">2. Preserve the Original Markdown&#39;s Section Structure</a></li><li><a href="#3-use-the-title-to-determine-location-copy" class="table-of-contents__link toc-highlight">3. Use the Title to Determine Location Copy</a></li><li><a href="#4-do-not-fabricate-exif-data" class="table-of-contents__link toc-highlight">4. Do Not Fabricate EXIF Data</a></li><li><a href="#5-only-read-compressed-previews" class="table-of-contents__link toc-highlight">5. Only Read Compressed Previews</a></li><li><a href="#6-run-a-verification-command-after-generation" class="table-of-contents__link toc-highlight">6. Run a Verification Command After Generation</a></li></ul></li><li><a href="#recommended-direct-instruction-template-for-future-ai" class="table-of-contents__link toc-highlight">Recommended Direct Instruction Template for Future AI</a></li><li><a href="#acceptance-checklist" class="table-of-contents__link toc-highlight">Acceptance Checklist</a></li><li><a href="#common-issues-and-fixes" class="table-of-contents__link toc-highlight">Common Issues and Fixes</a><ul><li><a href="#1-generation-script-succeeded-but-some-image-metadata-is-empty" class="table-of-contents__link toc-highlight">1. Generation Script Succeeded but Some Image Metadata Is Empty</a></li><li><a href="#2-page-location-display-is-wrong" class="table-of-contents__link toc-highlight">2. Page Location Display Is Wrong</a></li><li><a href="#3-the-same-image-reused-across-multiple-travel-pages-causes-an-error" class="table-of-contents__link toc-highlight">3. The Same Image Reused Across Multiple Travel Pages Causes an Error</a></li><li><a href="#4-user-provided-heic-png-or-links-with-query-parameters" class="table-of-contents__link toc-highlight">4. User Provided HEIC, PNG, or Links with Query Parameters</a></li><li><a href="#5-chinese-garbled-text-in-powershell-when-viewing-documents-or-json" class="table-of-contents__link toc-highlight">5. Chinese Garbled Text in PowerShell When Viewing Documents or JSON</a></li></ul></li><li><a href="#related-documents" class="table-of-contents__link toc-highlight">Related Documents</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/en/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/en/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.17.0</span></div></div></div></footer></div>
 </body>
 </html>
