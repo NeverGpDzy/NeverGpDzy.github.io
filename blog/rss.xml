@@ -14,7 +14,11 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/27/bmw-m3-touring-24h-note</guid>
             <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[聊一台 BMW M3 Touring 24H 为什么不够理性，却特别让车迷上头，以及那个邪恶大宝马到底邪恶在哪。]]></description>
-            <content:encoded><![CDATA[<p>事情是这样的。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<!-- -->
+<!-- -->
+<!-- -->
+<p>事情是这样的。</p>
 <p>这台车一开始不是正经项目。</p>
 <p>它最早只是宝马在社交平台上开的一个愚人节玩笑，一张很懂车迷爽点的图，一个看起来大概率发完就结束的品牌整活。</p>
 <p>宝马真的把一台 M3 Touring 做成了能去跑纽北 24 小时的赛车。</p>
@@ -114,7 +118,7 @@
 <p>但人喜欢车，很多时候就是被这些不是刚需的东西击中。</p>
 <p>它们让机器不只是机器，让品牌不只是品牌，也让一个坐在屏幕前刷图的人，突然觉得自己那点很幼稚的热爱被认真对待了一次。</p>
 <p>这就已经很难得了。</p>
-<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：BMW M3 Touring 24H 手机壁纸竖版海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/bmw-m3-touring-gt3-dark-portrait-poster.png" alt="BMW M3 Touring 24H 手机壁纸竖�版海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">能看到这里的人，应该真的会喜欢这张手机壁纸。</figcaption></figure></section>
+<section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：BMW M3 Touring 24H 手机壁纸竖版海报"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/AI-images/bmw-m3-touring-gt3-dark-portrait-poster.png" alt="BMW M3 Touring 24H 手机壁纸竖版海报" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">能看到这里的人，应该真的会喜欢这张手机壁纸。</figcaption></figure></section>
 <p>最后放这张竖图，纯属私心。</p>
 <p>能看到这里的人，大概率不是误点进来的。</p>
 <p>你应该也懂那种感觉。</p>
@@ -132,7 +136,9 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/25/gpt-image-2-f1-driver-posters</guid>
             <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[这次不是简历海报，而是一组 F1 车手海报。记录 gpt-image-2 把私人热爱变成可收藏画面的那一下。]]></description>
-            <content:encoded><![CDATA[<p>4 月 25 日，我又拿 <code>gpt-image-2</code> 玩了一轮。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<!-- -->
+<p>4 月 25 日，我又拿 <code>gpt-image-2</code> 玩了一轮。</p>
 <p>这次没有继续做简历海报，也没有正儿八经去测什么复杂信息图。我只是做了一件很私人的小事，把自己喜欢的几位 F1 车手，生成成一组海报。</p>
 <p>结果再一次被戳中内心。</p>
 <p>前几天我刚写过一次 <code>gpt-image-2</code>，那篇里已经聊过它为什么不只是会画图了，所以今天就不再重复模型发布、参数、能力边界这些东西。那些当然重要，但对我来说，真正有意思的变化其实发生在更小的地方。</p>
@@ -189,7 +195,9 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/23/gpt-image-2-poster-shock</guid>
             <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[从一张个人简历海报出发，记录 gpt-image-2 在信息组织和设计初稿上的意外进步。]]></description>
-            <content:encoded><![CDATA[<p>事情是这样的。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<!-- -->
+<p>事情是这样的。</p>
 <p><code>2026-04-21</code>，OpenAI 发了 <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer">Introducing ChatGPT Images 2.0</a>。</p>
 <p>我一开始其实没太当回事。</p>
 <p>不是说不期待，而是这两年 AI 生图的惊艳时刻太多了，大家已经被训练得有点麻木。你给它一句话，它给你一张漂亮图。光影很好，氛围很好，细节也挺满。然后呢。</p>
@@ -264,7 +272,11 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq</guid>
             <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[一次围着炭火展开的朋友小聚，写下烧烤、黄豆粉、汾酒和普通夜晚里的松弛感。]]></description>
-            <content:encoded><![CDATA[<p>4 月 18 日周六晚上，和朋友们在「川西火焰山西昌火盆烧烤(新都格林城市花园店)」小聚了一下。说是小聚，其实也没有什么特别隆重的安排，就是找个地方坐下来，围着一盆炭火，点几样想吃的东西，喝一点小酒，把最近的生活慢慢聊开。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<!-- -->
+<!-- -->
+<!-- -->
+<p>4 月 18 日周六晚上，和朋友们在「川西火焰山西昌火盆烧烤(新都格林城市花园店)」小聚了一下。说是小聚，其实也没有什么特别隆重的安排，就是找个地方坐下来，围着一盆炭火，点几样想吃的东西，喝一点小酒，把最近的生活慢慢聊开。</p>
 <p>这种饭局最舒服的地方，是它不急。肉串架到火盆边上以后，不能马上吃，只能等炭火一点点把油脂逼出来。跑山小香猪、麻辣嫩牛肉、香烤五花肉、香烤猪皮，一串串摆开的时候，桌面上已经有了很踏实的烟火气。</p>
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：火盆上的肉串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9549_FriendsMeet.jpg" alt="火盆上的肉串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">围着炭火慢慢烤，肉串的香气一点点被逼出来。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：腌好的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9550_FriendsMeet.jpg" alt="腌好的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">跑山小香猪在盘子里排好队。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火边的烤串近景"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9555_FriendsMeet.jpg" alt="炭火边的烤串近景" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">有些时候，等待肉熟的过程本身就很适合聊天。</figcaption></figure></section>
 <p>我一直觉得，火盆烧烤比很多已经烤好端上来的烧烤更适合朋友局。它会自然地把节奏放慢：有人看火，有人翻面，有人提醒快糊了，有人负责先尝一口。肉还没熟的时候，话就已经接上了；等肉真的能吃了，桌上的气氛也就热起来了。</p>
@@ -291,7 +303,8 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/14/be-brave-and-strong</guid>
             <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[围绕热爱、赚钱和机会判断，写给自己的提醒：先站稳、变强，再谈更自由的选择。]]></description>
-            <content:encoded><![CDATA[<p>人得先做勇敢的人，再做强大的人。很多事情没有那么多标准答案，先别把自己困在“我到底喜不喜欢”“这是不是最完美的路”里。喜欢和赚钱本来就可以分开，不讨厌、做得下去、还能赚钱，那就先继续干下去。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<p>人得先做勇敢的人，再做强大的人。很多事情没有那么多标准答案，先别把自己困在“我到底喜不喜欢”“这是不是最完美的路”里。喜欢和赚钱本来就可以分开，不讨厌、做得下去、还能赚钱，那就先继续干下去。</p>
 <p>我越来越觉得，很多人被“热爱”这两个字骗得太厉害。好像只要不是发自内心地喜欢，就不值得做。不是这样。现实一点看，能养活自己、能让自己站稳、能让你积累能力的事情，本身就有价值。先活下来，先变强，再谈更自由的选择。</p>
 <p>如果你真的想赚钱，不要一上来就问别人“怎么赚钱”。这句话背后更该先问的是：他为什么愿意告诉我？他告诉我的，到底是赚钱的方法，还是把我变成他的收入？</p>
 <p>这几年我越来越警惕一类话术：表面上是在教你进场，实际上是在借你的焦虑变现。判断一个行业是不是开始走下坡路，有个不一定绝对、但很有参考价值的信号：这个行业里是不是越来越多人开始教别人怎么挣钱。</p>
@@ -306,7 +319,8 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/07/agent-harness</guid>
             <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[读 LangChain 关于 Agent Harness 的文章后，梳理模型之外的规划、状态、权限和评估为何决定 Agent 能否可靠做事。]]></description>
-            <content:encoded><![CDATA[<p>事情是这样的。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<p>事情是这样的。</p>
 <p>4 月 7 日，我花了一点时间读 LangChain 的这篇文章，<a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/" target="_blank" rel="noopener noreferrer">The Anatomy of an Agent Harness</a>。</p>
 <p>一开始我是冲着 harness 这个词去的。</p>
 <p>因为这个词最近在 Agent 圈子里出现得越来越频繁，但它又有点尴尬。你要是直接翻译成「马具」或者「束具」，听着很奇怪。翻译成「框架」又太轻了，好像只是写几层代码封装一下。翻译成「外骨骼」可能更接近一点，但也不完全准确。</p>
@@ -415,7 +429,8 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research</guid>
             <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[记录徐强教授关于 AI 时代科研范式的报告，思考论文之外的真实交付物、Agent 治理和科研判断力。]]></description>
-            <content:encoded><![CDATA[<p><code>2026年4月2日（星期四）19:30 - 21:00</code>，我听了香港中文大学计算机科学与工程系徐强教授的一场报告，题目很锋利，叫《Paper 已死，硬核科研当立：AI 时代科研人的自我修养》。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<p><code>2026年4月2日（星期四）19:30 - 21:00</code>，我听了香港中文大学计算机科学与工程系徐强教授的一场报告，题目很锋利，叫《Paper 已死，硬核科研当立：AI 时代科研人的自我修养》。</p>
 <p>“Paper 已死”当然是一种有意为之的表达，但它真正刺中的，并不是论文有没有价值，而是另一层更深的问题：当 AI 正在系统性改写科研流程时，科研人到底该拿什么证明自己的价值？未来的科研，又该以什么作为真正的交付物？</p>
 <p>听完整场报告，我最大的感受是，AI 时代并没有让科研变简单，反而让“什么才算真正的科研”这件事变得更清晰了。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="当论文不再是科研的唯一终点">当论文不再是科研的唯一终点<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BD%93%E8%AE%BA%E6%96%87%E4%B8%8D%E5%86%8D%E6%98%AF%E7%A7%91%E7%A0%94%E7%9A%84%E5%94%AF%E4%B8%80%E7%BB%88%E7%82%B9" class="hash-link" aria-label="当论文不再是科研的唯一终点的直接链接" title="当论文不再是科研的唯一终点的直接链接">​</a></h2>
@@ -443,7 +458,7 @@
 <p>徐强教授的回答并不悲观。他并不认为科研能力会被少数“天赋型选手”彻底固化。大模型会放大效率差距，这一点很可能是真的；但科研思维本身是可以训练的。如何察觉一个问题的价值，如何辨别信息是否可靠，如何组织自己的研究过程，这些都不是不可学习的神秘天赋，而是可以靠长期训练建立起来的能力。</p>
 <p>他还提到，读论文时最重要的，不只是看作者得出了什么结论，而是去想：他是怎么走到这条路上的？一个成熟研究者真正需要培养的，不只是知识储备，更是研究品味和判断力。你不只是要会“读懂论文”，更要会看出问题是如何被发现、定义、推进和解决的。</p>
 <p>这一点非常重要。因为 AI 可以帮你更快地总结论文、提取信息、生成思路，但如果你没有判断力，就很容易被看似流畅、实际上空洞的内容牵着走。工具越强，判断力越稀缺。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-时代教育最该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-��时代教育最该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接">​</a></h2>
 <p>报告里还有一部分关于教育的讨论，也让我印象很深。</p>
 <p>在 AI 的帮助下，知识获取和技能学习会越来越“平权”。很多过去必须靠长期积累才能掌握的内容，今天正在变得更容易触达、更容易调用。但这并不意味着教育会变轻松，恰恰相反，它可能会变得更难。</p>
 <p>因为当知识本身越来越容易获得时，真正稀缺的就不再是记住多少内容，而是判断什么值得学、什么值得做、什么值得相信。未来真正重要的，可能不只是教学生掌握知识，而是培养他们的判断力、选择能力、批判性思维，以及围绕真实兴趣形成问题意识的能力。</p>
@@ -460,11 +475,11 @@
 <p>科研的核心价值不应仅限于发表论文（citation），更应体现在能否被 AI Agent 调用和产生实际的社会影响力。</p>
 <p>未来的科研交付物应包含可被 Agent 调用的工具、API、Benchmark 或 Ground Truth 等基础设施，以确保工作的长期生命力和生态位。</p>
 <p>提出了“Rose 法则”作为新的科研评判标准：解决一个真实需求（R），具备原创性（O），具有重要性（S）和优雅性（E）。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内�核：OS 系统的直接链接">​</a></h3>
 <p>针对 Agent 系统存在的不确定性、不可控性及潜在风险，提出构建一个“监管内核”（OS），作为 Agent 的“缰绳”。</p>
 <p>该内核通过将大语言模型（LLM）的语义输出映射为确定性的指令集，结合规则进行边界检查和拦截，形成“神经符号系统”。</p>
 <p>目标是让 LLM 负责创造可能性和制定计划，而监管内核则负责守住边界，确保系统安全、可靠地执行。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-关键议题与观点探讨">3. 关键议题与观点探讨<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#3-%E5%85%B3%E9%94%AE%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%A7%82%E7%82%B9%E6%8E%A2%E8%AE%A8" class="hash-link" aria-label="3. 关键议题与观��点探讨的直接链接" title="3. 关键议题与观点探讨的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-关键议题与观点探讨">3. 关键议题与观点探讨<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#3-%E5%85%B3%E9%94%AE%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%A7%82%E7%82%B9%E6%8E%A2%E8%AE%A8" class="hash-link" aria-label="3. 关键议题与观点探讨的直接链接" title="3. 关键议题与观点探讨的直接链接">​</a></h3>
 <p>科研价值与“水论文”：强调硬核科研的价值在于对问题的深刻洞察和解决，而非简单的重复劳动。自动化“水论文”系统缺乏认知增益，而高质量的科研过程本身对锻炼个人能力有益。</p>
 <p>AI 工具的使用：认为 AI 工具（如大模型）能有效抹平不同能力的研究人员在技能层面的差距，但核心的“科研思维”如如何提出有价值的问题、如何与 AI 有效沟通、如何判断信息真伪，仍是需要训练和培养的。</p>
 <p>教育模式的演变：面对 AI 对知识获取方式的冲击，教育应转向培养学生的核心判断力、批判性思维和跨领域整合能力，而非单纯的知识灌输。课堂的角色应转变为引导学生解决问题和进行深度交流。</p>
@@ -473,7 +488,7 @@
 <li>开源项目发布</li>
 </ol>
 <p>徐强近期将会发布其团队研发的监管内核系统（OS），并邀请社区试用和反馈。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="问答摘记">问答摘记<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%E7%AD%94%E6%91%98%E8%AE%B0" class="hash-link" aria-label="问答摘记的直接链接" title="问答摘记的直接链接">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="问答摘记">问答摘记<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%EF%BF%BD%EF%BF%BD%E7%AD%94%E6%91%98%E8%AE%B0" class="hash-link" aria-label="问答摘记的直接链接" title="问答摘记的直接链接">​</a></h3>
 <p>刘伟峰：头一两年，和最近两年感受不一样，AI 抹平中等、高级人员的科研能力，但是最近感觉有所拉大。能用好 AI 大模型的人将差距拉开，而这波人有很好的组织管理天赋，从小就有这样的能力，这个能力可以让他们更好地利用 AI。这种差距很难再追赶，固化了，徐老师怎样看待这个事情。</p>
 <p>徐强：有不同意见。工业革命抹平体力差距，大模型抹平人的技能差距，但不认为它抹平了科研的能力。科研这套思维方式可以训练，怎样察觉一个问题它的价值、和 AI 有效沟通、如何判断信息真伪，有意识地训练科研的思维就不会被 AI 抹平，所以否认 AI 时代下科研能力与领导组织天赋强相关。徐强的书中也说到不会更大地拉开差距，科研是有规律的，是可以训练的。</p>
 <p>论文是读不完的，要精挑细选地去读。在读论文的时候，主要考虑作者是怎样走到这条路上的，而不是真正的研究内容，提升自己的科研品味和判断力，然后就能提升自己使用 AI 做科研的效率和效果。</p>
@@ -489,7 +504,11 @@
             <guid>https://docs.nevergpdzy.cn/blog/2026/03/20/friends-meet-sim-racing-and-home-dinner</guid>
             <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[一场从赛车模拟器到朋友家厨房的小聚，记录兴趣、家常菜和微醺聊天连成的一整天。]]></description>
-            <content:encoded><![CDATA[<p>3 月 20 日，我和两个好友从学校出发，去其中一位朋友家里小聚。因为我们都很喜欢赛车，下午先绕去模拟器店里玩了一圈，晚上再去菜市场买菜、回家自己做饭。现在回头看，这天并没有什么特别隆重的安排，但从方向盘到灶台，再到饭桌上的微醺和聊天，每一段都很值得记一下。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<!-- -->
+<!-- -->
+<!-- -->
+<p>3 月 20 日，我和两个好友从学校出发，去其中一位朋友家里小聚。因为我们都很喜欢赛车，下午先绕去模拟器店里玩了一圈，晚上再去菜市场买菜、回家自己做饭。现在回头看，这天并没有什么特别隆重的安排，但从方向盘到灶台，再到饭桌上的微醺和聊天，每一段都很值得记一下。</p>
 <p>那天下午的节奏从一进模拟器店就变得很直接。三联屏、方向盘、踏板一摆好，人自然就坐进去了。我们从 F1 一路开到《神力科莎》的 GT3 纽北，又换去跑拉力赛，最后连《欧洲卡车模拟》都没有放过。共同喜欢车的人待在一起，快乐往往不需要太多铺垫，赛道、失误、重开和互相调侃，已经足够把一个下午填得很满。</p>
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：学校里开着的粉色花"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9149_FriendsMeet.jpg" alt="学校里开着的粉色花" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">出门前路边的花先把这天的心情抬高了一点。</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：模拟器店里的三联屏赛车模拟器"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9151_FriendsMeet.jpg" alt="模拟器店里的三联屏赛车模拟器" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">共同喜欢车的人，看到方向盘和踏板就很难不坐上去。</figcaption></figure></section>
 <p>玩完模拟器以后，我们顺路去菜市场买菜，再一起回到朋友家。白天还在和赛道较劲，晚上就开始围着厨房忙活，这种切换反而很有意思。我负责做蒜香黄油虾、清蒸鲈鱼、炒蛤蜊和苦瓜炒蛋，几个人一边搭手一边等菜出锅，屋子里的气味也慢慢从外面的春天变成了很具体的烟火气。</p>
@@ -508,7 +527,8 @@
             <guid>https://docs.nevergpdzy.cn/blog/2024/6/9/The_method_of_spiritual_victory</guid>
             <pubDate>Sun, 09 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[从《阿Q正传》谈精神胜利法，提醒自己别用自我安慰替代复盘和改变。]]></description>
-            <content:encoded><![CDATA[<p>小时候读《阿Q正传》，很容易把阿Q当成一个离自己很远的人物，一个旧时代里有点可笑、又有点可怜的小人物。可越往后越觉得，阿Q一点也不远。很多时候，人不是输给现实本身，而是输给了那套替自己找补的本事。明明已经吃了亏，受了挫，落了下风，却偏要在心里偷偷改写一遍剧情，把自己写成没输的那一个。</p>
+            <content:encoded><![CDATA[<div class="playerWrapper_a5Ga"><div class="player_M4oV"><button class="playBtn_Ze5h" aria-label="Play"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"></path></svg></button><span class="label_V3GE">收听文章</span><span class="time_FntQ" aria-live="off">00:00<!-- --> / <!-- -->00:00</span><div class="progressTrack_wdBp" role="slider" tabindex="0" aria-label="收听文章" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="00:00 / 00:00"><div class="progressFill_DuFr" style="width:0%"></div></div><button class="speedBtn_hef2" aria-label="倍速: 1x">1<!-- -->x</button></div></div>
+<p>小时候读《阿Q正传》，很容易把阿Q当成一个离自己很远的人物，一个旧时代里有点可笑、又有点可怜的小人物。可越往后越觉得，阿Q一点也不远。很多时候，人不是输给现实本身，而是输给了那套替自己找补的本事。明明已经吃了亏，受了挫，落了下风，却偏要在心里偷偷改写一遍剧情，把自己写成没输的那一个。</p>
 <p>这就是精神胜利法最厉害、也最危险的地方。它不是让人真的变强，而是让人暂时感觉自己还没有那么狼狈。它给失败套上一层好看的说法，给无能找一个体面的借口，给退缩包装成一种“我其实看不上”的姿态。表面上是在安慰自己，实际上是在躲现实。</p>
 <p>这种东西到今天一点都没消失。考差了，不去想到底哪里没学明白，只说“这个分数体系本来就有问题”；机会没抓住，不去承认自己准备不够，只说“我其实根本不稀罕”；事情没做好，不去复盘自己哪里出了错，反而先把责任推给环境、运气、别人不识货。这样做最大的好处，是心里会立刻舒服一点；最大的坏处，是你也就到此为止了。</p>
 <p>人当然需要一点自我安慰。谁都会有撑不住的时候，谁都不可能每次失败之后都立刻冷静、立刻清醒、立刻复盘。问题不在于安慰自己，而在于你是不是把这种安慰当成了长期活法。短暂地缓一口气没问题，真正可怕的是，你缓着缓着，就开始相信那套自己编出来的话了。</p>
