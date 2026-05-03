@@ -139,5 +139,24 @@
     ],
     "voice": "Chloe",
     "generatedAt": "2026-05-01T09:48:48.259921+00:00"
+  },
+  "en/hamasushi-big-conveyor-belt-sushi-meal": {
+    "urls": [
+      "https://picture.nevergpdzy.cn/Audio/blog/en/en_hamasushi-big-conveyor-belt-sushi-meal_001.mp3",
+      "https://picture.nevergpdzy.cn/Audio/blog/en/en_hamasushi-big-conveyor-belt-sushi-meal_002.mp3",
+      "https://picture.nevergpdzy.cn/Audio/blog/en/en_hamasushi-big-conveyor-belt-sushi-meal_003.mp3",
+      "https://picture.nevergpdzy.cn/Audio/blog/en/en_hamasushi-big-conveyor-belt-sushi-meal_004.mp3"
+    ],
+    "voice": "Chloe",
+    "generatedAt": "2026-05-03T08:00:13.780486+00:00"
+  },
+  "hamasushi-big-conveyor-belt-sushi-meal": {
+    "urls": [
+      "https://picture.nevergpdzy.cn/Audio/blog/hamasushi-big-conveyor-belt-sushi-meal_001.mp3",
+      "https://picture.nevergpdzy.cn/Audio/blog/hamasushi-big-conveyor-belt-sushi-meal_002.mp3",
+      "https://picture.nevergpdzy.cn/Audio/blog/hamasushi-big-conveyor-belt-sushi-meal_003.mp3"
+    ],
+    "voice": "茉莉",
+    "generatedAt": "2026-05-03T08:12:39.578915+00:00"
   }
 }
