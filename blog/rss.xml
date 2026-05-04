@@ -256,7 +256,7 @@
             <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[从一张个人简历海报出发，记录 gpt-image-2 在信息组织和设计初稿上的意外进步。]]></description>
             <content:encoded><![CDATA[<p>事情是这样的。</p>
-<p><code>2026-04-21</code>，OpenAI 发了 <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer">Introducing ChatGPT Images 2.0</a>。</p>
+<p><code>2026-04-21</code>，OpenAI 发了 <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer" class="">Introducing ChatGPT Images 2.0</a>。</p>
 <p>我一开始其实没太当回事。</p>
 <p>不是说不期待，而是这两年 AI 生图的惊艳时刻太多了，大家已经被训练得有点麻木。你给它一句话，它给你一张漂亮图。光影很好，氛围很好，细节也挺满。然后呢。</p>
 <p>然后很多时候就没有然后了。</p>
@@ -340,12 +340,12 @@
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：朋友倒汾酒"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9554_FriendsMeet.jpg" alt="朋友倒汾酒" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">小杯倒上汾酒，一杯二两必须一样高！</figcaption></figure><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：炭火上的烤串"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9566_FriendsMeet.jpg" alt="炭火上的烤串" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">炭火烧得正旺，串在火边一点点变得有焦香。</figcaption></figure></section>
 <p>素菜也很适合放在这顿里慢慢吃。茄子吸味，藕片脆，洋葱烤过以后甜味会出来，生菜可以把刚烤好的肉包起来。炭火慢炙，鲜润的鱿鱼渐渐褪去紧实，变得软糯柔韧。裹挟着洋葱的清甜辛香，烟火入味，分寸恰好。</p>
 <section class="gallery_vig_ articleGallery_rGE5" aria-label="文章照片"><figure class="card_ru9b articleCard_SLFQ"><button type="button" class="cardButton_pEyk" aria-label="查看大图：烤鱼和藕片"><img class="image_f8qZ" src="https://picture.nevergpdzy.cn/FriendsMeet/IMG_9578_FriendsMeet.jpg" alt="烤鱼和藕片" loading="lazy" decoding="async"></button><figcaption class="cardCaption_VPj9">烤盘上铺着茄子、葱、芹菜粒、小米辣和藕片，热油和炭火味混在一起。</figcaption></figure></section>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="顺手记下两种酒">顺手记下两种酒<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E9%A1%BA%E6%89%8B%E8%AE%B0%E4%B8%8B%E4%B8%A4%E7%A7%8D%E9%85%92" class="hash-link" aria-label="顺手记下两种酒的直接链接" title="顺手记下两种酒的直接链接" translate="no">​</a></h2>
 <p>这次桌上喝了汾酒，也喝了朝日啤酒。它们放在同一顿烧烤里，其实还挺有意思：一个是白酒里的清香型代表，一个是主打干爽收口的啤酒。</p>
 <p>汾酒是清香型白酒的典型代表，产地和山西汾阳杏花村联系很深。清香型给人的感觉通常不是厚重堆叠，而是比较干净、利落。放在烧烤桌上，小杯慢慢喝，反而不会把肉串和调料的味道压过去。尤其是这种带炭火味的饭局，白酒如果太甜太厚，很容易抢戏；汾酒这种清爽一点的路子，和烤肉的油脂感是能搭上的。</p>
 <p>朝日啤酒走的是另一条线。Super Dry 诞生于 1987 年，主打的是 <code>Karakuchi</code> 风格，也就是干爽、清冽、收口快。它适合配烧烤的原因也很直接：肉串有油脂，辣椒面和黄豆粉会让口腔里的味道变丰富，这时候喝一口冰一点、收口干净的啤酒，能把前一口的油香和辣味轻轻带走，让人很自然地想吃下一串。</p>
 <p>所以这顿的小酒并不是为了喝得多尽兴，而是给这张桌子添一点松弛感。汾酒适合小口慢慢碰，朝日适合在烤肉之后清一下口。两种酒放在一起，刚好对应了朋友局里的两种节奏：一种是慢慢聊，一种是继续吃。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="普通的一晚">普通的一晚<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E6%99%AE%E9%80%9A%E7%9A%84%E4%B8%80%E6%99%9A" class="hash-link" aria-label="普通的一晚的直接链接" title="普通的一晚的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="普通的一晚">普通的一晚<a href="https://docs.nevergpdzy.cn/blog/2026/04/18/friends-meet-firepot-bbq#%E6%99%AE%E9%80%9A%E7%9A%84%E4%B8%80%E6%99%9A" class="hash-link" aria-label="普通的一晚的直接链接" title="普通的一晚的直接链接" translate="no">​</a></h2>
 <p>回头看这几张照片，记住的不只是吃了什么、喝了什么。更具体一点，是炭火中间那点红，是肉串边缘慢慢出现的焦香，是第一次蘸黄豆粉时的意外惊喜，也是朋友坐在旁边时那种不用刻意找话题的轻松。</p>
 <p>很多时候，生活里值得留下来的东西并不需要很宏大。一顿烧烤，几串肉，一盘黄豆粉，一点小酒，和几个能坐下来一起等肉熟的人，就已经足够成为某个晚上很真实的注脚。</p>]]></content:encoded>
             <author>dingzhiyu2004@163.com (DingZhiyu)</author>
@@ -373,7 +373,7 @@
             <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[读 LangChain 关于 Agent Harness 的文章后，梳理模型之外的规划、状态、权限和评估为何决定 Agent 能否可靠做事。]]></description>
             <content:encoded><![CDATA[<p>事情是这样的。</p>
-<p>4 月 7 日，我花了一点时间读 LangChain 的这篇文章，<a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/" target="_blank" rel="noopener noreferrer">The Anatomy of an Agent Harness</a>。</p>
+<p>4 月 7 日，我花了一点时间读 LangChain 的这篇文章，<a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/" target="_blank" rel="noopener noreferrer" class="">The Anatomy of an Agent Harness</a>。</p>
 <p>一开始我是冲着 harness 这个词去的。</p>
 <p>因为这个词最近在 Agent 圈子里出现得越来越频繁，但它又有点尴尬。你要是直接翻译成「马具」或者「束具」，听着很奇怪。翻译成「框架」又太轻了，好像只是写几层代码封装一下。翻译成「外骨骼」可能更接近一点，但也不完全准确。</p>
 <p>反正就是这么一个词。</p>
@@ -484,62 +484,62 @@
             <content:encoded><![CDATA[<p><code>2026年4月2日（星期四）19:30 - 21:00</code>，我听了香港中文大学计算机科学与工程系徐强教授的一场报告，题目很锋利，叫《Paper 已死，硬核科研当立：AI 时代科研人的自我修养》。</p>
 <p>“Paper 已死”当然是一种有意为之的表达，但它真正刺中的，并不是论文有没有价值，而是另一层更深的问题：当 AI 正在系统性改写科研流程时，科研人到底该拿什么证明自己的价值？未来的科研，又该以什么作为真正的交付物？</p>
 <p>听完整场报告，我最大的感受是，AI 时代并没有让科研变简单，反而让“什么才算真正的科研”这件事变得更清晰了。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="当论文不再是科研的唯一终点">当论文不再是科研的唯一终点<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BD%93%E8%AE%BA%E6%96%87%E4%B8%8D%E5%86%8D%E6%98%AF%E7%A7%91%E7%A0%94%E7%9A%84%E5%94%AF%E4%B8%80%E7%BB%88%E7%82%B9" class="hash-link" aria-label="当论文不再是科研的唯一终点的直接链接" title="当论文不再是科研的唯一终点的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="当论文不再是科研的唯一终点">当论文不再是科研的唯一终点<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BD%93%E8%AE%BA%E6%96%87%E4%B8%8D%E5%86%8D%E6%98%AF%E7%A7%91%E7%A0%94%E7%9A%84%E5%94%AF%E4%B8%80%E7%BB%88%E7%82%B9" class="hash-link" aria-label="当论文不再是科研的唯一终点的直接链接" title="当论文不再是科研的唯一终点的直接链接" translate="no">​</a></h2>
 <p>过去很长一段时间里，论文几乎就是科研成果最典型的代表。一个研究是否“成立”，常常取决于它能不能被写成 paper、能不能发到足够好的会议和期刊上。论文当然重要，但如果把科研的终点完全等同于“发表”，那种范式正在被 AI 时代迅速冲击。</p>
 <p>徐强教授在报告里反复强调，未来真正有生命力的科研成果，不应该只是一篇论文，更应该包括可被 Agent 调用的工具、API、Benchmark、Ground Truth 等基础设施。换句话说，科研的价值不再只体现在 citation 上，也体现在它是否真的解决了现实需求，是否能被别人继续调用、复用、扩展，最终进入一个长期运转的技术生态。</p>
 <p>这其实是在把科研从“写出来”重新拉回到“做出来”。</p>
 <p>围绕这一点，报告里还提到一个很值得记住的评价框架：<code>ROSE</code>。也就是，一个好的科研工作，应该解决真实需求，具备原创性，具有重要性，同时保持一定的优雅性。和“这篇 paper 发在哪儿”相比，这套标准显然更难，但也更接近科研本身。</p>
 <p>因为真正好的研究，未必止步于论文；它更可能继续变成工具、系统和方法，继续活在后续的工作里。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="agent-越强越需要监管内核">Agent 越强，越需要“监管内核”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#agent-%E8%B6%8A%E5%BC%BA%E8%B6%8A%E9%9C%80%E8%A6%81%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8" class="hash-link" aria-label="Agent 越强，越需要“监管内核”的直接链接" title="Agent 越强，越需要“监管内核”的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="agent-越强越需要监管内核">Agent 越强，越需要“监管内核”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#agent-%E8%B6%8A%E5%BC%BA%E8%B6%8A%E9%9C%80%E8%A6%81%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8" class="hash-link" aria-label="Agent 越强，越需要“监管内核”的直接链接" title="Agent 越强，越需要“监管内核”的直接链接" translate="no">​</a></h2>
 <p>报告的第二条主线，讲的是 Agent 时代的系统治理问题。</p>
 <p>今天很多人谈 Agent，更多是在谈它的能力边界不断扩展：它可以理解任务、拆解流程、调用工具，甚至在某些场景下表现出接近“自主行动”的特征。但越是这样，一个问题就越无法回避：如果 Agent 变得越来越强，谁来保证它最终的行为仍然安全、可靠、可控？</p>
 <p>徐强教授给出的回答，是“监管内核”。</p>
 <p>这个概念很有意思。它并不是简单地给模型加几条规则，而是试图在大语言模型与外部世界之间，建立一层类似操作系统的约束结构。大模型负责生成开放性的语义输出，负责提出计划、创造可能性；而“监管内核”负责把这些开放语义映射为可检验、可约束、可执行的确定性指令，再通过边界检查和规则拦截，保证系统不越界、不失控。</p>
 <p>一句话概括就是：<code>LLM</code> 负责想，内核负责守。</p>
 <p>这背后其实是一种非常关键的认知转变。真正成熟的 Agent 系统，不能只靠“更聪明”的模型堆出来，而必须有一套可验证、可治理的底层机制。AI 时代的系统设计，不只是能力问题，更是边界问题。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-抹平的是技巧不是科研能力本身">AI 抹平的是技巧，不是科研能力本身<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%8A%B9%E5%B9%B3%E7%9A%84%E6%98%AF%E6%8A%80%E5%B7%A7%E4%B8%8D%E6%98%AF%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E6%9C%AC%E8%BA%AB" class="hash-link" aria-label="AI 抹平的是技巧，不是科研能力本身的直接链接" title="AI 抹平的是技巧，不是科研能力本身的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-抹平的是技巧不是科研能力本身">AI 抹平的是技巧，不是科研能力本身<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%8A%B9%E5%B9%B3%E7%9A%84%E6%98%AF%E6%8A%80%E5%B7%A7%E4%B8%8D%E6%98%AF%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E6%9C%AC%E8%BA%AB" class="hash-link" aria-label="AI 抹平的是技巧，不是科研能力本身的直接链接" title="AI 抹平的是技巧，不是科研能力本身的直接链接" translate="no">​</a></h2>
 <p>整场报告里，我最认同的一点，是它没有把 AI 简单理解为“效率工具”，而是进一步追问：当工具越来越强，科研人还剩下什么不可替代？</p>
 <p>徐强教授的判断很明确：AI 确实会抹平大量技能层面的差距，但它并不会抹平科研能力本身。自动化更容易替代的，是重复性的劳动，是低水平的“水论文”生产，是那些只靠熟练度堆起来的流程性工作；而真正难以被替代的，是对问题的洞察、对方向的判断、对信息真伪的辨别，以及把一个模糊问题推进成可验证成果的能力。</p>
 <p>这其实意味着，AI 时代的科研训练重点已经变了。</p>
 <p>未来比“会不会用工具”更重要的，是你能不能提出一个值得研究的问题；能不能和 AI 高质量沟通；能不能判断哪些结果是真的有效，哪些只是模型给出的“看起来像答案”的幻觉；能不能把一项工作从想法推进到真正可复用、可传播、可落地的成果。</p>
 <p>工具在变强，但真正决定上限的能力，反而变得更底层了。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="问答环节里真正点破了科研人的自我修养">问答环节里，真正点破了科研人的“自我修养”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%E7%AD%94%E7%8E%AF%E8%8A%82%E9%87%8C%E7%9C%9F%E6%AD%A3%E7%82%B9%E7%A0%B4%E4%BA%86%E7%A7%91%E7%A0%94%E4%BA%BA%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB" class="hash-link" aria-label="问答环节里，真正点破了科研人的“自我修养”的直接链接" title="问答环节里，真正点破了科研人的“自我修养”的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="问答环节里真正点破了科研人的自我修养">问答环节里，真正点破了科研人的“自我修养”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%E7%AD%94%E7%8E%AF%E8%8A%82%E9%87%8C%E7%9C%9F%E6%AD%A3%E7%82%B9%E7%A0%B4%E4%BA%86%E7%A7%91%E7%A0%94%E4%BA%BA%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB" class="hash-link" aria-label="问答环节里，真正点破了科研人的“自我修养”的直接链接" title="问答环节里，真正点破了科研人的“自我修养”�的直接链接" translate="no">​</a></h2>
 <p>报告后的问答环节，有几个观点非常值得单独记下来。</p>
 <p>有人提问，AI 会不会让人与人之间的差距越来越大，尤其是那些本来就擅长组织、判断和领导的人，会不会在 AI 加持下进一步拉开差距？</p>
 <p>徐强教授的回答并不悲观。他并不认为科研能力会被少数“天赋型选手”彻底固化。大模型会放大效率差距，这一点很可能是真的；但科研思维本身是可以训练的。如何察觉一个问题的价值，如何辨别信息是否可靠，如何组织自己的研究过程，这些都不是不可学习的神秘天赋，而是可以靠长期训练建立起来的能力。</p>
 <p>他还提到，读论文时最重要的，不只是看作者得出了什么结论，而是去想：他是怎么走到这条路上的？一个成熟研究者真正需要培养的，不只是知识储备，更是研究品味和判断力。你不只是要会“读懂论文”，更要会看出问题是如何被发现、定义、推进和解决的。</p>
 <p>这一点非常重要。因为 AI 可以帮你更快地总结论文、提取信息、生成思路，但如果你没有判断力，就很容易被看似流畅、实际上空洞的内容牵着走。工具越强，判断力越稀缺。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-时代教育最该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-时代教育最该培养的不是会做题的人">AI 时代，教育最该培养的不是“会做题的人”<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#ai-%E6%97%B6%E4%BB%A3%E6%95%99%E8%82%B2%E6%9C%80%E8%AF%A5%E5%9F%B9%E5%85%BB%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BC%9A%E5%81%9A%E9%A2%98%E7%9A%84%E4%BA%BA" class="hash-link" aria-label="AI 时代，教育最该培养的不是“会做题的人”的直接链接" title="AI 时代，教育最该培养的不是“会做题的人”的直接链接" translate="no">​</a></h2>
 <p>报告里还有一部分关于教育的讨论，也让我印象很深。</p>
 <p>在 AI 的帮助下，知识获取和技能学习会越来越“平权”。很多过去必须靠长期积累才能掌握的内容，今天正在变得更容易触达、更容易调用。但这并不意味着教育会变轻松，恰恰相反，它可能会变得更难。</p>
 <p>因为当知识本身越来越容易获得时，真正稀缺的就不再是记住多少内容，而是判断什么值得学、什么值得做、什么值得相信。未来真正重要的，可能不只是教学生掌握知识，而是培养他们的判断力、选择能力、批判性思维，以及围绕真实兴趣形成问题意识的能力。</p>
 <p>说得更直白一点，AI 可以成为执行器，但前提是你自己先得是一个有方向感的人。没有问题意识的人，工具再强，也只会更快地滑向空转。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="写在最后">写在最后<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E" class="hash-link" aria-label="写在最后的直接链接" title="写在最后的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="写在最后">写在最后<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E" class="hash-link" aria-label="写在最后的直接链接" title="写在最后的直接链接" translate="no">​</a></h2>
 <p>所以，“Paper 已死”真正想说的，不是论文没用了，而是只把论文当作科研终点的时代，正在结束。</p>
 <p>AI 时代真正的“硬核科研”，一方面要求研究者能够产出更接近真实世界需求的成果，能够留下可复用、可调用、可进入系统的交付物；另一方面，也要求研究者重新修炼那些最基础却最关键的能力：问题意识、判断力、研究品味，以及与新工具协同工作的能力。</p>
 <p>工具革命已经发生了。接下来真正决定一个科研人能走多远的，也许不是他会不会用 AI，而是他能不能在 AI 时代，依然看见什么问题真正值得被解决。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="附原始听会记录">附：原始听会记录<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%99%84%E5%8E%9F%E5%A7%8B%E5%90%AC%E4%BC%9A%E8%AE%B0%E5%BD%95" class="hash-link" aria-label="附：原始听会记录的直接链接" title="附：原始听会记录的直接链接">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="附原始听会记录">附：原始听会记录<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%99%84%E5%8E%9F%E5%A7%8B%E5%90%AC%E4%BC%9A%E8%AE%B0%E5%BD%95" class="hash-link" aria-label="附：原始听会记录的直接链接" title="附：原始听会记录的直接链接" translate="no">​</a></h2>
 <p>以下内容保留我当时的笔记式记录，放在文末备查。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="小结">小结<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="小结的直接链接" title="小结的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="小结">小结<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%B0%8F%E7%BB%93" class="hash-link" aria-label="小��结的直接链接" title="小结的直接链接" translate="no">​</a></h3>
 <p>本次会议围绕 AI 时代科研范式的变革展开，探讨了科研交付物的重塑、Agent 时代的监管内核，并回应了关于科研价值、AI 工具使用及教育模式等核心问题。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-科研范式的重塑与交付物的变革">1. 科研范式的重塑与交付物的变革<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#1-%E7%A7%91%E7%A0%94%E8%8C%83%E5%BC%8F%E7%9A%84%E9%87%8D%E5%A1%91%E4%B8%8E%E4%BA%A4%E4%BB%98%E7%89%A9%E7%9A%84%E5%8F%98%E9%9D%A9" class="hash-link" aria-label="1. 科研范式的重塑与交付物的变革的直接链接" title="1. 科研范式的重塑与交付物的变革的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-科研范式的重塑与交付物的变革">1. 科研范式的重塑与交付物的变革<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#1-%E7%A7%91%E7%A0%94%E8%8C%83%E5%BC%8F%E7%9A%84%E9%87%8D%E5%A1%91%E4%B8%8E%E4%BA%A4%E4%BB%98%E7%89%A9%E7%9A%84%E5%8F%98%E9%9D%A9" class="hash-link" aria-label="1. 科研范式的重塑与交付物的变革的直接链接" title="1. 科研范式的重塑与交付物的变革的直接链接" translate="no">​</a></h3>
 <p>科研的核心价值不应仅限于发表论文（citation），更应体现在能否被 AI Agent 调用和产生实际的社会影响力。</p>
 <p>未来的科研交付物应包含可被 Agent 调用的工具、API、Benchmark 或 Ground Truth 等基础设施，以确保工作的长期生命力和生态位。</p>
 <p>提出了“Rose 法则”作为新的科研评判标准：解决一个真实需求（R），具备原创性（O），具有重要性（S）和优雅性（E）。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-agent-时代的监管内核os-系统">2. Agent 时代的监管内核：OS 系统<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#2-agent-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%91%E7%AE%A1%E5%86%85%E6%A0%B8os-%E7%B3%BB%E7%BB%9F" class="hash-link" aria-label="2. Agent 时代的监管内核：OS 系统的直接链接" title="2. Agent 时代的监管内核：OS 系统的直接链接" translate="no">​</a></h3>
 <p>针对 Agent 系统存在的不确定性、不可控性及潜在风险，提出构建一个“监管内核”（OS），作为 Agent 的“缰绳”。</p>
 <p>该内核通过将大语言模型（LLM）的语义输出映射为确定性的指令集，结合规则进行边界检查和拦截，形成“神经符号系统”。</p>
 <p>目标是让 LLM 负责创造可能性和制定计划，而监管内核则负责守住边界，确保系统安全、可靠地执行。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-关键议题与观点探讨">3. 关键议题与观点探讨<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#3-%E5%85%B3%E9%94%AE%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%A7%82%E7%82%B9%E6%8E%A2%E8%AE%A8" class="hash-link" aria-label="3. 关键议题与观��点探讨的直接链接" title="3. 关键议题与观点探讨的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-关键议题与观点探讨">3. 关键议题与观点探讨<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#3-%E5%85%B3%E9%94%AE%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%A7%82%E7%82%B9%E6%8E%A2%E8%AE%A8" class="hash-link" aria-label="3. 关键议题与观点探讨的直接链接" title="3. 关键议题与观点探讨的直接链接" translate="no">​</a></h3>
 <p>科研价值与“水论文”：强调硬核科研的价值在于对问题的深刻洞察和解决，而非简单的重复劳动。自动化“水论文”系统缺乏认知增益，而高质量的科研过程本身对锻炼个人能力有益。</p>
 <p>AI 工具的使用：认为 AI 工具（如大模型）能有效抹平不同能力的研究人员在技能层面的差距，但核心的“科研思维”如如何提出有价值的问题、如何与 AI 有效沟通、如何判断信息真伪，仍是需要训练和培养的。</p>
 <p>教育模式的演变：面对 AI 对知识获取方式的冲击，教育应转向培养学生的核心判断力、批判性思维和跨领域整合能力，而非单纯的知识灌输。课堂的角色应转变为引导学生解决问题和进行深度交流。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="待办">待办<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BE%85%E5%8A%9E" class="hash-link" aria-label="待办的直接链接" title="待办的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="待办">待办<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E5%BE%85%E5%8A%9E" class="hash-link" aria-label="待办的直接链接" title="待办的直接链接" translate="no">​</a></h3>
 <ol>
-<li>开源项目发布</li>
+<li class="">开源项目发布</li>
 </ol>
 <p>徐强近期将会发布其团队研发的监管内核系统（OS），并邀请社区试用和反馈。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="问答摘记">问答摘记<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%E7%AD%94%E6%91%98%E8%AE%B0" class="hash-link" aria-label="问答摘记的直接链接" title="问答摘记的直接链接">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="问答摘记">问答摘记<a href="https://docs.nevergpdzy.cn/blog/2026/04/02/paper-is-dead-hardcore-research#%E9%97%AE%E7%AD%94%E6%91%98%E8%AE%B0" class="hash-link" aria-label="问答摘记的直接链接" title="问答摘记的直接链接" translate="no">​</a></h3>
 <p>刘伟峰：头一两年，和最近两年感受不一样，AI 抹平中等、高级人员的科研能力，但是最近感觉有所拉大。能用好 AI 大模型的人将差距拉开，而这波人有很好的组织管理天赋，从小就有这样的能力，这个能力可以让他们更好地利用 AI。这种差距很难再追赶，固化了，徐老师怎样看待这个事情。</p>
 <p>徐强：有不同意见。工业革命抹平体力差距，大模型抹平人的技能差距，但不认为它抹平了科研的能力。科研这套思维方式可以训练，怎样察觉一个问题它的价值、和 AI 有效沟通、如何判断信息真伪，有意识地训练科研的思维就不会被 AI 抹平，所以否认 AI 时代下科研能力与领导组织天赋强相关。徐强的书中也说到不会更大地拉开差距，科研是有规律的，是可以训练的。</p>
 <p>论文是读不完的，要精挑细选地去读。在读论文的时候，主要考虑作者是怎样走到这条路上的，而不是真正的研究内容，提升自己的科研品味和判断力，然后就能提升自己使用 AI 做科研的效率和效果。</p>

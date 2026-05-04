@@ -2,7 +2,7 @@
 <html lang="en-US" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-LabNotes/travel-album-map-implementation" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.8.1">
+<meta name="generator" content="Docusaurus v3.10.1">
 <title data-rh="true">Travel Album and Map Feature Implementation Notes | NeverGpDzy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" name="twitter:image" content="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><meta data-rh="true" property="og:url" content="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-album-map-implementation"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Travel Album and Map Feature Implementation Notes | NeverGpDzy"><meta data-rh="true" name="description" content="The complete implementation approach, file responsibilities, and design trade-offs for the Travel section -- from source drafts and image metadata to map data and frontend rendering."><meta data-rh="true" property="og:description" content="The complete implementation approach, file responsibilities, and design trade-offs for the Travel section -- from source drafts and image metadata to map data and frontend rendering."><link data-rh="true" rel="icon" href="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"><link data-rh="true" rel="canonical" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-album-map-implementation"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-album-map-implementation" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-album-map-implementation" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nevergpdzy.cn/docs/LabNotes/travel-album-map-implementation" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://HB5I1Y5I3F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Practice And Troubleshooting","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes"},{"@type":"ListItem","position":2,"name":"Travel Album and Map Implementation Notes","item":"https://docs.nevergpdzy.cn/en/docs/LabNotes/travel-album-map-implementation"}]}</script><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="NeverGpDzy RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/en/blog/atom.xml" title="NeverGpDzy Atom Feed">
 
@@ -10,525 +10,525 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="NeverGpDzy" href="/en/opensearch.xml">
-<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.c39b859e.css">
-<script src="/en/assets/js/runtime~main.9e340e1e.js" defer="defer"></script>
-<script src="/en/assets/js/main.c5025780.js" defer="defer"></script>
+<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.6f7ef865.css">
+<script src="/en/assets/js/runtime~main.54a19025.js" defer="defer"></script>
+<script src="/en/assets/js/main.381b115f.js" defer="defer"></script>
 </head>
-<body class="navigation-with-keyboard">
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<body>
+<svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">NeverGpDzy</b></a><a class="navbar__item navbar__link" href="/en/docs/intro">All Articles</a><a class="navbar__item navbar__link" href="/en/docs/Travel">Travel</a><a class="navbar__item navbar__link" href="/en/blog">Blog</a><div class="root_VgBn"><button class="trigger_mviG" type="button"><span class="mark_yPFJ" aria-hidden="true"></span><span class="city_Cy95">weather?</span></button></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://cv.nevergpdzy.cn/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">CV<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a class="navbar__item navbar__link" href="/en/about">About</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/docs/LabNotes/travel-album-map-implementation" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-CN">简体中文</a></li><li><a href="/en/docs/LabNotes/travel-album-map-implementation" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en-US">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Command+K)"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_bSxm"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_cWv0"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/en/docs/LabNotes">Practice And Troubleshooting</a><button aria-label="Collapse sidebar category &#x27;Practice And Troubleshooting&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/mermaid-diagram-syntax-guide">Mermaid Diagram Examples and Syntax Quick Reference</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/topic-directory-workflow">Creating a Topic Directory Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-intro-page-workflow">Docs Intro Page Maintenance Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/i18n-workflow">Internationalization Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/blog-creation-automation-workflow">Blog Creation Automation Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/giscus-comments-integration">giscus Comments</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-acr-docker-hub-pull-acceleration">Troubleshooting Docker Hub Pull Failures on Aliyun ECS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-oss-static-site-hosting-guide">Hosting a Static Site on Aliyun OSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/amap-coordinate-drift">Amap Coordinate Drift</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/apple-heif-display-on-web">Displaying Apple HEIF Photos on the Web</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/config-mac-from-zero">Setting Up a Mac From Zero</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dark-visitor-map-troubleshooting">Dark Mode Visitor Map Troubleshooting</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-audio-workflow">Docs Audio Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dual-cdn-cloudflare-free-cname-postmortem">Dual CDN Split-Traffic Failure Postmortem</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/embed-pdf-using-iframe">Embedding PDF Files With PdfEmbed</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/cuda-cache-streaming">CUDA Cache Streaming Optimization Guide (MDX Edition)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/life-blog-writing-workflow">Life Blog Writing Workflow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/navbar-weather-widget-strategy">Navbar Weather Widget Strategy</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/rocky-system-configuration">Rocky Linux New System Configuration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/time-machine-wechat-file-recovery">Recovering WeChat Files from a Time Machine Backup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/en/docs/LabNotes/travel-album-map-implementation">Travel Album and Map Implementation Notes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/travel-photo-metadata-workflow">Travel Photo Metadata Workflow</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_hjYf"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_z5aJ"><div class="docItemContainer_c0TR"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/en/docs/LabNotes"><span>Practice And Troubleshooting</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Travel Album and Map Implementation Notes</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Travel Album and Map Feature Implementation Notes</h1></header>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="NeverGpDzy Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">NeverGpDzy</b></a><a class="navbar__item navbar__link" href="/en/docs/intro">All Articles</a><a class="navbar__item navbar__link" href="/en/docs/Travel">Travel</a><a class="navbar__item navbar__link" href="/en/blog">Blog</a><div class="root_VgBn"><button class="trigger_mviG" type="button"><span class="mark_yPFJ" aria-hidden="true"></span><span class="city_Cy95">weather?</span></button></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://cv.nevergpdzy.cn/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">CV<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a class="navbar__item navbar__link" href="/en/about">About</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/docs/LabNotes/travel-album-map-implementation" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-CN">简体中文</a></li><li><a href="/en/docs/LabNotes/travel-album-map-implementation" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en-US">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_bSxm"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_cWv0"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/en/docs/LabNotes"><span title="Practice And Troubleshooting" class="categoryLinkLabel_W154">Practice And Troubleshooting</span></a><button aria-label="Collapse sidebar category &#x27;Practice And Troubleshooting&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/mermaid-diagram-syntax-guide"><span title="Mermaid Diagram Examples and Syntax Quick Reference" class="linkLabel_WmDU">Mermaid Diagram Examples and Syntax Quick Reference</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/topic-directory-workflow"><span title="Creating a Topic Directory Workflow" class="linkLabel_WmDU">Creating a Topic Directory Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-intro-page-workflow"><span title="Docs Intro Page Maintenance Workflow" class="linkLabel_WmDU">Docs Intro Page Maintenance Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/i18n-workflow"><span title="Internationalization Workflow" class="linkLabel_WmDU">Internationalization Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/blog-creation-automation-workflow"><span title="Blog Creation Automation Workflow" class="linkLabel_WmDU">Blog Creation Automation Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/giscus-comments-integration"><span title="giscus Comments" class="linkLabel_WmDU">giscus Comments</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-acr-docker-hub-pull-acceleration"><span title="Troubleshooting Docker Hub Pull Failures on Aliyun ECS" class="linkLabel_WmDU">Troubleshooting Docker Hub Pull Failures on Aliyun ECS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/aliyun-oss-static-site-hosting-guide"><span title="Hosting a Static Site on Aliyun OSS" class="linkLabel_WmDU">Hosting a Static Site on Aliyun OSS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/amap-coordinate-drift"><span title="Amap Coordinate Drift" class="linkLabel_WmDU">Amap Coordinate Drift</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/apple-heif-display-on-web"><span title="Displaying Apple HEIF Photos on the Web" class="linkLabel_WmDU">Displaying Apple HEIF Photos on the Web</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/config-mac-from-zero"><span title="Setting Up a Mac From Zero" class="linkLabel_WmDU">Setting Up a Mac From Zero</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dark-visitor-map-troubleshooting"><span title="Dark Mode Visitor Map Troubleshooting" class="linkLabel_WmDU">Dark Mode Visitor Map Troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/docs-audio-workflow"><span title="Docs Audio Workflow" class="linkLabel_WmDU">Docs Audio Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/dual-cdn-cloudflare-free-cname-postmortem"><span title="Dual CDN Split-Traffic Failure Postmortem" class="linkLabel_WmDU">Dual CDN Split-Traffic Failure Postmortem</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/embed-pdf-using-iframe"><span title="Embedding PDF Files With PdfEmbed" class="linkLabel_WmDU">Embedding PDF Files With PdfEmbed</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/cuda-cache-streaming"><span title="CUDA Cache Streaming Optimization Guide (MDX Edition)" class="linkLabel_WmDU">CUDA Cache Streaming Optimization Guide (MDX Edition)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/life-blog-writing-workflow"><span title="Life Blog Writing Workflow" class="linkLabel_WmDU">Life Blog Writing Workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/navbar-weather-widget-strategy"><span title="Navbar Weather Widget Strategy" class="linkLabel_WmDU">Navbar Weather Widget Strategy</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/rocky-system-configuration"><span title="Rocky Linux New System Configuration" class="linkLabel_WmDU">Rocky Linux New System Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/time-machine-wechat-file-recovery"><span title="Recovering WeChat Files from a Time Machine Backup" class="linkLabel_WmDU">Recovering WeChat Files from a Time Machine Backup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/en/docs/LabNotes/travel-album-map-implementation"><span title="Travel Album and Map Implementation Notes" class="linkLabel_WmDU">Travel Album and Map Implementation Notes</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/docs/LabNotes/travel-photo-metadata-workflow"><span title="Travel Photo Metadata Workflow" class="linkLabel_WmDU">Travel Photo Metadata Workflow</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_hjYf"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_z5aJ"><div class="docItemContainer_c0TR"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/en/docs/LabNotes"><span>Practice And Troubleshooting</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Travel Album and Map Implementation Notes</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Travel Album and Map Feature Implementation Notes</h1></header>
 <p>This document is not an operations manual for &quot;just adding a new travel post.&quot; It is an implementation reference for anyone who will continue maintaining this feature set.</p>
 <p>The goal is one thing:</p>
 <ul>
-<li>Clearly explain why the Travel section is designed this way, how it currently works, and which lines to follow when maintaining it going forward.</li>
+<li class="">Clearly explain why the Travel section is designed this way, how it currently works, and which lines to follow when maintaining it going forward.</li>
 </ul>
 <p>If you only want to add content, start here:</p>
 <ul>
-<li><a href="/en/docs/LabNotes/travel-photo-metadata-workflow">Travel Photo Metadata Workflow</a></li>
+<li class=""><a class="" href="/en/docs/LabNotes/travel-photo-metadata-workflow">Travel Photo Metadata Workflow</a></li>
 </ul>
 <p>If you encounter AMap marker drift (points shifted to the other side of the road), start here:</p>
 <ul>
-<li><a href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
+<li class=""><a class="" href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-this-feature-set-actually-solved">What This Feature Set Actually Solved<a href="#what-this-feature-set-actually-solved" class="hash-link" aria-label="Direct link to What This Feature Set Actually Solved" title="Direct link to What This Feature Set Actually Solved">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-feature-set-actually-solved">What This Feature Set Actually Solved<a href="#what-this-feature-set-actually-solved" class="hash-link" aria-label="Direct link to What This Feature Set Actually Solved" title="Direct link to What This Feature Set Actually Solved" translate="no">​</a></h2>
 <p>The current Travel section is not just &quot;image layout.&quot; It is a complete pipeline that solves:</p>
 <ol>
-<li>Stably turning travel content into <code>docs/Travel/*.mdx</code> pages.</li>
-<li>Unifying image references into maintainable relative paths instead of scattered full OSS URLs.</li>
-<li>Automatically extracting EXIF, capture time, device, lens, and GPS from JPEGs.</li>
-<li>Running AMap reverse geocoding on GPS-tagged photos for human-readable place names.</li>
-<li>Displaying a &quot;photo capture map&quot; on each article page.</li>
-<li>Displaying a &quot;My Footprints&quot; overview, footprint map, and travel article cards on the Travel category homepage.</li>
-<li>Making it so that adding new articles does not require re-hand-writing map, card, and metadata logic each time.</li>
+<li class="">Stably turning travel content into <code>docs/Travel/*.mdx</code> pages.</li>
+<li class="">Unifying image references into maintainable relative paths instead of scattered full OSS URLs.</li>
+<li class="">Automatically extracting EXIF, capture time, device, lens, and GPS from JPEGs.</li>
+<li class="">Running AMap reverse geocoding on GPS-tagged photos for human-readable place names.</li>
+<li class="">Displaying a &quot;photo capture map&quot; on each article page.</li>
+<li class="">Displaying a &quot;My Footprints&quot; overview, footprint map, and travel article cards on the Travel category homepage.</li>
+<li class="">Making it so that adding new articles does not require re-hand-writing map, card, and metadata logic each time.</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="design-principles">Design Principles<a href="#design-principles" class="hash-link" aria-label="Direct link to Design Principles" title="Direct link to Design Principles">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="design-principles">Design Principles<a href="#design-principles" class="hash-link" aria-label="Direct link to Design Principles" title="Direct link to Design Principles" translate="no">​</a></h2>
 <p>Five fixed principles underpin this implementation:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-the-article-file-owns-the-narrative-structure">1. The Article File Owns the Narrative Structure<a href="#1-the-article-file-owns-the-narrative-structure" class="hash-link" aria-label="Direct link to 1. The Article File Owns the Narrative Structure" title="Direct link to 1. The Article File Owns the Narrative Structure">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-the-article-file-owns-the-narrative-structure">1. The Article File Owns the Narrative Structure<a href="#1-the-article-file-owns-the-narrative-structure" class="hash-link" aria-label="Direct link to 1. The Article File Owns the Narrative Structure" title="Direct link to 1. The Article File Owns the Narrative Structure" translate="no">​</a></h3>
 <p><code>docs/Travel/*.mdx</code> determines:</p>
 <ul>
-<li>Article title</li>
-<li>Paragraph order</li>
-<li>Image groups</li>
-<li>The order of each image group</li>
+<li class="">Article title</li>
+<li class="">Paragraph order</li>
+<li class="">Image groups</li>
+<li class="">The order of each image group</li>
 </ul>
 <p>In other words, the article file is the single source of truth for the narrative structure.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-metadata-and-map-data-are-generated-artifacts">2. Metadata and Map Data Are Generated Artifacts<a href="#2-metadata-and-map-data-are-generated-artifacts" class="hash-link" aria-label="Direct link to 2. Metadata and Map Data Are Generated Artifacts" title="Direct link to 2. Metadata and Map Data Are Generated Artifacts">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-metadata-and-map-data-are-generated-artifacts">2. Metadata and Map Data Are Generated Artifacts<a href="#2-metadata-and-map-data-are-generated-artifacts" class="hash-link" aria-label="Direct link to 2. Metadata and Map Data Are Generated Artifacts" title="Direct link to 2. Metadata and Map Data Are Generated Artifacts" translate="no">​</a></h3>
 <p>The frontend should not re-read EXIF or re-request reverse geocoding on every run, nor should it infer map structures on the fly.</p>
 <p>So there are two generated artifacts:</p>
 <ul>
-<li><code>src/data/travelPhotoMetadata.generated.json</code></li>
-<li><code>src/data/travelMap.generated.json</code></li>
+<li class=""><code>src/data/travelPhotoMetadata.generated.json</code></li>
+<li class=""><code>src/data/travelMap.generated.json</code></li>
 </ul>
 <p>The first handles &quot;per-image information.&quot; The second handles &quot;article-level and place-level map information.&quot;</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-raw-gps-is-preserved-in-the-data-layer">3. Raw GPS Is Preserved in the Data Layer<a href="#3-raw-gps-is-preserved-in-the-data-layer" class="hash-link" aria-label="Direct link to 3. Raw GPS Is Preserved in the Data Layer" title="Direct link to 3. Raw GPS Is Preserved in the Data Layer">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-raw-gps-is-preserved-in-the-data-layer">3. Raw GPS Is Preserved in the Data Layer<a href="#3-raw-gps-is-preserved-in-the-data-layer" class="hash-link" aria-label="Direct link to 3. Raw GPS Is Preserved in the Data Layer" title="Direct link to 3. Raw GPS Is Preserved in the Data Layer" translate="no">​</a></h3>
 <p>Coordinates in photo EXIF remain as raw GPS and are not forcefully converted to AMap-renderable coordinates during generation.</p>
 <p>The reasons:</p>
 <ul>
-<li>Raw data stays traceable</li>
-<li>Reverse geocoding and other map SDKs can still reuse raw GPS</li>
-<li>Coordinate conversion is concentrated in the frontend map rendering layer, keeping responsibilities clearer</li>
+<li class="">Raw data stays traceable</li>
+<li class="">Reverse geocoding and other map SDKs can still reuse raw GPS</li>
+<li class="">Coordinate conversion is concentrated in the frontend map rendering layer, keeping responsibilities clearer</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-map-loading-mode-depends-on-page-role">4. Map Loading Mode Depends on Page Role<a href="#4-map-loading-mode-depends-on-page-role" class="hash-link" aria-label="Direct link to 4. Map Loading Mode Depends on Page Role" title="Direct link to 4. Map Loading Mode Depends on Page Role">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-map-loading-mode-depends-on-page-role">4. Map Loading Mode Depends on Page Role<a href="#4-map-loading-mode-depends-on-page-role" class="hash-link" aria-label="Direct link to 4. Map Loading Mode Depends on Page Role" title="Direct link to 4. Map Loading Mode Depends on Page Role" translate="no">​</a></h3>
 <p>The article page map defaults to collapsed and expands on click. The Travel category homepage map is one of the page&#x27;s core pieces of information, so it renders in embedded mode directly.</p>
 <p>This is not contradictory -- the page roles are different:</p>
 <ul>
-<li>On article pages, the map is supplementary information after the body; it should not steal attention from the text.</li>
-<li>On the Travel homepage, the map and &quot;My Footprints&quot; overview are above-the-fold main content; it can load directly.</li>
-<li>Both modes reuse the same <code>TravelOverviewMap</code> / <code>TravelMap</code> underlying capability; only the initialization timing differs.</li>
+<li class="">On article pages, the map is supplementary information after the body; it should not steal attention from the text.</li>
+<li class="">On the Travel homepage, the map and &quot;My Footprints&quot; overview are above-the-fold main content; it can load directly.</li>
+<li class="">Both modes reuse the same <code>TravelOverviewMap</code> / <code>TravelMap</code> underlying capability; only the initialization timing differs.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed">5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;<a href="#5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed" class="hash-link" aria-label="Direct link to 5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;" title="Direct link to 5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed">5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;<a href="#5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed" class="hash-link" aria-label="Direct link to 5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;" title="Direct link to 5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;" translate="no">​</a></h3>
 <p>So the current approach is not a single step from &quot;user&#x27;s verbal description&quot; to final MDX. Instead, it is a two-stage process:</p>
 <ol>
-<li>First organize a source draft</li>
-<li>Then generate the final article via script</li>
+<li class="">First organize a source draft</li>
+<li class="">Then generate the final article via script</li>
 </ol>
 <p>This is more stable than hand-writing final MDX in one shot, because when you later revise copy, add or remove images, or rearrange groups, you can reuse the same pipeline.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overall-layering">Overall Layering<a href="#overall-layering" class="hash-link" aria-label="Direct link to Overall Layering" title="Direct link to Overall Layering">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overall-layering">Overall Layering<a href="#overall-layering" class="hash-link" aria-label="Direct link to Overall Layering" title="Direct link to Overall Layering" translate="no">​</a></h2>
 <p>The current implementation splits into four layers.</p>
 <table><thead><tr><th>Layer</th><th>Primary Responsibility</th><th>Key Files</th></tr></thead><tbody><tr><td>Content Layer</td><td>Stores the final Travel articles</td><td><code>docs/Travel/*.mdx</code></td></tr><tr><td>Generation Layer</td><td>Generates articles, photo metadata, and map data</td><td><code>scripts/create-travel-article.mjs</code>, <code>scripts/generate-travel-photo-metadata.mjs</code>, <code>scripts/generate-travel-map-data.mjs</code></td></tr><tr><td>Data Layer</td><td>Provides stable JSON to the frontend</td><td><code>src/data/travelPhotoMetadata.generated.json</code>, <code>src/data/travelMap.generated.json</code></td></tr><tr><td>Display Layer</td><td>Renders albums, lightbox, article maps, Travel homepage, and overview map</td><td><code>src/components/TravelGallery/*</code>, <code>src/components/TravelMap/*</code>, <code>src/components/TravelHome/*</code></td></tr></tbody></table>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="end-to-end-data-flow">End-to-End Data Flow<a href="#end-to-end-data-flow" class="hash-link" aria-label="Direct link to End-to-End Data Flow" title="Direct link to End-to-End Data Flow">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="end-to-end-data-flow">End-to-End Data Flow<a href="#end-to-end-data-flow" class="hash-link" aria-label="Direct link to End-to-End Data Flow" title="Direct link to End-to-End Data Flow" translate="no">​</a></h2>
 <p>The complete pipeline runs like this:</p>
 <ol>
-<li>You provide a location, OSS image links, and a short description -- or directly provide a Markdown source draft.</li>
-<li>AI first organizes the source draft, or you prepare it manually.</li>
-<li><code>scripts/create-travel-article.mjs</code> converts the source draft into <code>docs/Travel/&lt;slug&gt;.mdx</code>.</li>
-<li><code>scripts/generate-travel-photo-metadata.mjs</code> scans all image references in Travel articles, downloads JPEGs, extracts EXIF and GPS, and calls AMap reverse geocoding when GPS is present.</li>
-<li><code>scripts/generate-travel-map-data.mjs</code> reads the <code>TravelGallery</code> order and photo metadata from the article to generate the structures needed by the article page map and category page map.</li>
-<li><code>TravelGallery</code> fills in display information for each image from the photo metadata JSON.</li>
-<li><code>TravelHome</code> reads article, place, and photo data from the map JSON and renders the Travel category homepage.</li>
-<li><code>TravelStoryMap</code> and <code>TravelOverviewMap</code> read points from the map JSON and render AMap maps on the frontend.</li>
+<li class="">You provide a location, OSS image links, and a short description -- or directly provide a Markdown source draft.</li>
+<li class="">AI first organizes the source draft, or you prepare it manually.</li>
+<li class=""><code>scripts/create-travel-article.mjs</code> converts the source draft into <code>docs/Travel/&lt;slug&gt;.mdx</code>.</li>
+<li class=""><code>scripts/generate-travel-photo-metadata.mjs</code> scans all image references in Travel articles, downloads JPEGs, extracts EXIF and GPS, and calls AMap reverse geocoding when GPS is present.</li>
+<li class=""><code>scripts/generate-travel-map-data.mjs</code> reads the <code>TravelGallery</code> order and photo metadata from the article to generate the structures needed by the article page map and category page map.</li>
+<li class=""><code>TravelGallery</code> fills in display information for each image from the photo metadata JSON.</li>
+<li class=""><code>TravelHome</code> reads article, place, and photo data from the map JSON and renders the Travel category homepage.</li>
+<li class=""><code>TravelStoryMap</code> and <code>TravelOverviewMap</code> read points from the map JSON and render AMap maps on the frontend.</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="content-layer-why-the-final-article-is-still-mdx">Content Layer: Why the Final Article Is Still MDX<a href="#content-layer-why-the-final-article-is-still-mdx" class="hash-link" aria-label="Direct link to Content Layer: Why the Final Article Is Still MDX" title="Direct link to Content Layer: Why the Final Article Is Still MDX">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="content-layer-why-the-final-article-is-still-mdx">Content Layer: Why the Final Article Is Still MDX<a href="#content-layer-why-the-final-article-is-still-mdx" class="hash-link" aria-label="Direct link to Content Layer: Why the Final Article Is Still MDX" title="Direct link to Content Layer: Why the Final Article Is Still MDX" translate="no">​</a></h2>
 <p>The final output lands in <code>docs/Travel/*.mdx</code> instead of only keeping a database or JSON. Three reasons:</p>
 <ol>
-<li>Docusaurus natively centers on document files.</li>
-<li>The relationship between article body and image groups is inherently document structure.</li>
-<li>MDX can directly reuse <code>TravelGallery</code> and <code>TravelStoryMap</code> components without an extra translation layer.</li>
+<li class="">Docusaurus natively centers on document files.</li>
+<li class="">The relationship between article body and image groups is inherently document structure.</li>
+<li class="">MDX can directly reuse <code>TravelGallery</code> and <code>TravelStoryMap</code> components without an extra translation layer.</li>
 </ol>
 <p>A current Travel article contains at minimum:</p>
 <ul>
-<li>Front matter</li>
-<li><code>TravelGallery</code> import</li>
-<li><code>TravelStoryMap</code> import</li>
-<li>Several <code>createTravelPhotos([...])</code> calls</li>
-<li>Body text alternating with image blocks</li>
+<li class="">Front matter</li>
+<li class=""><code>TravelGallery</code> import</li>
+<li class=""><code>TravelStoryMap</code> import</li>
+<li class="">Several <code>createTravelPhotos([...])</code> calls</li>
+<li class="">Body text alternating with image blocks</li>
 </ul>
 <p>Travel article front matter also handles category page sorting. The current convention uses the trip start date as <code>sidebar_position: -YYYYMMDD</code>, e.g., <code>sidebar_position: -20260207</code>. Docusaurus autogenerated sidebar sorts by ascending <code>sidebar_position</code>, so newer dates produce smaller negatives and rank higher. This keeps the Travel sidebar, prev/next navigation, and Travel homepage cards in a consistent &quot;newest trip first&quot; order.</p>
 <p>Do not use <code>1, 2, 3...</code> for ordering. That approach requires renumbering every time a newer trip is added, and maintenance cost grows over time. Do not rename Travel files for sorting purposes either; the current map data and homepage display still use the file basename as the article <code>id</code>. Renaming would break card covers, card descriptions, and stable associations in generated data.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="article-generation-layer-why-create-travel-article-exists-as-a-separate-step">Article Generation Layer: Why <code>create-travel-article</code> Exists as a Separate Step<a href="#article-generation-layer-why-create-travel-article-exists-as-a-separate-step" class="hash-link" aria-label="Direct link to article-generation-layer-why-create-travel-article-exists-as-a-separate-step" title="Direct link to article-generation-layer-why-create-travel-article-exists-as-a-separate-step">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="article-generation-layer-why-create-travel-article-exists-as-a-separate-step">Article Generation Layer: Why <code>create-travel-article</code> Exists as a Separate Step<a href="#article-generation-layer-why-create-travel-article-exists-as-a-separate-step" class="hash-link" aria-label="Direct link to article-generation-layer-why-create-travel-article-exists-as-a-separate-step" title="Direct link to article-generation-layer-why-create-travel-article-exists-as-a-separate-step" translate="no">​</a></h2>
 <p>Key script:</p>
 <ul>
-<li><code>scripts/create-travel-article.mjs</code></li>
+<li class=""><code>scripts/create-travel-article.mjs</code></li>
 </ul>
 <p>It exists not to be &quot;lazy,&quot; but to codify the format specification.</p>
 <p>This script currently handles:</p>
 <ol>
-<li>Parsing front matter.</li>
-<li>Tolerating UTF-8 BOM.</li>
-<li>Recognizing Markdown image lines.</li>
-<li>Only accepting JPEGs under <code>picture.nevergpdzy.cn</code> or already-normalized JPEG relative paths.</li>
-<li>Converting full OSS URLs to the repo&#x27;s unified relative paths. If only a filename is given, it falls back to <code>img_for_Typora/</code> per legacy rules.</li>
-<li>Preserving <code>##</code> section structure.</li>
-<li>Auto-generating <code>createTravelPhotos([...])</code>.</li>
-<li>Auto-inserting <code>&lt;TravelStoryMap /&gt;</code>.</li>
-<li>Optionally chaining into <code>generate:travel</code> or <code>build</code>.</li>
+<li class="">Parsing front matter.</li>
+<li class="">Tolerating UTF-8 BOM.</li>
+<li class="">Recognizing Markdown image lines.</li>
+<li class="">Only accepting JPEGs under <code>picture.nevergpdzy.cn</code> or already-normalized JPEG relative paths.</li>
+<li class="">Converting full OSS URLs to the repo&#x27;s unified relative paths. If only a filename is given, it falls back to <code>img_for_Typora/</code> per legacy rules.</li>
+<li class="">Preserving <code>##</code> section structure.</li>
+<li class="">Auto-generating <code>createTravelPhotos([...])</code>.</li>
+<li class="">Auto-inserting <code>&lt;TravelStoryMap /&gt;</code>.</li>
+<li class="">Optionally chaining into <code>generate:travel</code> or <code>build</code>.</li>
 </ol>
 <p>Current CLI behavior:</p>
 <ul>
-<li><code>--source</code> / <code>-s</code> points to the source draft; required.</li>
-<li><code>--sync</code> runs <code>npm run generate:travel</code> after generating the MDX.</li>
-<li><code>--verify</code> runs <code>npm run generate:travel</code> and <code>npm run build</code> after generating the MDX.</li>
-<li><code>--force</code> allows overwriting an existing target file. Without this flag, the script refuses to overwrite.</li>
-<li>The <code>output</code> field in the source draft&#x27;s front matter is only used to specify the output path and is not written into the final MDX.</li>
+<li class=""><code>--source</code> / <code>-s</code> points to the source draft; required.</li>
+<li class=""><code>--sync</code> runs <code>npm run generate:travel</code> after generating the MDX.</li>
+<li class=""><code>--verify</code> runs <code>npm run generate:travel</code> and <code>npm run build</code> after generating the MDX.</li>
+<li class=""><code>--force</code> allows overwriting an existing target file. Without this flag, the script refuses to overwrite.</li>
+<li class="">The <code>output</code> field in the source draft&#x27;s front matter is only used to specify the output path and is not written into the final MDX.</li>
 </ul>
 <p>The core idea at this layer:</p>
 <ul>
-<li>Codify the format specification into the script, not into the human brain.</li>
+<li class="">Codify the format specification into the script, not into the human brain.</li>
 </ul>
 <p>This way, whether you hand-write articles or AI helps, the structure landing in the repo stays as consistent as possible.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly">Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly<a href="#photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly" class="hash-link" aria-label="Direct link to Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly" title="Direct link to Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly">Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly<a href="#photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly" class="hash-link" aria-label="Direct link to Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly" title="Direct link to Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly" translate="no">​</a></h2>
 <p>Key script:</p>
 <ul>
-<li><code>scripts/generate-travel-photo-metadata.mjs</code></li>
+<li class=""><code>scripts/generate-travel-photo-metadata.mjs</code></li>
 </ul>
 <p>The frontend is not the right place to process EXIF, for several reasons:</p>
 <ol>
-<li>Images are too large.</li>
-<li>Browser-side parsing is unstable and wastes performance.</li>
-<li>Reverse geocoding requires request throttling and caching.</li>
-<li>A built static site is better suited to consuming ready-made JSON.</li>
+<li class="">Images are too large.</li>
+<li class="">Browser-side parsing is unstable and wastes performance.</li>
+<li class="">Reverse geocoding requires request throttling and caching.</li>
+<li class="">A built static site is better suited to consuming ready-made JSON.</li>
 </ol>
 <p>So the current approach is:</p>
 <ol>
-<li>Scan JPEGs referenced in <code>docs/Travel/*.mdx</code>.</li>
-<li>Normalize all references to canonical image keys.</li>
-<li>Download the images.</li>
-<li>Parse <code>DateTimeOriginal</code>, <code>Model</code>, <code>LensModel</code>, and GPS from the JPEGs.</li>
-<li>If GPS exists, call AMap Web Service reverse geocoding.</li>
-<li>Generate <code>travelPhotoMetadata.generated.json</code>.</li>
+<li class="">Scan JPEGs referenced in <code>docs/Travel/*.mdx</code>.</li>
+<li class="">Normalize all references to canonical image keys.</li>
+<li class="">Download the images.</li>
+<li class="">Parse <code>DateTimeOriginal</code>, <code>Model</code>, <code>LensModel</code>, and GPS from the JPEGs.</li>
+<li class="">If GPS exists, call AMap Web Service reverse geocoding.</li>
+<li class="">Generate <code>travelPhotoMetadata.generated.json</code>.</li>
 </ol>
 <p>This layer also handles several small but maintenance-critical details:</p>
 <ul>
-<li>Reuse existing caches to avoid redundant requests</li>
-<li>Throttle AMap requests to avoid hammering the API</li>
-<li>Normalize iPhone lens names</li>
-<li>Allow fallback to the article-title-inherited location name when GPS is unavailable</li>
+<li class="">Reuse existing caches to avoid redundant requests</li>
+<li class="">Throttle AMap requests to avoid hammering the API</li>
+<li class="">Normalize iPhone lens names</li>
+<li class="">Allow fallback to the article-title-inherited location name when GPS is unavailable</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson">Map Data Generation Layer: Why Another Layer with <code>travelMap.generated.json</code><a href="#map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" class="hash-link" aria-label="Direct link to map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" title="Direct link to map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson">Map Data Generation Layer: Why Another Layer with <code>travelMap.generated.json</code><a href="#map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" class="hash-link" aria-label="Direct link to map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" title="Direct link to map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" translate="no">​</a></h2>
 <p>Key script:</p>
 <ul>
-<li><code>scripts/generate-travel-map-data.mjs</code></li>
+<li class=""><code>scripts/generate-travel-map-data.mjs</code></li>
 </ul>
 <p>It might seem that the frontend already has photo metadata and could draw maps directly, but the current project does not do that. The frontend is still missing several types of &quot;article-level information&quot;:</p>
 <ul>
-<li>Which permalink corresponds to this article</li>
-<li>What is the order of each <code>TravelGallery</code></li>
-<li>Which image belongs to which section</li>
-<li>Which point is suitable as the article overview point</li>
-<li>Which point should represent &quot;visited this place&quot; on the Travel category page</li>
+<li class="">Which permalink corresponds to this article</li>
+<li class="">What is the order of each <code>TravelGallery</code></li>
+<li class="">Which image belongs to which section</li>
+<li class="">Which point is suitable as the article overview point</li>
+<li class="">Which point should represent &quot;visited this place&quot; on the Travel category page</li>
 </ul>
 <p>So this script separately organizes the &quot;map-renderable&quot; structure and hands it to the frontend.</p>
 <p>Key design decisions at this layer:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-maps-show-points-not-routes">1. Maps Show Points, Not Routes<a href="#1-maps-show-points-not-routes" class="hash-link" aria-label="Direct link to 1. Maps Show Points, Not Routes" title="Direct link to 1. Maps Show Points, Not Routes">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-maps-show-points-not-routes">1. Maps Show Points, Not Routes<a href="#1-maps-show-points-not-routes" class="hash-link" aria-label="Direct link to 1. Maps Show Points, Not Routes" title="Direct link to 1. Maps Show Points, Not Routes" translate="no">​</a></h3>
 <p>The current Travel maps no longer draw routes. They only show:</p>
 <ul>
-<li>Photo capture points on article pages</li>
-<li>Place representative points on the category page</li>
+<li class="">Photo capture points on article pages</li>
+<li class="">Place representative points on the category page</li>
 </ul>
 <p>The reason: photo GPS is better suited to expressing &quot;where this was captured&quot; than &quot;the complete route taken.&quot;</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-the-category-page-uses-representative-points-not-all-points-spread-out">2. The Category Page Uses Representative Points, Not All Points Spread Out<a href="#2-the-category-page-uses-representative-points-not-all-points-spread-out" class="hash-link" aria-label="Direct link to 2. The Category Page Uses Representative Points, Not All Points Spread Out" title="Direct link to 2. The Category Page Uses Representative Points, Not All Points Spread Out">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-the-category-page-uses-representative-points-not-all-points-spread-out">2. The Category Page Uses Representative Points, Not All Points Spread Out<a href="#2-the-category-page-uses-representative-points-not-all-points-spread-out" class="hash-link" aria-label="Direct link to 2. The Category Page Uses Representative Points, Not All Points Spread Out" title="Direct link to 2. The Category Page Uses Representative Points, Not All Points Spread Out" translate="no">​</a></h3>
 <p>If the category page spread out every point from an article, the information density would be too high and hard to click.</p>
 <p>So the script computes a suitable representative point per article and aggregates them into the overview map.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-section-order-continues-to-be-inherited-from-the-article">3. Section Order Continues to Be Inherited from the Article<a href="#3-section-order-continues-to-be-inherited-from-the-article" class="hash-link" aria-label="Direct link to 3. Section Order Continues to Be Inherited from the Article" title="Direct link to 3. Section Order Continues to Be Inherited from the Article">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-section-order-continues-to-be-inherited-from-the-article">3. Section Order Continues to Be Inherited from the Article<a href="#3-section-order-continues-to-be-inherited-from-the-article" class="hash-link" aria-label="Direct link to 3. Section Order Continues to Be Inherited from the Article" title="Direct link to 3. Section Order Continues to Be Inherited from the Article" translate="no">​</a></h3>
 <p>Map data does not independently define sections. It reads back the <code>TravelGallery</code> and heading order from the article.</p>
 <p>This ensures the map and the body text do not tell different stories.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="display-layer-why-travelgallery-and-travelmap-are-separated">Display Layer: Why <code>TravelGallery</code> and <code>TravelMap</code> Are Separated<a href="#display-layer-why-travelgallery-and-travelmap-are-separated" class="hash-link" aria-label="Direct link to display-layer-why-travelgallery-and-travelmap-are-separated" title="Direct link to display-layer-why-travelgallery-and-travelmap-are-separated">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="travelhome"><code>TravelHome</code><a href="#travelhome" class="hash-link" aria-label="Direct link to travelhome" title="Direct link to travelhome">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="display-layer-why-travelgallery-and-travelmap-are-separated">Display Layer: Why <code>TravelGallery</code> and <code>TravelMap</code> Are Separated<a href="#display-layer-why-travelgallery-and-travelmap-are-separated" class="hash-link" aria-label="Direct link to display-layer-why-travelgallery-and-travelmap-are-separated" title="Direct link to display-layer-why-travelgallery-and-travelmap-are-separated" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="travelhome"><code>TravelHome</code><a href="#travelhome" class="hash-link" aria-label="Direct link to travelhome" title="Direct link to travelhome" translate="no">​</a></h3>
 <p>Key files:</p>
 <ul>
-<li><code>src/components/TravelHome/index.js</code></li>
-<li><code>src/components/TravelHome/styles.module.css</code></li>
+<li class=""><code>src/components/TravelHome/index.js</code></li>
+<li class=""><code>src/components/TravelHome/styles.module.css</code></li>
 </ul>
 <p>This layer handles the Travel category homepage, not the article detail page.</p>
 <p>It currently does four things:</p>
 <ol>
-<li>Renders the top &quot;My Footprints&quot; overview card.</li>
-<li>Renders the embedded footprint map.</li>
-<li>Renders the travel article card list.</li>
-<li>On desktop, renders a bottom quote. On mobile, hides the quote to avoid crowding the page footer.</li>
+<li class="">Renders the top &quot;My Footprints&quot; overview card.</li>
+<li class="">Renders the embedded footprint map.</li>
+<li class="">Renders the travel article card list.</li>
+<li class="">On desktop, renders a bottom quote. On mobile, hides the quote to avoid crowding the page footer.</li>
 </ol>
 <p><code>TravelHome</code> content data still comes from <code>src/data/travelMap.generated.json</code>. It does not maintain a separate travel article list. The card display order comes from Docusaurus&#x27;s already-sorted Travel sidebar items by <code>sidebar_position</code>.</p>
 <p>Specific rules:</p>
 <ul>
-<li>Place count and article count come from <code>travelMapData.placeCount / articleCount</code>.</li>
-<li>Travel article card content comes from <code>travelMapData.articles</code>.</li>
-<li>Travel article card order comes from the Travel category&#x27;s <code>sidebarItems</code>, staying consistent with the left sidebar and prev/next navigation.</li>
-<li>If an article has not yet appeared in <code>sidebarItems</code>, <code>TravelHome</code> appends it after the sorted articles to prevent the card from disappearing due to missing sort data.</li>
-<li>Card cover images first read from <code>CARD_COVER_IMAGES</code> configured by article <code>id</code>. If not configured, they fall back to the first photo in the article, assembled using the <code>picture.nevergpdzy.cn</code> remote image rule.</li>
-<li>Card descriptions use display copy from <code>CARD_DESCRIPTIONS</code>, not the long description from front matter.</li>
-<li>Flight, train, and driving mileage are manually curated display data on the Travel homepage, not derived from photo metadata.</li>
+<li class="">Place count and article count come from <code>travelMapData.placeCount / articleCount</code>.</li>
+<li class="">Travel article card content comes from <code>travelMapData.articles</code>.</li>
+<li class="">Travel article card order comes from the Travel category&#x27;s <code>sidebarItems</code>, staying consistent with the left sidebar and prev/next navigation.</li>
+<li class="">If an article has not yet appeared in <code>sidebarItems</code>, <code>TravelHome</code> appends it after the sorted articles to prevent the card from disappearing due to missing sort data.</li>
+<li class="">Card cover images first read from <code>CARD_COVER_IMAGES</code> configured by article <code>id</code>. If not configured, they fall back to the first photo in the article, assembled using the <code>picture.nevergpdzy.cn</code> remote image rule.</li>
+<li class="">Card descriptions use display copy from <code>CARD_DESCRIPTIONS</code>, not the long description from front matter.</li>
+<li class="">Flight, train, and driving mileage are manually curated display data on the Travel homepage, not derived from photo metadata.</li>
 </ul>
 <p><code>CARD_COVER_IMAGES</code> only affects Travel homepage card covers. It does not modify <code>docs/Travel/*.mdx</code> body albums, article descriptions, or generated data in <code>src/data/travelMap.generated.json</code>.
 <code>CARD_DESCRIPTIONS</code> only affects Travel homepage cards. It does not modify <code>docs/Travel/*.mdx</code> article descriptions.</p>
 <p>There is a commonly misunderstood boundary: the <code>travelMap.generated.json</code> article list is generated from filenames. The actual display order is then re-sorted by <code>TravelHome</code> based on the <code>sidebarItems</code> passed in by Docusaurus. In other words, when adding a new article, first ensure <code>sidebar_position</code> is correct, then verify through a build that the homepage cards, sidebar, and prev/next navigation are consistent.</p>
 <p>When adding a new Travel article, the front matter must include the negative sort value corresponding to the trip start date:</p>
-<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430</span><br></span></code></pre></div></div>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430</span><br></div></code></pre></div></div>
 <p>For multiple articles on the same day, do not append integer digits (e.g., do not write <code>-2026043001</code>), because it will be smaller than normal dates and permanently rank higher. Use decimal suffixes for same-day fine-tuning:</p>
-<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.02</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.01</span><br></span></code></pre></div></div>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.02</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">sidebar_position</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">-20260430.01</span><br></div></code></pre></div></div>
 <p>Decimal suffixes only adjust order within the same day and do not cross adjacent dates.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="travel-homepage-visual-structure">Travel Homepage Visual Structure<a href="#travel-homepage-visual-structure" class="hash-link" aria-label="Direct link to Travel Homepage Visual Structure" title="Direct link to Travel Homepage Visual Structure">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="travel-homepage-visual-structure">Travel Homepage Visual Structure<a href="#travel-homepage-visual-structure" class="hash-link" aria-label="Direct link to Travel Homepage Visual Structure" title="Direct link to Travel Homepage Visual Structure" translate="no">​</a></h3>
 <p>The Travel homepage is not a simple reskin of the Docusaurus generated index. It is a dedicated homepage view.</p>
 <p>Current structure:</p>
 <ol>
-<li>Left: &quot;My Footprints&quot; overview card.</li>
-<li>Right: embedded map card.</li>
-<li>Below: travel story card grid.</li>
-<li>Desktop bottom: Chinese quote with full-width quote marks.</li>
+<li class="">Left: &quot;My Footprints&quot; overview card.</li>
+<li class="">Right: embedded map card.</li>
+<li class="">Below: travel story card grid.</li>
+<li class="">Desktop bottom: Chinese quote with full-width quote marks.</li>
 </ol>
 <p>A few boundaries to watch during maintenance:</p>
 <ul>
-<li>The left overview card background always uses <code>https://picture.nevergpdzy.cn/AI-images/tranquil-valley-path.png</code>.</li>
-<li>The stats area is fixed at two rows: row one is &quot;Places Explored / Travel Stories,&quot; row two is &quot;Flights / Trains / Drives.&quot;</li>
-<li>Stats are left-aligned. Text is left-aligned to the right of the icon. Icons are vertically centered in their own light-colored square.</li>
-<li>The right map card no longer shows an extra title bar or &quot;7 Places,&quot; giving the map more display area.</li>
-<li>Travel article cards do not show dates or view counts -- only location pills, cover, title, and short description.</li>
-<li>The bottom quote uses Chinese full-width quote marks on desktop; hidden on mobile.</li>
+<li class="">The left overview card background always uses <code>https://picture.nevergpdzy.cn/AI-images/tranquil-valley-path.png</code>.</li>
+<li class="">The stats area is fixed at two rows: row one is &quot;Places Explored / Travel Stories,&quot; row two is &quot;Flights / Trains / Drives.&quot;</li>
+<li class="">Stats are left-aligned. Text is left-aligned to the right of the icon. Icons are vertically centered in their own light-colored square.</li>
+<li class="">The right map card no longer shows an extra title bar or &quot;7 Places,&quot; giving the map more display area.</li>
+<li class="">Travel article cards do not show dates or view counts -- only location pills, cover, title, and short description.</li>
+<li class="">The bottom quote uses Chinese full-width quote marks on desktop; hidden on mobile.</li>
 </ul>
 <p>The visual goal of this page is &quot;travel overview,&quot; not a marketing landing page and not a plain doc directory page. Do not re-introduce the default <code>DocCardList</code> list style.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="travelgallery"><code>TravelGallery</code><a href="#travelgallery" class="hash-link" aria-label="Direct link to travelgallery" title="Direct link to travelgallery">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="travelgallery"><code>TravelGallery</code><a href="#travelgallery" class="hash-link" aria-label="Direct link to travelgallery" title="Direct link to travelgallery" translate="no">​</a></h3>
 <p>Key file:</p>
 <ul>
-<li><code>src/components/TravelGallery/index.js</code></li>
+<li class=""><code>src/components/TravelGallery/index.js</code></li>
 </ul>
 <p>This layer handles:</p>
 <ul>
-<li>Normalizing image references</li>
-<li>Assembling remote image URLs</li>
-<li>Filling in capture time, device, lens, and location from <code>travelPhotoMetadata.generated.json</code></li>
-<li>Rendering grid albums and lightbox</li>
+<li class="">Normalizing image references</li>
+<li class="">Assembling remote image URLs</li>
+<li class="">Filling in capture time, device, lens, and location from <code>travelPhotoMetadata.generated.json</code></li>
+<li class="">Rendering grid albums and lightbox</li>
 </ul>
 <p>It does not handle:</p>
 <ul>
-<li>Determining article structure</li>
-<li>Requesting AMap</li>
-<li>Parsing EXIF</li>
+<li class="">Determining article structure</li>
+<li class="">Requesting AMap</li>
+<li class="">Parsing EXIF</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="travelmap"><code>TravelMap</code><a href="#travelmap" class="hash-link" aria-label="Direct link to travelmap" title="Direct link to travelmap">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="travelmap"><code>TravelMap</code><a href="#travelmap" class="hash-link" aria-label="Direct link to travelmap" title="Direct link to travelmap" translate="no">​</a></h3>
 <p>Key files:</p>
 <ul>
-<li><code>src/components/TravelMap/shared.js</code></li>
-<li><code>src/components/TravelMap/TravelStoryMap.js</code></li>
-<li><code>src/components/TravelMap/TravelOverviewMap.js</code></li>
-<li><code>src/components/TravelMap/TravelMapDisclosure.js</code></li>
+<li class=""><code>src/components/TravelMap/shared.js</code></li>
+<li class=""><code>src/components/TravelMap/TravelStoryMap.js</code></li>
+<li class=""><code>src/components/TravelMap/TravelOverviewMap.js</code></li>
+<li class=""><code>src/components/TravelMap/TravelMapDisclosure.js</code></li>
 </ul>
 <p>This splits into three parts:</p>
 <ol>
-<li><code>shared.js</code>
+<li class=""><code>shared.js</code>
 Handles AMap config reading, loader singleton, map creation, control integration, coordinate conversion, <code>fit view</code>, destruction, and resize.</li>
-<li><code>TravelStoryMap.js</code>
+<li class=""><code>TravelStoryMap.js</code>
 Handles article page collapsed map, photo point clustering, markers, and click info windows.</li>
-<li><code>TravelOverviewMap.js</code>
+<li class=""><code>TravelOverviewMap.js</code>
 Handles place overview map and article jump. Default collapsed; also supports the <code>embedded</code> mode used by the Travel homepage.</li>
 </ol>
 <p><code>TravelOverviewMap</code> has two modes to distinguish:</p>
 <ul>
-<li>Default mode: uses <code>TravelMapDisclosure</code>; the inline map is created only after clicking. Suitable for non-above-the-fold supplementary maps.</li>
-<li><code>embedded</code> mode: the map is created immediately on component mount. Suitable for the above-the-fold footprint map on the Travel homepage.</li>
+<li class="">Default mode: uses <code>TravelMapDisclosure</code>; the inline map is created only after clicking. Suitable for non-above-the-fold supplementary maps.</li>
+<li class=""><code>embedded</code> mode: the map is created immediately on component mount. Suitable for the above-the-fold footprint map on the Travel homepage.</li>
 </ul>
 <p>Both modes share the same place data, coordinate conversion, marker creation, fullscreen popup, and failure fallback.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-sharedjs-is-a-common-layer">Why <code>shared.js</code> Is a Common Layer<a href="#why-sharedjs-is-a-common-layer" class="hash-link" aria-label="Direct link to why-sharedjs-is-a-common-layer" title="Direct link to why-sharedjs-is-a-common-layer">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-sharedjs-is-a-common-layer">Why <code>shared.js</code> Is a Common Layer<a href="#why-sharedjs-is-a-common-layer" class="hash-link" aria-label="Direct link to why-sharedjs-is-a-common-layer" title="Direct link to why-sharedjs-is-a-common-layer" translate="no">​</a></h3>
 <p>For the map to run stably, it depends on a shared set of rules:</p>
 <ul>
-<li>Unified reading of <code>key / serviceHost / securityJsCode</code></li>
-<li>Unified setting of <code>window._AMapSecurityConfig</code></li>
-<li>Unified lazy loading of <code>@amap/amap-jsapi-loader</code></li>
-<li>Unified device-capability-based decision on loading <code>AMap.ToolBar</code> and <code>AMap.Scale</code></li>
-<li>Unified tightening of map render parameters -- default to <code>2D</code>, disable rotation / pitch / 3D buildings, keep only essential base map elements</li>
-<li>Unified <code>gps -&gt; AMap coordinate</code> conversion</li>
-<li>Unified <code>fitTravelMapToOverlays</code></li>
-<li>Unified <code>map.destroy()</code> on component collapse or unmount</li>
+<li class="">Unified reading of <code>key / serviceHost / securityJsCode</code></li>
+<li class="">Unified setting of <code>window._AMapSecurityConfig</code></li>
+<li class="">Unified lazy loading of <code>@amap/amap-jsapi-loader</code></li>
+<li class="">Unified device-capability-based decision on loading <code>AMap.ToolBar</code> and <code>AMap.Scale</code></li>
+<li class="">Unified tightening of map render parameters -- default to <code>2D</code>, disable rotation / pitch / 3D buildings, keep only essential base map elements</li>
+<li class="">Unified <code>gps -&gt; AMap coordinate</code> conversion</li>
+<li class="">Unified <code>fitTravelMapToOverlays</code></li>
+<li class="">Unified <code>map.destroy()</code> on component collapse or unmount</li>
 </ul>
 <p>If this logic scatters into individual map components, behavior drift is inevitable.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported">AMap Integration Layer: Why Both <code>serviceHost</code> and <code>securityJsCode</code> Are Supported<a href="#amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" class="hash-link" aria-label="Direct link to amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" title="Direct link to amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported">AMap Integration Layer: Why Both <code>serviceHost</code> and <code>securityJsCode</code> Are Supported<a href="#amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" class="hash-link" aria-label="Direct link to amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" title="Direct link to amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" translate="no">​</a></h2>
 <p>Key files:</p>
 <ul>
-<li><code>docusaurus.config.js</code></li>
-<li><code>src/components/TravelMap/shared.js</code></li>
+<li class=""><code>docusaurus.config.js</code></li>
+<li class=""><code>src/components/TravelMap/shared.js</code></li>
 </ul>
 <p>The core tension here:</p>
 <ul>
-<li>The frontend needs <code>AMAP_JSAPI_KEY</code> to load the AMap JSAPI</li>
-<li>But <code>AMAP_SECURITY_JS_CODE</code> should not be permanently exposed to the client in production</li>
+<li class="">The frontend needs <code>AMAP_JSAPI_KEY</code> to load the AMap JSAPI</li>
+<li class="">But <code>AMAP_SECURITY_JS_CODE</code> should not be permanently exposed to the client in production</li>
 </ul>
 <p>So the current strategy:</p>
 <ol>
-<li>In local or no-proxy environments, <code>securityJsCode</code> can serve as a fallback.</li>
-<li>Production prefers <code>AMAP_SERVICE_HOST</code>.</li>
-<li>Once <code>AMAP_SERVICE_HOST</code> is configured, the build no longer injects <code>AMAP_SECURITY_JS_CODE</code> into the frontend <code>customFields.amap</code>.</li>
+<li class="">In local or no-proxy environments, <code>securityJsCode</code> can serve as a fallback.</li>
+<li class="">Production prefers <code>AMAP_SERVICE_HOST</code>.</li>
+<li class="">Once <code>AMAP_SERVICE_HOST</code> is configured, the build no longer injects <code>AMAP_SECURITY_JS_CODE</code> into the frontend <code>customFields.amap</code>.</li>
 </ol>
 <p>The logic is in <code>docusaurus.config.js</code>: when <code>AMAP_SERVICE_HOST</code> has a value, <code>customFields.amap.securityJsCode</code> is written as an empty string; otherwise it reads <code>AMAP_SECURITY_JS_CODE</code> or its fallback. The frontend uniformly sets <code>window._AMapSecurityConfig</code> via <code>src/utils/amap.js</code>.</p>
 <p>The benefits:</p>
 <ul>
-<li>Local debugging remains simple</li>
-<li>The real security key stays in the server proxy layer for production</li>
+<li class="">Local debugging remains simple</li>
+<li class="">The real security key stays in the server proxy layer for production</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time">Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;<a href="#coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time" class="hash-link" aria-label="Direct link to Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;" title="Direct link to Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time">Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;<a href="#coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time" class="hash-link" aria-label="Direct link to Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;" title="Direct link to Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;" translate="no">​</a></h2>
 <p>This is important enough to restate.</p>
 <p>The current data stores raw EXIF GPS, meaning:</p>
 <ul>
-<li>Coordinates in <code>travelPhotoMetadata.generated.json</code> are still raw GPS</li>
-<li>Points in <code>travelMap.generated.json</code> also continue using this raw GPS</li>
+<li class="">Coordinates in <code>travelPhotoMetadata.generated.json</code> are still raw GPS</li>
+<li class="">Points in <code>travelMap.generated.json</code> also continue using this raw GPS</li>
 </ul>
 <p>The actual conversion to AMap-renderable coordinates happens on the frontend when calling:</p>
-<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token maybe-class-name">AMap</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">convertFrom</span><span class="token punctuation" style="color:#393A34">(</span><span class="token spread operator" style="color:#393A34">...</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;gps&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token maybe-class-name">AMap</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">convertFrom</span><span class="token punctuation" style="color:#393A34">(</span><span class="token spread operator" style="color:#393A34">...</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;gps&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><br></div></code></pre></div></div>
 <p>This design is intentional, not an oversight. The reasons:</p>
 <ol>
-<li>Raw GPS is more universal.</li>
-<li>Generation scripts should not silently write coordinates that only work with one map vendor.</li>
-<li>When switching map vendors, you only need to change the rendering layer -- no need to reprocess historical data.</li>
+<li class="">Raw GPS is more universal.</li>
+<li class="">Generation scripts should not silently write coordinates that only work with one map vendor.</li>
+<li class="">When switching map vendors, you only need to change the rendering layer -- no need to reprocess historical data.</li>
 </ol>
 <p>Related troubleshooting notes:</p>
 <ul>
-<li><a href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
+<li class=""><a class="" href="/en/docs/LabNotes/amap-coordinate-drift">AMap Coordinate Drift Record</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="map-interaction-why-article-pages-collapsed-and-homepage-renders-directly">Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly<a href="#map-interaction-why-article-pages-collapsed-and-homepage-renders-directly" class="hash-link" aria-label="Direct link to Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly" title="Direct link to Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="map-interaction-why-article-pages-collapsed-and-homepage-renders-directly">Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly<a href="#map-interaction-why-article-pages-collapsed-and-homepage-renders-directly" class="hash-link" aria-label="Direct link to Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly" title="Direct link to Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly" translate="no">​</a></h2>
 <p>There are now two map interaction modes:</p>
 <ol>
-<li>Article page capture point map: collapsed via <code>TravelMapDisclosure</code>.</li>
-<li>Travel homepage footprint map: rendered directly via <code>TravelOverviewMap embedded</code>.</li>
+<li class="">Article page capture point map: collapsed via <code>TravelMapDisclosure</code>.</li>
+<li class="">Travel homepage footprint map: rendered directly via <code>TravelOverviewMap embedded</code>.</li>
 </ol>
 <p>Article pages stay collapsed for three reasons:</p>
 <ol>
-<li>The map should not overpower the body text.</li>
-<li>AMap JSAPI loading cost is non-trivial.</li>
-<li>Initializing the map only after click reduces unnecessary WebGL instances.</li>
+<li class="">The map should not overpower the body text.</li>
+<li class="">AMap JSAPI loading cost is non-trivial.</li>
+<li class="">Initializing the map only after click reduces unnecessary WebGL instances.</li>
 </ol>
 <p>The Travel homepage renders directly for clear reasons:</p>
 <ol>
-<li>The footprint map is part of the homepage&#x27;s above-the-fold content, not a post-article supplement.</li>
-<li>Users visiting the Travel homepage expect to see &quot;where they have been&quot; first.</li>
-<li>The map is already compressed into a compact card and will not interrupt reading like a full article-page map.</li>
+<li class="">The footprint map is part of the homepage&#x27;s above-the-fold content, not a post-article supplement.</li>
+<li class="">Users visiting the Travel homepage expect to see &quot;where they have been&quot; first.</li>
+<li class="">The map is already compressed into a compact card and will not interrupt reading like a full article-page map.</li>
 </ol>
 <p>Current behavior:</p>
 <ul>
-<li><code>TravelStoryMap</code> does not expand by default; the map is only created after the user clicks.</li>
-<li><code>TravelOverviewMap</code> still supports collapsible mode to maintain component generality.</li>
-<li><code>TravelHome</code> calls <code>TravelOverviewMap embedded</code>, creating the map immediately on mount.</li>
-<li>In collapsible mode, the inline map is destroyed when the panel collapses to avoid hidden WebGL resource usage.</li>
-<li>In embedded mode, window resize events trigger map resize requests to keep the canvas size correct after responsive layout changes.</li>
-<li>The map instance is destroyed when the page unmounts.</li>
+<li class=""><code>TravelStoryMap</code> does not expand by default; the map is only created after the user clicks.</li>
+<li class=""><code>TravelOverviewMap</code> still supports collapsible mode to maintain component generality.</li>
+<li class=""><code>TravelHome</code> calls <code>TravelOverviewMap embedded</code>, creating the map immediately on mount.</li>
+<li class="">In collapsible mode, the inline map is destroyed when the panel collapses to avoid hidden WebGL resource usage.</li>
+<li class="">In embedded mode, window resize events trigger map resize requests to keep the canvas size correct after responsive layout changes.</li>
+<li class="">The map instance is destroyed when the page unmounts.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="travel-homepage-responsive-rules">Travel Homepage Responsive Rules<a href="#travel-homepage-responsive-rules" class="hash-link" aria-label="Direct link to Travel Homepage Responsive Rules" title="Direct link to Travel Homepage Responsive Rules">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="travel-homepage-responsive-rules">Travel Homepage Responsive Rules<a href="#travel-homepage-responsive-rules" class="hash-link" aria-label="Direct link to Travel Homepage Responsive Rules" title="Direct link to Travel Homepage Responsive Rules" translate="no">​</a></h2>
 <p>The Travel homepage responsive behavior is not a simple desktop scale-down. It redistributes attention by device.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="desktop">Desktop<a href="#desktop" class="hash-link" aria-label="Direct link to Desktop" title="Direct link to Desktop">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="desktop">Desktop<a href="#desktop" class="hash-link" aria-label="Direct link to Desktop" title="Direct link to Desktop" translate="no">​</a></h3>
 <ul>
-<li>Top is a two-column layout: left &quot;My Footprints&quot; is wider, right map is narrower.</li>
-<li>Left and right card heights stay consistent; the map canvas must not stretch the entire row.</li>
-<li>Stats area is fixed at two rows left-aligned; do not stretch to fill the row.</li>
-<li>Article cards prefer multi-column display to avoid oversized individual cards.</li>
-<li>Bottom quote displays with Chinese full-width quote marks.</li>
+<li class="">Top is a two-column layout: left &quot;My Footprints&quot; is wider, right map is narrower.</li>
+<li class="">Left and right card heights stay consistent; the map canvas must not stretch the entire row.</li>
+<li class="">Stats area is fixed at two rows left-aligned; do not stretch to fill the row.</li>
+<li class="">Article cards prefer multi-column display to avoid oversized individual cards.</li>
+<li class="">Bottom quote displays with Chinese full-width quote marks.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="desktop-widescreen-and-sidebar-rules">Desktop Widescreen and Sidebar Rules<a href="#desktop-widescreen-and-sidebar-rules" class="hash-link" aria-label="Direct link to Desktop Widescreen and Sidebar Rules" title="Direct link to Desktop Widescreen and Sidebar Rules">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="desktop-widescreen-and-sidebar-rules">Desktop Widescreen and Sidebar Rules<a href="#desktop-widescreen-and-sidebar-rules" class="hash-link" aria-label="Direct link to Desktop Widescreen and Sidebar Rules" title="Direct link to Desktop Widescreen and Sidebar Rules" translate="no">​</a></h3>
 <p>The Travel homepage should be treated as a standalone display page on desktop, not a regular docs article directory page. Maintenance must ensure both entry points use a no-sidebar widescreen layout:</p>
 <ul>
-<li><code>/docs/Travel</code></li>
-<li><code>/docs/category/travel</code></li>
+<li class=""><code>/docs/Travel</code></li>
+<li class=""><code>/docs/category/travel</code></li>
 </ul>
 <p>Both entry points should be recognized as Travel pages by <code>isTravelDocPath</code> in <code>src/utils/travelDocs.js</code>. Then at the <code>DocRoot/Layout</code> layer, skip <code>DocRootLayoutSidebar</code> and let <code>DocRoot/Layout/Main</code> use the Travel-specific widescreen container.</p>
 <p>The reasons:</p>
 <ul>
-<li>The left Docusaurus sidebar squeezes the above-the-fold display area, making &quot;My Footprints&quot; and the map card narrow.</li>
-<li>The two top cards on the Travel homepage need a stable left-right ratio -- roughly <code>2:1</code> on desktop widescreen.</li>
-<li>Travel story cards below should maintain four per row on desktop widescreen, with the display area centered overall and cards scaling proportionally with available width.</li>
+<li class="">The left Docusaurus sidebar squeezes the above-the-fold display area, making &quot;My Footprints&quot; and the map card narrow.</li>
+<li class="">The two top cards on the Travel homepage need a stable left-right ratio -- roughly <code>2:1</code> on desktop widescreen.</li>
+<li class="">Travel story cards below should maintain four per row on desktop widescreen, with the display area centered overall and cards scaling proportionally with available width.</li>
 </ul>
 <p>If you later adjust Travel homepage routes or Docusaurus generated index config, you must also check the Travel path logic in <code>src/utils/travelDocs.js</code>. Otherwise, one entry point may still have a sidebar while the other does not -- an inconsistent split.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mobile">Mobile<a href="#mobile" class="hash-link" aria-label="Direct link to Mobile" title="Direct link to Mobile">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mobile">Mobile<a href="#mobile" class="hash-link" aria-label="Direct link to Mobile" title="Direct link to Mobile" translate="no">​</a></h3>
 <ul>
-<li>The top overview card is pushed down as much as possible to avoid a hero image filling the entire first screen.</li>
-<li>Stats are still two rows left-aligned, but each chip only occupies space based on content and minimum width.</li>
-<li>Map height is independently reduced -- it serves only as a &quot;sense of place&quot; entry, not for large-area map browsing.</li>
-<li>Article cards display in a single column, but image ratios are tightened to avoid each card looking like a huge poster.</li>
-<li>Bottom quote is hidden to avoid crowding with the footer.</li>
+<li class="">The top overview card is pushed down as much as possible to avoid a hero image filling the entire first screen.</li>
+<li class="">Stats are still two rows left-aligned, but each chip only occupies space based on content and minimum width.</li>
+<li class="">Map height is independently reduced -- it serves only as a &quot;sense of place&quot; entry, not for large-area map browsing.</li>
+<li class="">Article cards display in a single column, but image ratios are tightened to avoid each card looking like a huge poster.</li>
+<li class="">Bottom quote is hidden to avoid crowding with the footer.</li>
 </ul>
 <p>During maintenance, do not revert mobile to a scaled-down desktop layout. Scan efficiency and touch feel matter more here.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mobile-interaction-performance-optimization-why-intentional-reduced-configuration">Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;<a href="#mobile-interaction-performance-optimization-why-intentional-reduced-configuration" class="hash-link" aria-label="Direct link to Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;" title="Direct link to Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="mobile-interaction-performance-optimization-why-intentional-reduced-configuration">Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;<a href="#mobile-interaction-performance-optimization-why-intentional-reduced-configuration" class="hash-link" aria-label="Direct link to Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;" title="Direct link to Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;" translate="no">​</a></h2>
 <p>This section is easy to &quot;accidentally add back&quot; during future maintenance, so it is recorded separately.</p>
 <p>After the project went live, the most immediate mobile issue was not &quot;too many points&quot; but the per-frame cost being too high during scroll, drag, and pinch-zoom.</p>
 <p>There were three main risk areas:</p>
 <ol>
-<li>The map once exhibited fallback behavior of initializing immediately on pages where it should not.</li>
-<li>Although the map instance did not use pitch, rotation, or 3D building effects, it still initialized in <code>3D</code> mode.</li>
-<li>Mobile still loaded <code>ToolBar</code>, <code>Scale</code>, and other desktop-oriented controls.</li>
+<li class="">The map once exhibited fallback behavior of initializing immediately on pages where it should not.</li>
+<li class="">Although the map instance did not use pitch, rotation, or 3D building effects, it still initialized in <code>3D</code> mode.</li>
+<li class="">Mobile still loaded <code>ToolBar</code>, <code>Scale</code>, and other desktop-oriented controls.</li>
 </ol>
 <p>The current principle:</p>
 <ul>
-<li>Travel maps prioritize smooth mobile interaction, not &quot;parameters look maxed out.&quot;</li>
-<li>If the current page does not explicitly use 3D perspective, do not retain 3D overhead for &quot;theoretically more powerful.&quot;</li>
-<li>Hidden map instances are not kept alive. Collapsed maps are destroyed immediately and recreated on re-expand.</li>
-<li>The Travel homepage, which explicitly needs an above-the-fold map, can use embedded mode but must control map dimensions.</li>
+<li class="">Travel maps prioritize smooth mobile interaction, not &quot;parameters look maxed out.&quot;</li>
+<li class="">If the current page does not explicitly use 3D perspective, do not retain 3D overhead for &quot;theoretically more powerful.&quot;</li>
+<li class="">Hidden map instances are not kept alive. Collapsed maps are destroyed immediately and recreated on re-expand.</li>
+<li class="">The Travel homepage, which explicitly needs an above-the-fold map, can use embedded mode but must control map dimensions.</li>
 </ul>
 <p>Specific implementation rules:</p>
 <ul>
-<li><code>shared.js</code> creates maps in <code>2D</code> mode by default.</li>
-<li><code>pitchEnable</code>, <code>rotateEnable</code>, <code>showBuildingBlock</code>, and <code>showIndoorMap</code> are all disabled.</li>
-<li>The base map keeps only <code>bg / road / point</code> and does not open heavier layer elements this page does not need.</li>
-<li><code>AMap.ToolBar</code> and <code>AMap.Scale</code> are not loaded by default on coarse-pointer devices (phones, tablets).</li>
-<li><code>TravelOverviewMap</code> default mode stays collapsed; only <code>embedded</code> mode auto-initializes.</li>
-<li>Article page inline maps call <code>destroy()</code> immediately on collapse.</li>
-<li>The Travel homepage embedded map shows no extra title bar, reducing UI obstruction and giving the map more space.</li>
+<li class=""><code>shared.js</code> creates maps in <code>2D</code> mode by default.</li>
+<li class=""><code>pitchEnable</code>, <code>rotateEnable</code>, <code>showBuildingBlock</code>, and <code>showIndoorMap</code> are all disabled.</li>
+<li class="">The base map keeps only <code>bg / road / point</code> and does not open heavier layer elements this page does not need.</li>
+<li class=""><code>AMap.ToolBar</code> and <code>AMap.Scale</code> are not loaded by default on coarse-pointer devices (phones, tablets).</li>
+<li class=""><code>TravelOverviewMap</code> default mode stays collapsed; only <code>embedded</code> mode auto-initializes.</li>
+<li class="">Article page inline maps call <code>destroy()</code> immediately on collapse.</li>
+<li class="">The Travel homepage embedded map shows no extra title bar, reducing UI obstruction and giving the map more space.</li>
 </ul>
 <p>This scaling-down is not about &quot;cutting features.&quot; The Travel map&#x27;s role is to assist reading:</p>
 <ul>
-<li>Seeing point distribution is enough</li>
-<li>No need to showcase 3D city effects here</li>
-<li>No need to maintain a hidden active WebGL instance for a handful of points</li>
+<li class="">Seeing point distribution is enough</li>
+<li class="">No need to showcase 3D city effects here</li>
+<li class="">No need to maintain a hidden active WebGL instance for a handful of points</li>
 </ul>
 <p>If this section eventually evolves into high-density points or long-interaction scenarios, consider switching overlays to <code>LabelMarker</code>-style performance-oriented implementations rather than re-enabling 3D and desktop controls first.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-implementation-no-longer-keeps-routes">Why This Implementation No Longer Keeps &quot;Routes&quot;<a href="#why-this-implementation-no-longer-keeps-routes" class="hash-link" aria-label="Direct link to Why This Implementation No Longer Keeps &quot;Routes&quot;" title="Direct link to Why This Implementation No Longer Keeps &quot;Routes&quot;">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-implementation-no-longer-keeps-routes">Why This Implementation No Longer Keeps &quot;Routes&quot;<a href="#why-this-implementation-no-longer-keeps-routes" class="hash-link" aria-label="Direct link to Why This Implementation No Longer Keeps &quot;Routes&quot;" title="Direct link to Why This Implementation No Longer Keeps &quot;Routes&quot;" translate="no">​</a></h2>
 <p>This is an explicit product trade-off, not an unfinished feature.</p>
 <p>The main problems with routes were:</p>
 <ul>
-<li>Visually they looked like track logs, not albums</li>
-<li>Most travel photo groups&#x27; GPS points do not suit linear narration</li>
-<li>Some photos lack GPS, making routes inherently incomplete</li>
-<li>The more the map looked like a &quot;navigation product,&quot; the more it stole focus from the body text</li>
+<li class="">Visually they looked like track logs, not albums</li>
+<li class="">Most travel photo groups&#x27; GPS points do not suit linear narration</li>
+<li class="">Some photos lack GPS, making routes inherently incomplete</li>
+<li class="">The more the map looked like a &quot;navigation product,&quot; the more it stole focus from the body text</li>
 </ul>
 <p>So this iteration changed to:</p>
 <ul>
-<li>Article pages only mark capture points</li>
-<li>The category page only marks places visited</li>
-<li>Point descriptions still come from photo metadata and article structure</li>
+<li class="">Article pages only mark capture points</li>
+<li class="">The category page only marks places visited</li>
+<li class="">Point descriptions still come from photo metadata and article structure</li>
 </ul>
 <p>This line better fits the Travel section&#x27;s positioning on this site.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-implementation-fits-your-current-workflow">Why This Implementation Fits Your Current Workflow<a href="#why-this-implementation-fits-your-current-workflow" class="hash-link" aria-label="Direct link to Why This Implementation Fits Your Current Workflow" title="Direct link to Why This Implementation Fits Your Current Workflow">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-implementation-fits-your-current-workflow">Why This Implementation Fits Your Current Workflow<a href="#why-this-implementation-fits-your-current-workflow" class="hash-link" aria-label="Direct link to Why This Implementation Fits Your Current Workflow" title="Direct link to Why This Implementation Fits Your Current Workflow" translate="no">​</a></h2>
 <p>Your most common input today is not a complete MDX submitted directly, but:</p>
 <ol>
-<li>A location</li>
-<li>A set of OSS image links</li>
-<li>A few words about your feelings and style preferences</li>
+<li class="">A location</li>
+<li class="">A set of OSS image links</li>
+<li class="">A few words about your feelings and style preferences</li>
 </ol>
 <p>So the current system deliberately accommodates this input style:</p>
 <ul>
-<li>A person can provide just a short description first</li>
-<li>AI fills in the source draft</li>
-<li>Then the article is auto-generated</li>
-<li>Then metadata and maps are auto-generated</li>
+<li class="">A person can provide just a short description first</li>
+<li class="">AI fills in the source draft</li>
+<li class="">Then the article is auto-generated</li>
+<li class="">Then metadata and maps are auto-generated</li>
 </ul>
 <p>This is more practical than requiring you to hand-write every trip into fully spec-compliant MDX.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rules-to-follow-when-extending-this-system">Rules to Follow When Extending This System<a href="#rules-to-follow-when-extending-this-system" class="hash-link" aria-label="Direct link to Rules to Follow When Extending This System" title="Direct link to Rules to Follow When Extending This System">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-do-not-hand-edit-generated-json">1. Do Not Hand-Edit Generated JSON<a href="#1-do-not-hand-edit-generated-json" class="hash-link" aria-label="Direct link to 1. Do Not Hand-Edit Generated JSON" title="Direct link to 1. Do Not Hand-Edit Generated JSON">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rules-to-follow-when-extending-this-system">Rules to Follow When Extending This System<a href="#rules-to-follow-when-extending-this-system" class="hash-link" aria-label="Direct link to Rules to Follow When Extending This System" title="Direct link to Rules to Follow When Extending This System" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-do-not-hand-edit-generated-json">1. Do Not Hand-Edit Generated JSON<a href="#1-do-not-hand-edit-generated-json" class="hash-link" aria-label="Direct link to 1. Do Not Hand-Edit Generated JSON" title="Direct link to 1. Do Not Hand-Edit Generated JSON" translate="no">​</a></h3>
 <p>These two files are generated artifacts:</p>
 <ul>
-<li><code>src/data/travelPhotoMetadata.generated.json</code></li>
-<li><code>src/data/travelMap.generated.json</code></li>
+<li class=""><code>src/data/travelPhotoMetadata.generated.json</code></li>
+<li class=""><code>src/data/travelMap.generated.json</code></li>
 </ul>
 <p>Change the scripts to change the logic. Do not edit the JSON directly.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-reuse-sharedjs-when-adding-new-map-components">2. Reuse <code>shared.js</code> When Adding New Map Components<a href="#2-reuse-sharedjs-when-adding-new-map-components" class="hash-link" aria-label="Direct link to 2-reuse-sharedjs-when-adding-new-map-components" title="Direct link to 2-reuse-sharedjs-when-adding-new-map-components">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-reuse-sharedjs-when-adding-new-map-components">2. Reuse <code>shared.js</code> When Adding New Map Components<a href="#2-reuse-sharedjs-when-adding-new-map-components" class="hash-link" aria-label="Direct link to 2-reuse-sharedjs-when-adding-new-map-components" title="Direct link to 2-reuse-sharedjs-when-adding-new-map-components" translate="no">​</a></h3>
 <p>Do not re-write in new components:</p>
 <ul>
-<li>AMap loader initialization</li>
-<li>Security configuration</li>
-<li>Coordinate conversion</li>
-<li><code>fit view</code></li>
-<li>Destruction logic</li>
+<li class="">AMap loader initialization</li>
+<li class="">Security configuration</li>
+<li class="">Coordinate conversion</li>
+<li class=""><code>fit view</code></li>
+<li class="">Destruction logic</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-new-content-should-follow-the-source-draft---final-mdx-pipeline">3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline<a href="#3-new-content-should-follow-the-source-draft---final-mdx-pipeline" class="hash-link" aria-label="Direct link to 3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline" title="Direct link to 3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-new-content-should-follow-the-source-draft---final-mdx-pipeline">3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline<a href="#3-new-content-should-follow-the-source-draft---final-mdx-pipeline" class="hash-link" aria-label="Direct link to 3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline" title="Direct link to 3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline" translate="no">​</a></h3>
 <p>Do not regress to hand-assembling <code>createTravelPhotos([...])</code> every time.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-production-should-use-a-proxy">4. Production Should Use a Proxy<a href="#4-production-should-use-a-proxy" class="hash-link" aria-label="Direct link to 4. Production Should Use a Proxy" title="Direct link to 4. Production Should Use a Proxy">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-production-should-use-a-proxy">4. Production Should Use a Proxy<a href="#4-production-should-use-a-proxy" class="hash-link" aria-label="Direct link to 4. Production Should Use a Proxy" title="Direct link to 4. Production Should Use a Proxy" translate="no">​</a></h3>
 <p>Do not publish <code>AMAP_SECURITY_JS_CODE</code> alongside a static build by default.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-do-not-re-introduce-route-logic">5. Do Not Re-Introduce Route Logic<a href="#5-do-not-re-introduce-route-logic" class="hash-link" aria-label="Direct link to 5. Do Not Re-Introduce Route Logic" title="Direct link to 5. Do Not Re-Introduce Route Logic">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-do-not-re-introduce-route-logic">5. Do Not Re-Introduce Route Logic<a href="#5-do-not-re-introduce-route-logic" class="hash-link" aria-label="Direct link to 5. Do Not Re-Introduce Route Logic" title="Direct link to 5. Do Not Re-Introduce Route Logic" translate="no">​</a></h3>
 <p>Unless the Travel section&#x27;s product direction truly changes, do not let the map shift from &quot;capture point overview&quot; back to &quot;navigation route map.&quot;</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="most-commonly-used-commands">Most Commonly Used Commands<a href="#most-commonly-used-commands" class="hash-link" aria-label="Direct link to Most Commonly Used Commands" title="Direct link to Most Commonly Used Commands">​</a></h2>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run sync:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md --verify</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm run verify:travel</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="most-commonly-used-commands">Most Commonly Used Commands<a href="#most-commonly-used-commands" class="hash-link" aria-label="Direct link to Most Commonly Used Commands" title="Direct link to Most Commonly Used Commands" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">npm run sync:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">npm run create:travel-article -- --source drafts/travel/&lt;slug&gt;-source.md --verify</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">npm run generate:travel</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">npm run verify:travel</span><br></div></code></pre></div></div>
 <p>These commands correspond to:</p>
 <ol>
-<li>Generate the article</li>
-<li>Generate the article and sync metadata and map data</li>
-<li>Generate the article, sync metadata and map data, and build-verify</li>
-<li>Refresh metadata and map data only</li>
-<li>Refresh and build-verify</li>
+<li class="">Generate the article</li>
+<li class="">Generate the article and sync metadata and map data</li>
+<li class="">Generate the article, sync metadata and map data, and build-verify</li>
+<li class="">Refresh metadata and map data only</li>
+<li class="">Refresh and build-verify</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="where-to-start-when-revisiting-this-implementation">Where to Start When Revisiting This Implementation<a href="#where-to-start-when-revisiting-this-implementation" class="hash-link" aria-label="Direct link to Where to Start When Revisiting This Implementation" title="Direct link to Where to Start When Revisiting This Implementation">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-to-start-when-revisiting-this-implementation">Where to Start When Revisiting This Implementation<a href="#where-to-start-when-revisiting-this-implementation" class="hash-link" aria-label="Direct link to Where to Start When Revisiting This Implementation" title="Direct link to Where to Start When Revisiting This Implementation" translate="no">​</a></h2>
 <p>If you or someone else needs to continue maintaining this feature set, the recommended reading order is:</p>
 <ol>
-<li><code>docs/LabNotes/travel-photo-metadata-workflow.md</code></li>
-<li><code>scripts/create-travel-article.mjs</code></li>
-<li><code>scripts/generate-travel-photo-metadata.mjs</code></li>
-<li><code>scripts/generate-travel-map-data.mjs</code></li>
-<li><code>src/components/TravelGallery/index.js</code></li>
-<li><code>src/components/TravelHome/index.js</code></li>
-<li><code>src/components/TravelHome/styles.module.css</code></li>
-<li><code>src/components/TravelMap/shared.js</code></li>
-<li><code>src/components/TravelMap/TravelStoryMap.js</code></li>
-<li><code>src/components/TravelMap/TravelOverviewMap.js</code></li>
+<li class=""><code>docs/LabNotes/travel-photo-metadata-workflow.md</code></li>
+<li class=""><code>scripts/create-travel-article.mjs</code></li>
+<li class=""><code>scripts/generate-travel-photo-metadata.mjs</code></li>
+<li class=""><code>scripts/generate-travel-map-data.mjs</code></li>
+<li class=""><code>src/components/TravelGallery/index.js</code></li>
+<li class=""><code>src/components/TravelHome/index.js</code></li>
+<li class=""><code>src/components/TravelHome/styles.module.css</code></li>
+<li class=""><code>src/components/TravelMap/shared.js</code></li>
+<li class=""><code>src/components/TravelMap/TravelStoryMap.js</code></li>
+<li class=""><code>src/components/TravelMap/TravelOverviewMap.js</code></li>
 </ol>
 <p>Reading in this order makes it easiest to first understand how data flows, then understand why the frontend renders things this way.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="one-sentence-summary">One-Sentence Summary<a href="#one-sentence-summary" class="hash-link" aria-label="Direct link to One-Sentence Summary" title="Direct link to One-Sentence Summary">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="one-sentence-summary">One-Sentence Summary<a href="#one-sentence-summary" class="hash-link" aria-label="Direct link to One-Sentence Summary" title="Direct link to One-Sentence Summary" translate="no">​</a></h2>
 <p>The core of the current Travel feature is not &quot;we integrated AMap.&quot; It is:</p>
 <blockquote>
 <p>Use article structure as the single source of truth, use scripts to generate metadata and map data, and let the frontend only handle rendering -- turning &quot;travel photos + copy + map&quot; into a repeatable, maintainable content production pipeline.</p>
-</blockquote></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/docs/LabNotes/time-machine-wechat-file-recovery"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Recovering WeChat Files from a Time Machine Backup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/en/docs/LabNotes/travel-photo-metadata-workflow"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Travel Photo Metadata Workflow</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-this-feature-set-actually-solved" class="table-of-contents__link toc-highlight">What This Feature Set Actually Solved</a></li><li><a href="#design-principles" class="table-of-contents__link toc-highlight">Design Principles</a><ul><li><a href="#1-the-article-file-owns-the-narrative-structure" class="table-of-contents__link toc-highlight">1. The Article File Owns the Narrative Structure</a></li><li><a href="#2-metadata-and-map-data-are-generated-artifacts" class="table-of-contents__link toc-highlight">2. Metadata and Map Data Are Generated Artifacts</a></li><li><a href="#3-raw-gps-is-preserved-in-the-data-layer" class="table-of-contents__link toc-highlight">3. Raw GPS Is Preserved in the Data Layer</a></li><li><a href="#4-map-loading-mode-depends-on-page-role" class="table-of-contents__link toc-highlight">4. Map Loading Mode Depends on Page Role</a></li><li><a href="#5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed" class="table-of-contents__link toc-highlight">5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;</a></li></ul></li><li><a href="#overall-layering" class="table-of-contents__link toc-highlight">Overall Layering</a></li><li><a href="#end-to-end-data-flow" class="table-of-contents__link toc-highlight">End-to-End Data Flow</a></li><li><a href="#content-layer-why-the-final-article-is-still-mdx" class="table-of-contents__link toc-highlight">Content Layer: Why the Final Article Is Still MDX</a></li><li><a href="#article-generation-layer-why-create-travel-article-exists-as-a-separate-step" class="table-of-contents__link toc-highlight">Article Generation Layer: Why <code>create-travel-article</code> Exists as a Separate Step</a></li><li><a href="#photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly" class="table-of-contents__link toc-highlight">Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly</a></li><li><a href="#map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" class="table-of-contents__link toc-highlight">Map Data Generation Layer: Why Another Layer with <code>travelMap.generated.json</code></a><ul><li><a href="#1-maps-show-points-not-routes" class="table-of-contents__link toc-highlight">1. Maps Show Points, Not Routes</a></li><li><a href="#2-the-category-page-uses-representative-points-not-all-points-spread-out" class="table-of-contents__link toc-highlight">2. The Category Page Uses Representative Points, Not All Points Spread Out</a></li><li><a href="#3-section-order-continues-to-be-inherited-from-the-article" class="table-of-contents__link toc-highlight">3. Section Order Continues to Be Inherited from the Article</a></li></ul></li><li><a href="#display-layer-why-travelgallery-and-travelmap-are-separated" class="table-of-contents__link toc-highlight">Display Layer: Why <code>TravelGallery</code> and <code>TravelMap</code> Are Separated</a><ul><li><a href="#travelhome" class="table-of-contents__link toc-highlight"><code>TravelHome</code></a></li><li><a href="#travel-homepage-visual-structure" class="table-of-contents__link toc-highlight">Travel Homepage Visual Structure</a></li><li><a href="#travelgallery" class="table-of-contents__link toc-highlight"><code>TravelGallery</code></a></li><li><a href="#travelmap" class="table-of-contents__link toc-highlight"><code>TravelMap</code></a></li><li><a href="#why-sharedjs-is-a-common-layer" class="table-of-contents__link toc-highlight">Why <code>shared.js</code> Is a Common Layer</a></li></ul></li><li><a href="#amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" class="table-of-contents__link toc-highlight">AMap Integration Layer: Why Both <code>serviceHost</code> and <code>securityJsCode</code> Are Supported</a></li><li><a href="#coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time" class="table-of-contents__link toc-highlight">Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;</a></li><li><a href="#map-interaction-why-article-pages-collapsed-and-homepage-renders-directly" class="table-of-contents__link toc-highlight">Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly</a></li><li><a href="#travel-homepage-responsive-rules" class="table-of-contents__link toc-highlight">Travel Homepage Responsive Rules</a><ul><li><a href="#desktop" class="table-of-contents__link toc-highlight">Desktop</a></li><li><a href="#desktop-widescreen-and-sidebar-rules" class="table-of-contents__link toc-highlight">Desktop Widescreen and Sidebar Rules</a></li><li><a href="#mobile" class="table-of-contents__link toc-highlight">Mobile</a></li></ul></li><li><a href="#mobile-interaction-performance-optimization-why-intentional-reduced-configuration" class="table-of-contents__link toc-highlight">Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;</a></li><li><a href="#why-this-implementation-no-longer-keeps-routes" class="table-of-contents__link toc-highlight">Why This Implementation No Longer Keeps &quot;Routes&quot;</a></li><li><a href="#why-this-implementation-fits-your-current-workflow" class="table-of-contents__link toc-highlight">Why This Implementation Fits Your Current Workflow</a></li><li><a href="#rules-to-follow-when-extending-this-system" class="table-of-contents__link toc-highlight">Rules to Follow When Extending This System</a><ul><li><a href="#1-do-not-hand-edit-generated-json" class="table-of-contents__link toc-highlight">1. Do Not Hand-Edit Generated JSON</a></li><li><a href="#2-reuse-sharedjs-when-adding-new-map-components" class="table-of-contents__link toc-highlight">2. Reuse <code>shared.js</code> When Adding New Map Components</a></li><li><a href="#3-new-content-should-follow-the-source-draft---final-mdx-pipeline" class="table-of-contents__link toc-highlight">3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline</a></li><li><a href="#4-production-should-use-a-proxy" class="table-of-contents__link toc-highlight">4. Production Should Use a Proxy</a></li><li><a href="#5-do-not-re-introduce-route-logic" class="table-of-contents__link toc-highlight">5. Do Not Re-Introduce Route Logic</a></li></ul></li><li><a href="#most-commonly-used-commands" class="table-of-contents__link toc-highlight">Most Commonly Used Commands</a></li><li><a href="#where-to-start-when-revisiting-this-implementation" class="table-of-contents__link toc-highlight">Where to Start When Revisiting This Implementation</a></li><li><a href="#one-sentence-summary" class="table-of-contents__link toc-highlight">One-Sentence Summary</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/en/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/en/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.30.1</span></div></div></div></footer></div>
+</blockquote></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/docs/LabNotes/time-machine-wechat-file-recovery"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Recovering WeChat Files from a Time Machine Backup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/en/docs/LabNotes/travel-photo-metadata-workflow"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Travel Photo Metadata Workflow</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-this-feature-set-actually-solved" class="table-of-contents__link toc-highlight">What This Feature Set Actually Solved</a></li><li><a href="#design-principles" class="table-of-contents__link toc-highlight">Design Principles</a><ul><li><a href="#1-the-article-file-owns-the-narrative-structure" class="table-of-contents__link toc-highlight">1. The Article File Owns the Narrative Structure</a></li><li><a href="#2-metadata-and-map-data-are-generated-artifacts" class="table-of-contents__link toc-highlight">2. Metadata and Map Data Are Generated Artifacts</a></li><li><a href="#3-raw-gps-is-preserved-in-the-data-layer" class="table-of-contents__link toc-highlight">3. Raw GPS Is Preserved in the Data Layer</a></li><li><a href="#4-map-loading-mode-depends-on-page-role" class="table-of-contents__link toc-highlight">4. Map Loading Mode Depends on Page Role</a></li><li><a href="#5-the-generation-pipeline-prioritizes-maintainability-over-one-shot-speed" class="table-of-contents__link toc-highlight">5. The Generation Pipeline Prioritizes Maintainability Over &quot;One-Shot Speed&quot;</a></li></ul></li><li><a href="#overall-layering" class="table-of-contents__link toc-highlight">Overall Layering</a></li><li><a href="#end-to-end-data-flow" class="table-of-contents__link toc-highlight">End-to-End Data Flow</a></li><li><a href="#content-layer-why-the-final-article-is-still-mdx" class="table-of-contents__link toc-highlight">Content Layer: Why the Final Article Is Still MDX</a></li><li><a href="#article-generation-layer-why-create-travel-article-exists-as-a-separate-step" class="table-of-contents__link toc-highlight">Article Generation Layer: Why <code>create-travel-article</code> Exists as a Separate Step</a></li><li><a href="#photo-metadata-generation-layer-why-the-frontend-does-not-read-exif-directly" class="table-of-contents__link toc-highlight">Photo Metadata Generation Layer: Why the Frontend Does Not Read EXIF Directly</a></li><li><a href="#map-data-generation-layer-why-another-layer-with-travelmapgeneratedjson" class="table-of-contents__link toc-highlight">Map Data Generation Layer: Why Another Layer with <code>travelMap.generated.json</code></a><ul><li><a href="#1-maps-show-points-not-routes" class="table-of-contents__link toc-highlight">1. Maps Show Points, Not Routes</a></li><li><a href="#2-the-category-page-uses-representative-points-not-all-points-spread-out" class="table-of-contents__link toc-highlight">2. The Category Page Uses Representative Points, Not All Points Spread Out</a></li><li><a href="#3-section-order-continues-to-be-inherited-from-the-article" class="table-of-contents__link toc-highlight">3. Section Order Continues to Be Inherited from the Article</a></li></ul></li><li><a href="#display-layer-why-travelgallery-and-travelmap-are-separated" class="table-of-contents__link toc-highlight">Display Layer: Why <code>TravelGallery</code> and <code>TravelMap</code> Are Separated</a><ul><li><a href="#travelhome" class="table-of-contents__link toc-highlight"><code>TravelHome</code></a></li><li><a href="#travel-homepage-visual-structure" class="table-of-contents__link toc-highlight">Travel Homepage Visual Structure</a></li><li><a href="#travelgallery" class="table-of-contents__link toc-highlight"><code>TravelGallery</code></a></li><li><a href="#travelmap" class="table-of-contents__link toc-highlight"><code>TravelMap</code></a></li><li><a href="#why-sharedjs-is-a-common-layer" class="table-of-contents__link toc-highlight">Why <code>shared.js</code> Is a Common Layer</a></li></ul></li><li><a href="#amap-integration-layer-why-both-servicehost-and-securityjscode-are-supported" class="table-of-contents__link toc-highlight">AMap Integration Layer: Why Both <code>serviceHost</code> and <code>securityJsCode</code> Are Supported</a></li><li><a href="#coordinate-handling-why-convert-at-render-time-instead-of-overwrite-at-generation-time" class="table-of-contents__link toc-highlight">Coordinate Handling: Why &quot;Convert at Render Time&quot; Instead of &quot;Overwrite at Generation Time&quot;</a></li><li><a href="#map-interaction-why-article-pages-collapsed-and-homepage-renders-directly" class="table-of-contents__link toc-highlight">Map Interaction: Why Article Pages Collapsed and Homepage Renders Directly</a></li><li><a href="#travel-homepage-responsive-rules" class="table-of-contents__link toc-highlight">Travel Homepage Responsive Rules</a><ul><li><a href="#desktop" class="table-of-contents__link toc-highlight">Desktop</a></li><li><a href="#desktop-widescreen-and-sidebar-rules" class="table-of-contents__link toc-highlight">Desktop Widescreen and Sidebar Rules</a></li><li><a href="#mobile" class="table-of-contents__link toc-highlight">Mobile</a></li></ul></li><li><a href="#mobile-interaction-performance-optimization-why-intentional-reduced-configuration" class="table-of-contents__link toc-highlight">Mobile Interaction Performance Optimization: Why Intentional &quot;Reduced Configuration&quot;</a></li><li><a href="#why-this-implementation-no-longer-keeps-routes" class="table-of-contents__link toc-highlight">Why This Implementation No Longer Keeps &quot;Routes&quot;</a></li><li><a href="#why-this-implementation-fits-your-current-workflow" class="table-of-contents__link toc-highlight">Why This Implementation Fits Your Current Workflow</a></li><li><a href="#rules-to-follow-when-extending-this-system" class="table-of-contents__link toc-highlight">Rules to Follow When Extending This System</a><ul><li><a href="#1-do-not-hand-edit-generated-json" class="table-of-contents__link toc-highlight">1. Do Not Hand-Edit Generated JSON</a></li><li><a href="#2-reuse-sharedjs-when-adding-new-map-components" class="table-of-contents__link toc-highlight">2. Reuse <code>shared.js</code> When Adding New Map Components</a></li><li><a href="#3-new-content-should-follow-the-source-draft---final-mdx-pipeline" class="table-of-contents__link toc-highlight">3. New Content Should Follow the &quot;Source Draft -&gt; Final MDX&quot; Pipeline</a></li><li><a href="#4-production-should-use-a-proxy" class="table-of-contents__link toc-highlight">4. Production Should Use a Proxy</a></li><li><a href="#5-do-not-re-introduce-route-logic" class="table-of-contents__link toc-highlight">5. Do Not Re-Introduce Route Logic</a></li></ul></li><li><a href="#most-commonly-used-commands" class="table-of-contents__link toc-highlight">Most Commonly Used Commands</a></li><li><a href="#where-to-start-when-revisiting-this-implementation" class="table-of-contents__link toc-highlight">Where to Start When Revisiting This Implementation</a></li><li><a href="#one-sentence-summary" class="table-of-contents__link toc-highlight">One-Sentence Summary</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/en/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/en/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.30.2</span></div></div></div></footer></div>
 </body>
 </html>
