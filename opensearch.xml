@@ -4,8 +4,8 @@
   <ShortName>NeverGpDzy</ShortName>
   <Description>Search NeverGpDzy</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.nevergpdzy.cn/https://oss.nevergpdzy.com/img_for_Typora/OIG%20(3).png</Image>
-  <Url type="text/html" method="get" template="https://docs.nevergpdzy.cn/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.nevergpdzy.cn/opensearch.xml" />
-  <moz:SearchForm>https://docs.nevergpdzy.cn/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://nevergpdzy.com/https://oss.nevergpdzy.com/img_for_Typora/OIG%20(3).png</Image>
+  <Url type="text/html" method="get" template="https://nevergpdzy.com/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://nevergpdzy.com/opensearch.xml" />
+  <moz:SearchForm>https://nevergpdzy.com/</moz:SearchForm>
 </OpenSearchDescription>
