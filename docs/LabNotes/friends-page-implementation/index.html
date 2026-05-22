@@ -10,9 +10,9 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="NeverGpDzy" href="/opensearch.xml">
-<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.bfdf23af.css">
-<script src="/assets/js/runtime~main.b5792a54.js" defer="defer"></script>
-<script src="/assets/js/main.78d15739.js" defer="defer"></script>
+<link rel="stylesheet" href="/assets/css/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.acc0f53d.css">
+<script src="/assets/js/runtime~main.a5cace71.js" defer="defer"></script>
+<script src="/assets/js/main.57bf384a.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,6 +28,7 @@
 <li class=""><strong>滚动入场动画</strong>：卡片在 <code>IntersectionObserver</code> 触发时以 <code>cubic-bezier(0.22, 1, 0.36, 1)</code> 缓动淡入上移，尊重 <code>prefers-reduced-motion: reduce</code>。</li>
 <li class=""><strong>申请引导区块</strong>：页面底部以虚线边框区块展示友链申请条件和联系方式，引导有意交换友链的访客主动联系。</li>
 <li class=""><strong>国际化</strong>：页面所有文案（标题、筛选标签、申请区块）和友链数据字段（名称、描述、分类）均支持 <code>zh-Hans</code> / <code>en</code> 双语。</li>
+<li class=""><strong>移动端触摸交互</strong>：触屏设备采用两次点击模式——首次点击展开描述（添加 <code>cardExpanded</code> 类），再  次点击跳转访问。点击卡片外区域收起描述。通过 <code>window.matchMedia(&#x27;(hover: none) and (pointer: coarse)&#x27;)</code> 检测触屏设备。</li>
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="文件结构">文件结构<a href="#文件结构" class="hash-link" aria-label="文件结构的直接链接" title="文件结构的直接链接" translate="no">​</a></h2>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">src/</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">├── pages/</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">│   └── friends.mdx                   # 路由入口，挂载 FriendsSection 组件</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">├── components/</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">│   └── FriendsSection/</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">│       ├── index.js                  # 主组件，包含 Avatar、页面布局与状态逻辑</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">│       └── styles.module.css         # CSS Modules 样式</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">└── data/</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    └── friends.js                    # 友链数据数组</span><br></div></code></pre></div></div>
@@ -43,12 +44,14 @@
 <p><strong>状态管理</strong>：</p>
 <ul>
 <li class=""><code>activeCategory</code>：当前选中的分类筛选值，<code>null</code> 表示&quot;全部&quot;。</li>
-<li class=""><code>categories</code>：<code>useMemo</code> 从友链数据中动态提取的分类集合，随 locale 变化重新计算。</li>
+<li class=""><code>categories</code>：<code>useMemo</code> 从友链数据中动态提取的  分类集合，随 locale 变化重新计算。</li>
 <li class=""><code>filteredFriends</code>：<code>useMemo</code> 根据 <code>activeCategory</code> 过滤后的友链列表。</li>
+<li class=""><code>expandedId</code>：当前展开的友链卡片 ID（仅触屏设备使用），控制 <code>cardExpanded</code> 类的添加与移除。</li>
 </ul>
 <p><strong>副作用</strong>：</p>
 <ul>
 <li class=""><code>useEffect</code> 在 <code>filteredFriends</code> 变化时重新绑定 <code>IntersectionObserver</code>，为每个 <code>.card</code> 元素注册视口交叉监听，触发 <code>cardVisible</code> 类添加以实现入场动画。</li>
+<li class=""><code>useEffect</code> 在 <code>expandedId</code> 变化时注册/注销 <code>document</code> 级 <code>click</code> 监听器，点击卡片外区域时清除展开状态。</li>
 </ul>
 <p><strong>键盘无障碍</strong>：</p>
 <ul>
@@ -74,6 +77,7 @@
 <li class=""><strong>申请区块</strong>：虚线边框，hover 时边框色变为主题色，规则列表用 <code>::before { content: &#x27;✓ &#x27; }</code> 伪元素装饰。</li>
 <li class=""><strong>减动偏好</strong>：<code>prefers-reduced-motion: reduce</code> 下跳过所有入场动画，卡片直接完全可见。</li>
 <li class=""><strong>响应式</strong>：760px 和 480px 断点下缩小卡片、头像和字号。</li>
+<li class=""><strong>移动端触摸展开</strong>：在 <code>@media (hover: none) and (pointer: coarse)</code> 内，先用 <code>:hover</code> 规则禁用桌面悬停效果（防止粘性 hover 干扰），再用 <code>.card.cardExpanded.cardExpanded</code>（重复类名提升特异性至 <code>(0,4,0)</code>）确保展开状态始终高于移动端粘性 <code>:hover</code> 的 <code>(0,3,0)</code>，避免点击后文字不显示的问题。过渡时间统一缩短至 0.2s 以适配触屏交互节 奏。</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="路由">路由<a href="#路由" class="hash-link" aria-label="路由的直接链接" title="路由的直接链接" translate="no">​</a></h2>
 <p>友链页面通过 <code>src/pages/friends.mdx</code> 暴露为 <code>/friends</code> 路径（中文默认）和 <code>/en/friends</code>（英文），MDX 仅负责设置 frontmatter 并挂载 <code>&lt;FriendsSection /&gt;</code> 组件，不包含页面逻辑。</p>
@@ -81,8 +85,8 @@
 <ul>
 <li class="">新增友链只需编辑 <code>src/data/friends.js</code>，无需修改组件代码。确保 <code>id</code> 唯一、<code>url</code> 以 <code>https://</code> 开头。</li>
 <li class="">修改申请条件文案需同时更新 <code>COPY[&#x27;zh-Hans&#x27;]</code> 和 <code>COPY[&#x27;en&#x27;]</code> 中的 <code>applyRules</code> 数组。</li>
-<li class="">分类标签文本来自友链数据的 <code>category</code> 字段，若同一分类在中英文 下名称不同（如 <code>&#x27;技术&#x27;</code> vs <code>&#x27;Tech&#x27;</code>），筛选匹配将基于当前 locale 解析后的值进行。</li>
+<li class="">分类标签文本来自友链数据的 <code>category</code> 字段，若同一分类在中英文下名称不同（如 <code>&#x27;技术&#x27;</code> vs <code>&#x27;Tech&#x27;</code>），筛选匹配将基于当前 locale 解析后的值进行。</li>
 <li class="">若新增或删除友链后统计数量不准确，检查 <code>countLabel</code> 引用的是 <code>friends.length</code>（全部友链数量，非过滤后的数量）。</li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/cuda-cache-streaming"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">CUDA Cache Streaming 优化指南 MDX版</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/life-blog-writing-workflow"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">生活类 Blog 写作工作流</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#功能概述" class="table-of-contents__link toc-highlight">功能概述</a></li><li><a href="#文件结构" class="table-of-contents__link toc-highlight">文件结构</a></li><li><a href="#数据格式" class="table-of-contents__link toc-highlight">数据格式</a><ul><li><a href="#新增友链" class="table-of-contents__link toc-highlight">新增友链</a></li></ul></li><li><a href="#组件架构" class="table-of-contents__link toc-highlight">组件架构</a><ul><li><a href="#friendssection主组件" class="table-of-contents__link toc-highlight">FriendsSection（主组件）</a></li><li><a href="#avatar子组件" class="table-of-contents__link toc-highlight">Avatar（子组件）</a></li></ul></li><li><a href="#样式设计要点" class="table-of-contents__link toc-highlight">样式设计要点</a></li><li><a href="#路由" class="table-of-contents__link toc-highlight">路由</a></li><li><a href="#维护注意事项" class="table-of-contents__link toc-highlight">维护注意事项</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.39.0</span></div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/cuda-cache-streaming"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">CUDA Cache Streaming 优化指南 MDX版</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/LabNotes/life-blog-writing-workflow"><div class="pagination-nav__sublabel"> 下一页</div><div class="pagination-nav__label">生活类 Blog 写作工作流</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#功能概述" class="table-of-contents__link toc-highlight">功能概述</a></li><li><a href="#文件结构" class="table-of-contents__link toc-highlight">文件结构</a></li><li><a href="#数据格式" class="table-of-contents__link toc-highlight">数据格式</a><ul><li><a href="#新增友链" class="table-of-contents__link toc-highlight">新增友链</a></li></ul></li><li><a href="#组件架构" class="table-of-contents__link toc-highlight">组件架构</a><ul><li><a href="#friendssection主组件" class="table-of-contents__link toc-highlight">FriendsSection（主组件）</a></li><li><a href="#avatar子组件" class="table-of-contents__link toc-highlight">Avatar（子组件）</a></li></ul></li><li><a href="#样式设计要点" class="table-of-contents__link toc-highlight">样式设计要点</a></li><li><a href="#路由" class="table-of-contents__link toc-highlight">路由</a></li><li><a href="#维护注意事项" class="table-of-contents__link toc-highlight">维护注意事项</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright"><span class="footer-meta-row"><span>© 2023-2026 NeverGpDzy</span><a class="footer-record-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023035415号</a></span><span class="footer-link-row"><a href="/docs/intro">Docs</a><span class="footer-separator" aria-hidden="true">·</span><a href="/blog">Blog</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://cv.nevergpdzy.cn/">CV</a><span class="footer-separator" aria-hidden="true">·</span><a href="https://github.com/NeverGpDzy">GitHub</a><span class="footer-separator" aria-hidden="true">·</span><a href="mailto:i@nevergpdzy.cn">Email</a></span><span class="footer-version-row">Version v8.39.1</span></div></div></div></footer></div>
 </body>
 </html>
