@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdev_knowledge_base=self.webpackChunkdev_knowledge_base||[]).push([[2782],{76004:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/en/blog","page":1,"postsPerPage":10,"totalPages":2,"totalCount":11,"nextPage":"/en/blog/page/2","blogDescription":"Blog posts on programming, tools, and tech discoveries.","blogTitle":"Blog"}}')}}]);
